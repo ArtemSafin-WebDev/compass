@@ -29,10 +29,10 @@ export default function blogFiltering() {
                     rightCol.appendChild(card);
                 }
 
-                gsap.from(card, {
-                    duration: 0.5,
-                    autoAlpha: 0
-                });
+                // gsap.from(card, {
+                //     duration: 0.5,
+                //     autoAlpha: 0
+                // });
             });
 
             ScrollTrigger.refresh(true);

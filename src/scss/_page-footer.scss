@@ -3,7 +3,6 @@
     color: white;
 }
 
-
 .page-footer__content {
     min-height: 100vh;
     padding-left: var(--inner-left-padding);
@@ -13,20 +12,76 @@
     grid-template-columns: minmax(0, 37.6rem) 1fr minmax(0, var(--right-col-width));
     grid-gap: 3.2rem;
     grid-template-rows: repeat(3, minmax(auto, 1fr));
-    // grid-template-areas: 
+    // grid-template-areas:
     // "e up nav"
     // "btn btn btn"
     // "e copyright madeby";
 
-
-    grid-template-areas: "e up nav" "btn btn btn" "x copyright madeby";
-   
+    grid-template-areas: 'e up nav' 'btn btn btn' 'x copyright madeby';
 }
 
+.page-footer__write-us-btn {
+    display: flex;
+    flex-direction: column;
+    grid-area: btn;
+
+    &:hover {
+        .page-footer__write-us-main-content svg {
+            transform: translateX(15%);
+        }
+        .page-footer__write-us-main-content-text::after {
+            background-color: white;
+            transform: scaleY(3);
+        }
+    }
+}
+
+.page-footer__write-us-btn-interested {
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1;
+    color: #ababab;
+}
+
+.page-footer__write-us-main-content {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12rem;
+    line-height: 14.4rem;
+
+    svg {
+        width: 18rem;
+        height: 18rem;
+        flex-shrink: 0;
+        margin-left: 5rem;
+        fill: #FF4545;
+        position: relative;
+        bottom: -1.4rem;
+        transition: transform .3s;
+    }
+}
+
+.page-footer__write-us-main-content-text {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: 1px;
+        background-color: rgba(white, .3);
+        margin-top: 0.8rem;
+        transition: transform .3s, background-color .3s;
+        transform-origin: center top;
+        
+    }
+}
 
 .page-footer__copyright {
     grid-area: copyright;
-  
+    align-self: flex-end;
 }
 
 .page-footer__madeby {
@@ -35,9 +90,18 @@
     display: inline-flex;
     align-items: baseline;
     letter-spacing: 0.015em;
-    color: #ACACAC;
+    color: #acacac;
     grid-area: madeby;
-    
+    align-self: flex-end;
+
+    &:link,
+    &:visited {
+        color: #acacac;
+    }
+
+    &:hover {
+        color: white;
+    }
 }
 
 .page-footer__madeby-image {
@@ -46,7 +110,7 @@
     margin-left: 0.5rem;
     height: auto;
     position: relative;
-    bottom: -1rem;
+    bottom: -0.95rem;
 }
 
 .page-footer__scroll-top {
@@ -65,7 +129,6 @@
         color: var(--primary-color);
     }
 }
-
 
 .page-footer__nav {
     display: flex;
