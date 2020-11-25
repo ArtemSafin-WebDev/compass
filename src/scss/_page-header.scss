@@ -1,0 +1,135 @@
+.page-header {
+    position: fixed;
+    left: 0;
+    top: var(--top-offset);
+    width: 100%;
+    z-index: 600;
+    color: var(--dark);
+}
+
+.page-header__logo-link {
+    position: fixed;
+    z-index: 700;
+    top: var(--top-offset);
+    left: var(--content-padding);
+    max-width: var(--sidebar-width);
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    color: var(--logo-color);
+    &:link,
+    &:visited {
+        color: var(--logo-color);
+    }
+}
+
+.page-header__logo-image {
+    width: 21rem;
+    height: auto;
+    max-width: 100%;
+}
+
+.page-header__row {
+    display: flex;
+    align-items: flex-start;
+    padding-left: var(--inner-left-padding);
+}
+
+.page-header__left-col {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.page-header__right-col {
+    width: var(--right-col-width);
+    flex-shrink: 0;
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.page-header__agency-text {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-right: 2rem;
+}
+
+.page-header__burger-btn {
+    margin-right: auto;
+    flex-shrink: 0;
+
+    &:hover .page-header__burger-btn-content {
+        &::before {
+            transform: translateY(-0.3rem);
+        }
+        &::after {
+            transform: translateY(0.3rem);
+        }
+    }
+}
+
+.page-header__burger-btn-content {
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+
+    &::before,
+    &::after {
+        content: '';
+        transition: transform 0.3s;
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+        flex-shrink: 0;
+    }
+
+    &::before {
+        margin-bottom: 0.8rem;
+    }
+}
+
+.page-header__contact-link {
+    color: var(--primary-color);
+    flex-shrink: 0;
+    margin-left: 3rem;
+    font-weight: 500;
+
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+}
+
+.page-header__scroll-progress {
+    position: fixed;
+    top: var(--top-offset);
+    bottom: var(--bottom-offset);
+    width: 2px;
+    background-color: var(--progress-color);
+    z-index: 600;
+    left: calc(var(--content-padding) + var(--sidebar-width));
+}
+
+.page-header__social {
+    position: fixed;
+    z-index: 600;
+    left: var(--content-padding);
+    bottom: var(--bottom-offset);
+    width: var(--sidebar-width);
+}
+
+.page-header__social-list-item {
+    margin-bottom: 1.2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-header__social-link {
+    font-family: var(--roboto);
+    &:hover {
+        color: var(--primary-color);
+    }
+}

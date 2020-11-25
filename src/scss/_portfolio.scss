@@ -1,0 +1,197 @@
+.portfolio {
+}
+
+.portfolio__content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 23rem;
+    padding-left: var(--inner-left-padding);
+    padding-bottom: var(--bottom-offset);
+    position: relative;
+    z-index: 5;
+}
+
+.portfolio__intro {
+    max-width: 70rem;
+    margin-bottom: 10rem;
+}
+
+.portfolio__intro-heading {
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 7.2rem;
+    margin-bottom: 4.5rem;
+}
+
+.portfolio__intro-text {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    margin-bottom: 4rem;
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.portfolio__intro-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+
+    svg {
+        width: 2rem;
+        height: 2rem;
+        fill: currentColor;
+        flex-shrink: 0;
+        margin-left: 1.2rem;
+    }
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+}
+
+.portfolio__albums {
+    padding-top: 5rem;
+}
+
+.portfolio__albums-backgrounds {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+
+    &.shown {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .3s, visibility .3s;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(black, .5);
+        z-index: 40;
+    }
+}
+
+.portfolio__albums-background-list,
+.portfolio__albums-background-list-item,
+.portfolio__albums-background-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.portfolio__albums-background-list-item {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .6s, visibility 0s linear .6s;
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .6s, visibility .6s;
+        z-index: 10;
+    }
+}
+
+.portfolio__albums-background-image {
+    @include objectFitCover();
+}
+
+.portfolio__albums-heading {
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 7.2rem;
+    margin-bottom: 6rem;
+}
+
+.portfolio__albums-list-item {
+    border-bottom: 1px solid #ababab;
+    &:first-child {
+        border-top: 1px solid #ababab;
+    }
+}
+
+.portfolio__albums-card {
+    display: flex;
+    padding: 2rem 0;
+    min-height: 20rem;
+    align-items: center;
+    &:link,
+    &:visited {
+        color: rgba(white, 0.3);
+    }
+
+    .portfolio__albums-list-item.active & {
+        color: white;
+    }
+}
+
+.portfolio__albums-card-title {
+    font-weight: 500;
+    font-size: 6.2rem;
+    line-height: 7.4rem;
+    width: 50%;
+    flex-grow: 1;
+}
+
+.portfolio__albums-card-brief {
+    width: var(--right-col-width);
+    flex-shrink: 0;
+    margin-left: 3rem;
+    color: rgba(#ababab, 0.3);
+    transition: color .3s;
+
+    .portfolio__albums-list-item.active & {
+        color: white;
+    }
+}
+
+.portfolio__more-link {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20rem;
+    color: white;
+    border-bottom: .5rem solid #ABABAB;
+    transition: border-color .3s;
+    svg {
+        width: 2.8rem;
+        height: 2.8rem;
+        flex-shrink: 0;
+        margin-right: 1.4rem;
+        fill: currentColor;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        border-color: white;
+    }
+}
