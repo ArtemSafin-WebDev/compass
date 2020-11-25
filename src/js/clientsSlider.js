@@ -39,7 +39,7 @@ export default function clientsSlider() {
             })
         }
 
-        const removeAutoplay = (index) => {
+        const removeAutoplay = () => {
             gsap.killTweensOf(progress)
             gsap.to(progress, {
                 '--slider-progress': 0,

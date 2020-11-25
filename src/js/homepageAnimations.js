@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { DARK_BG, LOGO_ON_DARK, PROGRESS_ON_DARK, PROGRESS_ON_LIGHT, TEXT_COLOR } from "./colors";
+import { DARK_BG, LOGO_ON_DARK, PROGRESS_ON_DARK, PROGRESS_ON_LIGHT, PROGRESS_THUMB_ON_DARK, PROGRESS_THUMB_ON_LIGHT, TEXT_COLOR } from "./colors";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -10,7 +10,7 @@ export default function homepageAnimations() {
     const intro = document.querySelector('#intro');
     const portfolio = document.querySelector('#portfolio');
     const arrows = document.querySelector('#arrows');
-    const agencyText = document.querySelector('.page-header__agency-text');
+    const agencyText = document.querySelector('.page-header__left-col');
     const portfolioIntro = document.querySelector('.portfolio__intro');
     const ourClients = document.querySelector('#our-clients')
 
@@ -42,6 +42,9 @@ export default function homepageAnimations() {
         duration: 2
     }, 0).to("html", {
         "--progress-color": PROGRESS_ON_DARK,
+        duration: 2
+    }, 0).to("html", {
+        "--progress-thumb-color": PROGRESS_THUMB_ON_DARK,
         duration: 2
     }, 0).to(agencyText, {
         duration: 1,
@@ -99,6 +102,11 @@ export default function homepageAnimations() {
                 "--progress-color": PROGRESS_ON_DARK,
                 duration: 0.3
             })
+           
+            gsap.to("html", {
+                "--progress-thumb-color": PROGRESS_THUMB_ON_DARK,
+                duration: 0.3
+            })
             gsap.to(ourClients, {
                 color: TEXT_COLOR,
                 duration: 0.3
@@ -109,9 +117,15 @@ export default function homepageAnimations() {
             albumsBgItems[index].classList.add('active')
             albumsBgLayer.classList.add('shown');
             gsap.to("html", {
-                "--progress-color": PROGRESS_ON_LIGHT,
+                "--progress-color": '#ABABAB',
                 duration: 0.3
             })
+            gsap.to("html", {
+                "--progress-thumb-color": '#FFFFFF',
+                duration: 0.3
+            })
+
+          
             gsap.to(ourClients, {
                 color: '#ffffff',
                 duration: 0.3

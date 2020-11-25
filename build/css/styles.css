@@ -1315,6 +1315,18 @@ select:-webkit-autofill:focus {
   background-color: var(--progress-color);
   z-index: 600;
   left: calc(var(--content-padding) + var(--sidebar-width)); }
+  .page-header__scroll-progress::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: center top;
+            transform-origin: center top;
+    background-color: var(--progress-thumb-color);
+    -webkit-transform: scaleY(var(--scroll-progress, 0));
+            transform: scaleY(var(--scroll-progress, 0)); }
 
 .page-header__social {
   position: fixed;
