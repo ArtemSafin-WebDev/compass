@@ -4,9 +4,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function commonAnimations() {
-    const progress = document.querySelector('.page-header__scroll-progress');
+   
 
-    gsap.to(progress, {
+    gsap.to("html", {
         "--scroll-progress": 1,
         duration: 1,
         scrollTrigger: {
@@ -19,5 +19,5 @@ export default function commonAnimations() {
     });
 
 
-  
+   
 }
