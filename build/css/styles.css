@@ -995,6 +995,21 @@ html {
   font-size: 10px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent; }
+  @media screen and (min-width: 2048px) {
+    html {
+      font-size: 11px; } }
+  @media screen and (min-width: 2560px) {
+    html {
+      font-size: 12px; } }
+  @media screen and (min-width: 3200px) {
+    html {
+      font-size: 14px; } }
+  @media screen and (min-width: 3600px) {
+    html {
+      font-size: 16px; } }
+  @media screen and (min-width: 3840px) {
+    html {
+      font-size: 18px; } }
   @media only screen and (max-width: 1600px) {
     html {
       font-size: 9px; } }
