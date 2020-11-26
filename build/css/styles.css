@@ -2565,6 +2565,7 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .page-footer__content {
       min-height: 66.7rem;
+      min-height: 100vh;
       padding: 0;
       grid-template-areas: none;
       display: -webkit-box;

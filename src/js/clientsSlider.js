@@ -1,6 +1,7 @@
 import { Swiper, Navigation, EffectFade } from 'swiper';
 import gsap from 'gsap';
-
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { MOBILE } from './constants';
 
 Swiper.use([Navigation, EffectFade]);
 
@@ -16,13 +17,20 @@ export default function clientsSlider() {
             fadeEffect: {
                 crossFade: true
             },
-            autoHeight: false,
+            autoHeight: window.matchMedia(`(max-width: ${MOBILE}px)`).matches ? true : false,
             speed: 700,
             navigation: {
                 nextEl: element.querySelector('.our-clients__slider-arrow--next'),
                 prevEl: element.querySelector('.our-clients__slider-arrow--prev')
             }
         });
+
+        if (window.matchMedia(`(max-width: ${MOBILE}px)`).matches) {
+            slider.on('slideChange', () => {
+                ScrollTrigger.refresh(true);
+                
+            })
+        }
 
         const setAutoplay = (index) => {
             const nextIndex = (index + 1 >= slider.slides.length) ? 0 : index + 1;
