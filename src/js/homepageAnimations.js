@@ -3,6 +3,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DARK_BG, LOGO_ON_DARK, PROGRESS_ON_DARK, PROGRESS_ON_LIGHT, PROGRESS_THUMB_ON_DARK, PROGRESS_THUMB_ON_LIGHT, TEXT_COLOR } from './colors';
 import { SMALL_TABLET, TABLET } from './constants';
+import detectIt from 'detect-it';
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -169,6 +170,42 @@ export default function homepageAnimations() {
         }
     };
 
+    if (albumsItems.length !== albumsBgItems.length) {
+        console.error('Не равное количество объектов');
+    } else {
+        albumsItems.forEach((item, itemIndex) => {
+            item.addEventListener('mouseenter', () => {
+                albumsItems.forEach(item => item.classList.remove('active'));
+                item.classList.add('active');
+                setActiveAlbumItem(itemIndex);
+            });
+            item.addEventListener('mouseleave', () => {
+                item.classList.remove('active');
+                setActiveAlbumItem(null);
+            });
+        });
+
+        if (detectIt.hasTouch) {
+            albumsItems.forEach((item, itemIndex) => {
+                ScrollTrigger.create({
+                    trigger: item,
+                    start: 'top center',
+                    end: 'bottom center',
+                    onToggle: self => {
+                        albumsItems.forEach(item => item.classList.remove('active'));
+                        if (self.isActive) {
+                            item.classList.add('active');
+                            setActiveAlbumItem(itemIndex);
+                        } else {
+                            setActiveAlbumItem(null)
+                        }
+                       
+                    }
+                });
+            });
+        }
+    }
+
     if (!window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches) {
         if (blogLeftCol) {
             gsap.to(blogLeftCol, {
@@ -194,23 +231,5 @@ export default function homepageAnimations() {
                 }
             });
         }
-    }
-
-    
-
-    if (albumsItems.length !== albumsBgItems.length) {
-        console.error('Не равное количество объектов');
-    } else {
-        albumsItems.forEach((item, itemIndex) => {
-            item.addEventListener('mouseenter', () => {
-                albumsItems.forEach(item => item.classList.remove('active'));
-                item.classList.add('active');
-                setActiveAlbumItem(itemIndex);
-            });
-            item.addEventListener('mouseleave', () => {
-                item.classList.remove('active');
-                setActiveAlbumItem(null);
-            });
-        });
     }
 }
