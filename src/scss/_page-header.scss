@@ -4,7 +4,7 @@
     top: 0;
     pointer-events: none;
     width: 100%;
-    z-index: 600;
+    z-index: 1000;
     color: var(--page-header-text-color);
 }
 
@@ -24,7 +24,18 @@
 .page-header__logo-image {
     width: 21rem;
     height: auto;
+   
     max-width: 100%;
+
+    @include breakpoint(small-tablet) {
+        width: 30rem;
+        
+    }
+
+    @include breakpoint(mobile) {
+        width: 12rem;
+        
+    }
 }
 
 .page-header__row {
@@ -32,13 +43,11 @@
     display: flex;
     align-items: flex-start;
     padding-left: var(--inner-left-padding);
-    
 }
 
 .page-header__left-col {
     width: 50%;
     flex-grow: 1;
-  
 }
 
 .page-header__right-col {
@@ -47,6 +56,14 @@
     margin-left: 3rem;
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        padding-top: 0.35rem;
+        flex-shrink: 1;
+        width: 30%;
+        flex-grow: 1;
+        
+    }
 }
 
 .page-header__agency-text {
@@ -54,12 +71,28 @@
     font-size: 1.6rem;
     line-height: 1.9rem;
     margin-right: 2rem;
+
+    @include breakpoint(small-tablet) {
+        margin-top: 7rem;
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        margin-top: 6rem;
+        max-width: 12rem;
+    }
 }
 
 .page-header__burger-btn {
     margin-right: auto;
     flex-shrink: 0;
     pointer-events: initial;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     &:hover .page-header__burger-btn-content {
         &::before {
             transform: translateY(-0.3rem);
@@ -68,13 +101,19 @@
             transform: translateY(0.3rem);
         }
     }
+
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-left: auto;
+    }
 }
 
 .page-header__burger-btn-content {
     display: flex;
     flex-direction: column;
     width: 5rem;
-
+    color: inherit;
     &::before,
     &::after {
         content: '';
@@ -83,10 +122,25 @@
         height: 2px;
         background-color: currentColor;
         flex-shrink: 0;
+        backface-visibility: hidden;
     }
 
     &::before {
         margin-bottom: 0.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 7rem;
+        &::before {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        width: 3.3rem;
+        &::before {
+            margin-bottom: 0.8rem;
+        }
     }
 }
 
@@ -99,6 +153,15 @@
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 
@@ -122,6 +185,10 @@
         background-color: var(--progress-thumb-color);
         transform: scaleY(var(--scroll-progress, 0));
     }
+
+    @include breakpoint(small-tablet) {
+        display: none;
+    }
 }
 
 .page-header__social {
@@ -129,6 +196,9 @@
     width: 100%;
     margin-top: auto;
     color: var(--social-color);
+    @include breakpoint(small-tablet) {
+        display: none;
+    }
 }
 
 .page-header__social-list-item {
@@ -158,6 +228,11 @@
 
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(small-tablet) {
+        bottom: auto;
+        width: auto;
+    }
 }
 
 .sidebar__inner {
@@ -170,6 +245,10 @@
     padding-left: var(--content-padding);
     padding-top: var(--top-offset);
     padding-bottom: var(--bottom-offset);
+    @include breakpoint(small-tablet) {
+        padding-bottom: 0;
+        height: auto;
+    }
 }
 
 .page-header .midnightHeader.light {

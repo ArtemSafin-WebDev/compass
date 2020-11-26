@@ -1,4 +1,8 @@
 .portfolio {
+    @include breakpoint(small-tablet) {
+        background-color: var(--dark);
+        color: white;
+    }
 }
 
 .portfolio__content {
@@ -10,11 +14,29 @@
     padding-bottom: var(--bottom-offset);
     position: relative;
     z-index: 5;
+
+    @include breakpoint(small-tablet) {
+        min-height: auto;
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 15rem;
+        padding-bottom: 4rem;
+    }
 }
 
 .portfolio__intro {
     max-width: 70rem;
     margin-bottom: 10rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        min-height: auto;
+        max-width: 85rem;
+    }
 }
 
 .portfolio__intro-heading {
@@ -22,6 +44,13 @@
     font-size: 6rem;
     line-height: 7.2rem;
     margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .portfolio__intro-text {
@@ -34,6 +63,13 @@
         &:last-child {
             margin-bottom: 0;
         }
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -57,6 +93,20 @@
     &:visited {
         color: var(--primary-color);
     }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+
+        svg {
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-left: 0.8rem;
+            position: relative;
+            bottom: -0.2rem;
+        }
+    }
 }
 
 .portfolio__albums {
@@ -72,12 +122,12 @@
     z-index: -1;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
 
     &.shown {
         opacity: 1;
         visibility: visible;
-        transition: opacity .3s, visibility .3s;
+        transition: opacity 0.3s, visibility 0.3s;
     }
     &::after {
         content: '';
@@ -86,7 +136,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgba(black, .5);
+        background: rgba(black, 0.5);
         z-index: 40;
     }
 }
@@ -101,16 +151,15 @@
     height: 100%;
 }
 
-
 .portfolio__albums-background-list-item {
     opacity: 0;
     visibility: hidden;
-    transition: opacity .6s, visibility 0s linear .6s;
+    transition: opacity 0.6s, visibility 0s linear 0.6s;
 
     &.active {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .6s, visibility .6s;
+        transition: opacity 0.6s, visibility 0.6s;
         z-index: 10;
     }
 }
@@ -124,6 +173,13 @@
     font-size: 6rem;
     line-height: 7.2rem;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        margin-bottom: 4.5rem;
+    }
 }
 
 .portfolio__albums-list-item {
@@ -146,6 +202,12 @@
     .portfolio__albums-list-item.active & {
         color: white;
     }
+
+    @include breakpoint(mobile) {
+        padding: 4rem 0;
+        flex-direction: column;
+        min-height: auto;
+    }
 }
 
 .portfolio__albums-card-title {
@@ -154,6 +216,29 @@
     line-height: 7.4rem;
     width: 50%;
     flex-grow: 1;
+
+    svg {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+        flex-grow: 0;
+        svg {
+            display: block;
+            flex-shrink: 0;
+            fill: currentColor;
+            width: 2rem;
+            height: 2rem;
+            margin-left: 2rem;
+        }
+    }
 }
 
 .portfolio__albums-card-brief {
@@ -161,10 +246,17 @@
     flex-shrink: 0;
     margin-left: 3rem;
     color: rgba(#ababab, 0.3);
-    transition: color .3s;
+    transition: color 0.3s;
 
     .portfolio__albums-list-item.active & {
         color: white;
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin: 0;
+        margin-top: 1.4rem;
     }
 }
 
@@ -177,14 +269,17 @@
     justify-content: center;
     min-height: 20rem;
     color: white;
-    border-bottom: .5rem solid #ABABAB;
-    transition: border-color .3s;
+    border-bottom: 0.5rem solid #ababab;
+    transition: border-color 0.3s;
     svg {
         width: 2.8rem;
         height: 2.8rem;
         flex-shrink: 0;
         margin-right: 1.4rem;
         fill: currentColor;
+        &:last-child {
+            display: none;
+        }
     }
     &:link,
     &:visited {
@@ -193,5 +288,33 @@
 
     &:hover {
         border-color: white;
+    }
+
+    @include breakpoint(small-tablet) {
+        min-height: 16rem;
+    }
+
+    @include breakpoint(mobile) {
+        min-height: auto;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        justify-content: space-between;
+        padding: 4.7rem 0;
+        svg {
+            &:first-child {
+                display: none;
+            }
+
+            &:last-child {
+                display: block;
+                margin: 0;
+                flex-shrink: 0;
+                fill: currentColor;
+                width: 2rem;
+                height: 2rem;
+                margin-left: 2rem;
+            }
+        }
     }
 }

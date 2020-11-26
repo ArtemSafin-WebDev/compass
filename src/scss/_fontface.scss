@@ -13,6 +13,13 @@
     font-display: swap;
 }
 @font-face {
+    font-family: 'Golos';
+    src: url('../assets/fonts/Golos_Text_DemiBold.woff2') format('woff2'), url('../assets/fonts/Golos_Text_DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
     font-family: 'DundeeMedium';
     src: url('../assets/fonts/DundeeMedium.woff2') format('woff2'), url('../assets/fonts/DundeeMedium.woff') format('woff');
     font-weight: 400;

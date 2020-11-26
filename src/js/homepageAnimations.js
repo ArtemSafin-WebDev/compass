@@ -2,6 +2,7 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DARK_BG, LOGO_ON_DARK, PROGRESS_ON_DARK, PROGRESS_ON_LIGHT, PROGRESS_THUMB_ON_DARK, PROGRESS_THUMB_ON_LIGHT, TEXT_COLOR } from './colors';
+import { SMALL_TABLET, TABLET } from './constants';
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -9,89 +10,85 @@ export default function homepageAnimations() {
     const intro = document.querySelector('#intro');
     const portfolio = document.querySelector('#portfolio');
     const arrows = document.querySelector('#arrows');
-    const agencyText = document.querySelector('.page-header__left-col');
+
     const portfolioIntro = document.querySelector('.portfolio__intro');
     const ourClients = document.querySelector('#our-clients');
-    const social = document.querySelector('.page-header__social');
+    const blogLeftCol = document.querySelector('.blog__posts-left-col');
+    const blogRightCol = document.querySelector('.blog__posts-right-col');
 
-    if (!intro || !portfolio || !ourClients) return;
+    if (!window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches && intro && portfolio) {
+        const introFadeTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: portfolio,
+                scrub: 1,
+                start: 'top bottom',
+                end: '+=50%'
+            }
+        });
 
-    const introFadeTimeline = gsap.timeline({
-        scrollTrigger: {
-            trigger: portfolio,
-            scrub: 1,
-            start: 'top bottom',
-            end: '+=50%'
-        }
-    });
+        introFadeTimeline
+            .to(
+                intro,
+                {
+                    duration: 2,
+                    backgroundColor: DARK_BG,
+                    color: '#ffffff'
+                },
+                0
+            )
+            .to(
+                portfolio,
+                {
+                    duration: 2,
+                    backgroundColor: DARK_BG,
+                    color: '#ffffff'
+                },
+                0
+            )
+            .to(
+                '.page-header',
+                {
+                    '--page-header-text-color': '#ffffff',
+                    duration: 2
+                },
+                0
+            )
+            .to(
+                'html',
+                {
+                    '--logo-color': LOGO_ON_DARK,
+                    duration: 2
+                },
+                0
+            )
+            .to(
+                'html',
+                {
+                    '--progress-color': PROGRESS_ON_DARK,
+                    duration: 2
+                },
+                0
+            )
+            .to(
+                'html',
+                {
+                    '--progress-thumb-color': PROGRESS_THUMB_ON_DARK,
+                    duration: 2
+                },
+                0
+            )
 
-    introFadeTimeline
-        .to(
-            intro,
-            {
-                duration: 2,
-                backgroundColor: DARK_BG,
-                color: '#ffffff'
-            },
-            0
-        )
-        .to(
-            portfolio,
-            {
-                duration: 2,
-                backgroundColor: DARK_BG,
-                color: '#ffffff'
-            },
-            0
-        )
-        .to(
-            '.page-header',
-            {
-                '--page-header-text-color': '#ffffff',
-                duration: 2
-            },
-            0
-        )
-        .to(
-            'html',
-            {
-                '--logo-color': LOGO_ON_DARK,
-                duration: 2
-            },
-            0
-        )
-        .to(
-            'html',
-            {
-                '--progress-color': PROGRESS_ON_DARK,
-                duration: 2
-            },
-            0
-        )
-        .to(
-            'html',
-            {
-                '--progress-thumb-color': PROGRESS_THUMB_ON_DARK,
-                duration: 2
-            },
-            0
-        )
-        // .to(
-        //     agencyText,
-        //     {
-        //         duration: 1,
-        //         autoAlpha: 0
-        //     },
-        //     0
-        // )
-        .to(
-            'html',
-            {
-                duration: 1,
-                '--social-color': '#ffffff'
-            },
-            0
-        );
+            .to(
+                'html',
+                {
+                    duration: 1,
+                    '--social-color': '#ffffff'
+                },
+                0
+            );
+    } else {
+        portfolio.setAttribute('data-midnight', 'dark');
+    }
 
     const coloredArrowsTimeline = gsap.timeline({
         scrollTrigger: {
@@ -111,19 +108,21 @@ export default function homepageAnimations() {
         });
     });
 
-    const portfolioIntroTimeline = gsap.timeline({
-        scrollTrigger: {
-            trigger: portfolioIntro,
-            scrub: 1,
-            start: 'top bottom',
-            end: 'bottom bottom'
-        }
-    });
+    if (!window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches && portfolioIntro) {
+        const portfolioIntroTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: portfolioIntro,
+                scrub: 1,
+                start: 'top bottom',
+                end: 'bottom bottom'
+            }
+        });
 
-    portfolioIntroTimeline.to(portfolioIntro, {
-        duration: 1,
-        yPercent: -20
-    });
+        portfolioIntroTimeline.to(portfolioIntro, {
+            duration: 1,
+            yPercent: -20
+        });
+    }
 
     const albumsItems = Array.from(document.querySelectorAll('.portfolio__albums-list-item'));
     const albumsBgItems = Array.from(document.querySelectorAll('.portfolio__albums-background-list-item'));
@@ -148,8 +147,6 @@ export default function homepageAnimations() {
                 autoAlpha: 1,
                 duration: 0.3
             });
-
-           
         } else {
             albumsBgItems.forEach(item => item.classList.remove('active'));
             albumsBgItems[index].classList.add('active');
@@ -171,6 +168,35 @@ export default function homepageAnimations() {
             });
         }
     };
+
+    if (!window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches) {
+        if (blogLeftCol) {
+            gsap.to(blogLeftCol, {
+                duration: 1,
+                y: -80,
+                scrollTrigger: {
+                    trigger: blogLeftCol,
+                    scrub: 1,
+                    start: 'top bottom',
+                    end: 'bottom bottom'
+                }
+            });
+        }
+        if (blogRightCol) {
+            gsap.to(blogRightCol, {
+                duration: 1,
+                y: 80,
+                scrollTrigger: {
+                    trigger: blogRightCol,
+                    scrub: 1,
+                    start: 'top bottom',
+                    end: 'bottom bottom'
+                }
+            });
+        }
+    }
+
+    
 
     if (albumsItems.length !== albumsBgItems.length) {
         console.error('Не равное количество объектов');

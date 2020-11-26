@@ -23,6 +23,17 @@
     --progress-thumb-color: #202020;
     --page-header-text-color: #202020;
     --social-color: #202020;
+
+    @include breakpoint(small-tablet) {
+        --sidebar-width: 0;
+        --inner-left-padding: 0;
+    }
+
+    @include breakpoint(mobile) {
+        --content-padding: 2rem;
+       
+        --top-offset: 2.8rem;
+    }
 }
 
 html {
@@ -31,6 +42,30 @@ html {
     -webkit-text-size-adjust: 100%;
   
     @include noHighlight();
+
+    @include breakpoint(large-desktop) {
+        font-size: 9px;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 8px;
+    }
+
+    @include breakpoint(laptop) {
+        font-size: 7px;
+    }
+
+    @include breakpoint(tablet) {
+        font-size: 7px;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 7px;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
 }
 
 body {

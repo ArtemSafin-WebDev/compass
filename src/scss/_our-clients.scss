@@ -8,6 +8,17 @@
     padding-bottom: var(--bottom-offset);
     position: relative;
     z-index: 5;
+
+    @include breakpoint(tablet) {
+        min-height: auto;
+        padding-top: 6rem;
+        padding-bottom: 10rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+    }
 }
 
 .our-clients__heading {
@@ -15,23 +26,57 @@
     line-height: 7.2rem;
     margin-bottom: 7rem;
     font-weight: 500;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        margin-bottom: 6rem;
+    }
 }
 
 .our-clients__row {
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        justify-content: initial;
+    }
 }
 
 .our-clients__left-col {
     width: 12rem;
     flex-shrink: 0;
-    margin-right: 3rem;
+    margin-right: 8rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        flex-shrink: 1;
+        margin-bottom: 7rem;
+    }
+}
+
+.our-clients__logos-list {
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 8.5rem;
+        grid-row-gap: 4rem;
+    }
 }
 
 .our-clients__logos-list-item {
     margin-bottom: 6rem;
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        &:nth-child(n + 5) {
+            display: none;
+        }
     }
 }
 
@@ -47,14 +92,25 @@
     padding-right: 10rem;
     display: flex;
     flex-direction: column;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        flex-shrink: 1;
+        padding: 0;
+    }
 }
 
 .our-clients__slider {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    
     .swiper-container {
         margin: 0;
+        margin-bottom: 2rem;
+        @include breakpoint(mobile) {
+            margin-bottom: 5rem;
+        }
     }
 }
 
@@ -62,16 +118,18 @@
     margin-top: auto;
     display: flex;
     align-items: center;
+
+   
 }
 
 .our-clients__slider-arrow {
     flex-shrink: 0;
     margin-right: 1.8rem;
-    transition: color .2s, opacity .2s;
+    transition: color 0.2s, opacity 0.2s;
 
     &.swiper-button-disabled {
         cursor: default;
-        opacity: .5;
+        opacity: 0.5;
     }
     &:last-child {
         margin-right: 0;
@@ -81,10 +139,37 @@
         height: 3rem;
         fill: currentColor;
         display: block;
+        @include breakpoint(small-tablet) {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 3rem;
+            height: 3rem;
+           
+        }
     }
 
     &:not(.swiper-button-disabled):hover {
         color: var(--primary-color);
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-right: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-right: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-right: 1.7rem;
     }
 }
 
@@ -106,9 +191,11 @@
         background-color: #202020;
         transform: scaleX(var(--slider-progress, 0));
     }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3.2rem;
+    }
 }
-
-
 
 .our-clients__card-quote {
     margin-bottom: 4rem;
@@ -128,6 +215,17 @@
         vertical-align: baseline;
         margin-right: 0.7rem;
         display: inline-block;
+        @include breakpoint(mobile) {
+            width: 2.9rem;
+            height: 2.4rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -148,6 +246,11 @@
         padding-bottom: 100%;
         display: block;
         width: 100%;
+    }
+
+    @include breakpoint(mobile) {
+        width: 5rem;
+        margin-right: 1.4rem;
     }
 }
 
@@ -170,10 +273,21 @@
     font-size: 2.4rem;
     line-height: 2.9rem;
     margin-bottom: 0.7rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-bottom: 0.5rem;
+    }
 }
 
 .our-clients__card-quote-author-role {
     color: #ababab;
     font-size: 2.4rem;
     line-height: 2.9rem;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
 }

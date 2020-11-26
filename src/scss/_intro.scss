@@ -14,12 +14,20 @@
     pointer-events: none;
     top: 100%;
     margin-top: -30rem;
+   
+    position: absolute;
     right: var(--content-padding);
-
     mask-image: url('../img/large-arrows-mask.svg');
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
+
+    @include breakpoint(mobile) {
+        width: 35rem;
+        height: 35rem;
+        margin-top: -12rem;
+        right: -1.6rem;
+    }
 }
 
 .intro__content {
@@ -29,6 +37,15 @@
     padding-top: var(--top-page-padding);
     padding-left: var(--inner-left-padding);
     padding-bottom: var(--bottom-offset);
+
+    @include breakpoint(small-tablet) {
+        min-height: 100rem;
+    }
+    @include breakpoint(mobile) {
+        min-height: auto;
+        padding-top: 22rem;
+        padding-bottom: 25rem;
+    }
 }
 
 .intro__main-heading {
@@ -37,6 +54,12 @@
     line-height: 102.9%;
     margin-top: 19rem;
     margin-bottom: 4rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-size: 6.4rem;
+        line-height: 7rem;
+        font-weight: 600;
+    }
 }
 
 .intro__association {
@@ -45,6 +68,10 @@
     align-self: flex-start;
     &:hover {
         color: var(--primary-color);
+    }
+
+    @include breakpoint(small-tablet) {
+        display: none;
     }
 }
 
@@ -55,7 +82,3 @@
     flex-shrink: 0;
 }
 
-.intro__arrows {
-    position: absolute;
-    right: var(--content-padding);
-}
