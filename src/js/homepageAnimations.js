@@ -18,29 +18,43 @@ export default function homepageAnimations() {
     const blogRightCol = document.querySelector('.blog__posts-right-col');
 
     if (!window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches && intro && portfolio) {
+
+       
+
+
         const introFadeTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: portfolio,
-                scrub: 1,
-                start: 'top bottom',
-                end: '+=50%'
+                scrub: false,
+                start: 'top bottom-=100px',
+                toggleActions: 'play none none reverse'
             }
         });
+
+        introFadeTimeline.timeScale(1.5);
 
         introFadeTimeline
             .to(
                 intro,
                 {
-                    duration: 2,
+                    duration: 1,
                     backgroundColor: DARK_BG,
                     color: '#ffffff'
                 },
                 0
             )
             .to(
+                '.intro__association',
+                {
+                    autoAlpha: 0,
+                    duration: 0.5
+                },
+                0
+            )
+            .to(
                 portfolio,
                 {
-                    duration: 2,
+                    duration: 1,
                     backgroundColor: DARK_BG,
                     color: '#ffffff'
                 },
@@ -50,7 +64,7 @@ export default function homepageAnimations() {
                 '.page-header',
                 {
                     '--page-header-text-color': '#ffffff',
-                    duration: 2
+                    duration: 1
                 },
                 0
             )
@@ -58,7 +72,7 @@ export default function homepageAnimations() {
                 'html',
                 {
                     '--logo-color': LOGO_ON_DARK,
-                    duration: 2
+                    duration: 1
                 },
                 0
             )
@@ -66,7 +80,7 @@ export default function homepageAnimations() {
                 'html',
                 {
                     '--progress-color': PROGRESS_ON_DARK,
-                    duration: 2
+                    duration: 1
                 },
                 0
             )
@@ -74,7 +88,7 @@ export default function homepageAnimations() {
                 'html',
                 {
                     '--progress-thumb-color': PROGRESS_THUMB_ON_DARK,
-                    duration: 2
+                    duration: 1
                 },
                 0
             )
@@ -82,7 +96,7 @@ export default function homepageAnimations() {
             .to(
                 'html',
                 {
-                    duration: 1,
+                    duration: 0.5,
                     '--social-color': '#ffffff'
                 },
                 0
@@ -197,9 +211,8 @@ export default function homepageAnimations() {
                             item.classList.add('active');
                             setActiveAlbumItem(itemIndex);
                         } else {
-                            setActiveAlbumItem(null)
+                            setActiveAlbumItem(null);
                         }
-                       
                     }
                 });
             });

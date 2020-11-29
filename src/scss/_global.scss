@@ -23,6 +23,7 @@
     --progress-thumb-color: #202020;
     --page-header-text-color: #202020;
     --social-color: #202020;
+  
 
     @include breakpoint(small-tablet) {
         --sidebar-width: 0;
@@ -33,6 +34,7 @@
         --content-padding: 2rem;
        
         --top-offset: 2.8rem;
+        --bottom-offset: 2.8rem;
     }
 }
 
@@ -44,19 +46,39 @@ html {
     @include noHighlight();
 
     @media screen and (min-width: 2048px) {
-        font-size: 11px;
-    }
-    @media screen and (min-width: 2560px) {
         font-size: 12px;
     }
-    @media screen and (min-width: 3200px) {
+    @media screen and (min-width: 2200px) {
         font-size: 14px;
     }
-    @media screen and (min-width: 3600px) {
+    @media screen and (min-width: 2560px) {
         font-size: 16px;
     }
-    @media screen and (min-width: 3840px) {
+    @media screen and (min-width: 2800px) {
         font-size: 18px;
+    }
+    @media screen and (min-width: 3000px) {
+        font-size: 20px;
+    }
+    @media screen and (min-width: 3200px) {
+        font-size: 22px;
+    }
+    @media screen and (min-width: 3600px) {
+        font-size: 24px;
+    }
+    @media screen and (min-width: 3800px) {
+        font-size: 26px;
+    }
+    @media screen and (min-width: 4096px) {
+        font-size: 28px;
+    }
+    @media screen and (min-width: 4500px) {
+        font-size: 32px;
+    }
+
+
+    @media screen and (max-width: 1800px) {
+        font-size: 9px;
     }
 
     @include breakpoint(large-desktop) {

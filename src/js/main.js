@@ -5,6 +5,7 @@ import commonAnimations from './commonAnimations';
 import clientsSlider from './clientsSlider';
 import blogFiltering from './blogFiltering';
 import anchorLinks from './anchorLinks';
+import clientsLogos from './clientsLogos';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     clientsSlider();
     blogFiltering();
     anchorLinks();
+    clientsLogos();
     $('.sidebar').midnight();
     $('.page-header').midnight();
 });

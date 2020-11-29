@@ -34,7 +34,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: var(--top-page-padding);
+    padding-top: var(--top-offset);
     padding-left: var(--inner-left-padding);
     padding-bottom: var(--bottom-offset);
 
@@ -42,9 +42,10 @@
         min-height: 100rem;
     }
     @include breakpoint(mobile) {
-        min-height: auto;
-        padding-top: 22rem;
-        padding-bottom: 25rem;
+        min-height: 100vh;
+        padding-bottom: 12rem;
+        // padding-top: 22rem;
+        // padding-bottom: 25rem;
     }
 }
 
@@ -55,10 +56,11 @@
     margin-top: 19rem;
     margin-bottom: 4rem;
     @include breakpoint(mobile) {
-        margin: 0;
+        margin: auto 0;
         font-size: 6.4rem;
         line-height: 7rem;
         font-weight: 600;
+        
     }
 }
 
@@ -82,3 +84,24 @@
     flex-shrink: 0;
 }
 
+
+.intro__agency-text {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-right: 2rem;
+
+    @include breakpoint(small-tablet) {
+        margin-top: 7rem;
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        margin-top: 5rem;
+        max-width: 12rem;
+    }
+}

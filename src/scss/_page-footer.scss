@@ -112,17 +112,20 @@
 
 .page-footer__write-us-main-content-text {
     position: relative;
+    margin-left: -.8rem;
+    white-space: nowrap;
     &::after {
         content: '';
         position: absolute;
         left: 0;
-        right: 0;
+        width: calc(100% - 1.8rem);
         top: 100%;
         height: 1px;
         background-color: rgba(white, 0.3);
         margin-top: 0.8rem;
         transition: transform 0.3s, background-color 0.3s;
         transform-origin: center top;
+        margin-left: 1rem;
         @include breakpoint(mobile) {
             display: none;
         }
@@ -132,6 +135,9 @@
     @include breakpoint(mobile) {
         display: inline;
         border-bottom: 1px solid rgba(white, 0.1);
+        white-space: initial;
+        margin-left: 0;
+      
     }
 }
 
@@ -249,7 +255,7 @@
     flex-direction: column;
     align-items: flex-start;
     grid-area: nav;
-    padding-top: 4rem;
+    padding-top: 6rem;
     @include breakpoint(small-tablet) {
         padding-top: 0;
         align-items: flex-end;

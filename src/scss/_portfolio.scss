@@ -88,10 +88,19 @@
         fill: currentColor;
         flex-shrink: 0;
         margin-left: 1.2rem;
+        transition: transform .2s;
     }
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    &:hover {
+        color: #D03838;
+
+        svg {
+            transform: translateX(.3rem);
+        }
     }
 
     @include breakpoint(mobile) {
@@ -270,7 +279,7 @@
     min-height: 20rem;
     color: white;
     border-bottom: 0.5rem solid #ababab;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, color .3s;
     svg {
         width: 2.8rem;
         height: 2.8rem;
@@ -287,7 +296,8 @@
     }
 
     &:hover {
-        border-color: white;
+        // border-color: white;
+        color: #ABABAB;
     }
 
     @include breakpoint(small-tablet) {
