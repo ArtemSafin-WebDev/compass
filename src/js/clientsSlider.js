@@ -34,7 +34,7 @@ export default function clientsSlider() {
 
         const setAutoplay = (index) => {
             const nextIndex = (index + 1 >= slider.slides.length) ? 0 : index + 1;
-            console.log("next index", nextIndex)
+            // console.log("next index", nextIndex)
             gsap.to(progress, {
                 '--slider-progress': 1,
                 duration: 10,

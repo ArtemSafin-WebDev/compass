@@ -13,15 +13,10 @@ export default function homepageAnimations() {
     const arrows = document.querySelector('#arrows');
 
     const portfolioIntro = document.querySelector('.portfolio__intro');
-    const ourClients = document.querySelector('#our-clients');
-    const blogLeftCol = document.querySelector('.blog__posts-left-col');
-    const blogRightCol = document.querySelector('.blog__posts-right-col');
+ 
+ 
 
     if (!window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches && intro && portfolio) {
-
-       
-
-
         const introFadeTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: portfolio,
@@ -72,35 +67,14 @@ export default function homepageAnimations() {
                 'html',
                 {
                     '--logo-color': LOGO_ON_DARK,
-                    duration: 1
-                },
-                0
-            )
-            .to(
-                'html',
-                {
                     '--progress-color': PROGRESS_ON_DARK,
-                    duration: 1
-                },
-                0
-            )
-            .to(
-                'html',
-                {
                     '--progress-thumb-color': PROGRESS_THUMB_ON_DARK,
+                    '--social-color': '#ffffff',
                     duration: 1
                 },
                 0
             )
-
-            .to(
-                'html',
-                {
-                    duration: 0.5,
-                    '--social-color': '#ffffff'
-                },
-                0
-            );
+           
     } else {
         portfolio.setAttribute('data-midnight', 'dark');
     }
@@ -147,40 +121,10 @@ export default function homepageAnimations() {
         if (index !== 0 && !index) {
             albumsBgLayer.classList.remove('shown');
             albumsBgItems.forEach(item => item.classList.remove('active'));
-            gsap.to('.page-header__scroll-progress', {
-                autoAlpha: 1,
-                duration: 0.2,
-                delay: 0.1
-            });
-
-            gsap.to(ourClients, {
-                autoAlpha: 1,
-                duration: 0.3
-            });
-
-            gsap.to('.page-header__social', {
-                autoAlpha: 1,
-                duration: 0.3
-            });
         } else {
             albumsBgItems.forEach(item => item.classList.remove('active'));
             albumsBgItems[index].classList.add('active');
             albumsBgLayer.classList.add('shown');
-            gsap.to('.page-header__scroll-progress', {
-                autoAlpha: 0,
-                duration: 0.2,
-                delay: 0.1
-            });
-
-            gsap.to(ourClients, {
-                autoAlpha: 0,
-                duration: 0.3
-            });
-
-            gsap.to('.page-header__social', {
-                autoAlpha: 0,
-                duration: 0.3
-            });
         }
     };
 
@@ -219,30 +163,5 @@ export default function homepageAnimations() {
         }
     }
 
-    if (!window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches) {
-        if (blogLeftCol) {
-            gsap.to(blogLeftCol, {
-                duration: 1,
-                y: -80,
-                scrollTrigger: {
-                    trigger: blogLeftCol,
-                    scrub: 1,
-                    start: 'top bottom',
-                    end: 'bottom bottom'
-                }
-            });
-        }
-        if (blogRightCol) {
-            gsap.to(blogRightCol, {
-                duration: 1,
-                y: 80,
-                scrollTrigger: {
-                    trigger: blogRightCol,
-                    scrub: 1,
-                    start: 'top bottom',
-                    end: 'bottom bottom'
-                }
-            });
-        }
-    }
+   
 }

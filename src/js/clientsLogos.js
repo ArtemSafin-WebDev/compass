@@ -35,7 +35,7 @@ export default function clientsLogos() {
                 : list.children.length
             : list.children.length;
 
-        console.log('Current range', range);
+        // console.log('Current range', range);
 
         const getRandomNumberInRange = max => {
             return Math.floor(Math.random() * Math.floor(max));
@@ -54,8 +54,8 @@ export default function clientsLogos() {
 
             newImage.src = newImageSrc;
 
-            console.log('New image element', newImage);
-            console.log('Appending to', listItem);
+            // console.log('New image element', newImage);
+            // console.log('Appending to', listItem);
 
             listItem.appendChild(newImage);
 

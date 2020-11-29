@@ -1,5 +1,8 @@
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 export default function blogFiltering() {
     const elements = Array.from(document.querySelectorAll('.js-blog-filtering'));
@@ -36,6 +39,10 @@ export default function blogFiltering() {
             });
 
             ScrollTrigger.refresh(true);
+            const stickyUpdateEvent = new CustomEvent('stickyupdate');
+            document.dispatchEvent(stickyUpdateEvent);
+
+            gsap.to(window, { duration: 0.6, scrollTo: '.blog__content' });
         };
 
         categoryLinks.forEach(link =>
