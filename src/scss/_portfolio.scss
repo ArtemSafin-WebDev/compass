@@ -132,7 +132,9 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
-
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    backface-visibility: hidden;
+    transform: translateZ(0);
     &.shown {
         opacity: 1;
         visibility: visible;

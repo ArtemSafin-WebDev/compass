@@ -42,7 +42,7 @@
         min-height: 100rem;
     }
     @include breakpoint(mobile) {
-        min-height: 100vh;
+        min-height: calc(100vh - 8rem);
         padding-bottom: 12rem;
         // padding-top: 22rem;
         // padding-bottom: 25rem;

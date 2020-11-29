@@ -161,6 +161,19 @@ export default function homepageAnimations() {
                 });
             });
         }
+
+
+        gsap.to('.portfolio__albums-backgrounds', {
+            duration: 1, 
+            clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0 0%)',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.portfolio__content',
+                start: 'bottom bottom',
+                scrub: true,
+                end: "+=100%"
+            }
+        })
     }
 
    
