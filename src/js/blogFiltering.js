@@ -42,7 +42,11 @@ export default function blogFiltering() {
             const stickyUpdateEvent = new CustomEvent('stickyupdate');
             document.dispatchEvent(stickyUpdateEvent);
 
-            gsap.to(window, { duration: 0.6, scrollTo: '.blog__content' });
+            if (!window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches) {
+                gsap.to(window, { duration: 0.6, scrollTo: '.blog__content' });
+            }
+
+          
         };
 
         categoryLinks.forEach(link =>

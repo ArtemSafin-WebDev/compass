@@ -15,26 +15,25 @@
     align-self: flex-start;
     margin-bottom: auto;
     color: var(--logo-color);
+
+    img,
+    svg {
+        width: 21rem;
+        height: auto;
+
+        max-width: 100%;
+
+        @include breakpoint(small-tablet) {
+            width: 30rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 12rem;
+        }
+    }
     &:link,
     &:visited {
         color: var(--logo-color);
-    }
-}
-
-.page-header__logo-image {
-    width: 21rem;
-    height: auto;
-   
-    max-width: 100%;
-
-    @include breakpoint(small-tablet) {
-        width: 30rem;
-        
-    }
-
-    @include breakpoint(mobile) {
-        width: 12rem;
-        
     }
 }
 
@@ -62,7 +61,6 @@
         flex-shrink: 1;
         width: 30%;
         flex-grow: 1;
-        
     }
 }
 
@@ -101,7 +99,6 @@
             transform: translateY(0.3rem);
         }
     }
-
 
     @include breakpoint(mobile) {
         margin: 0;

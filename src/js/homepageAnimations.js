@@ -2,7 +2,7 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DARK_BG, LOGO_ON_DARK, PROGRESS_ON_DARK, PROGRESS_ON_LIGHT, PROGRESS_THUMB_ON_DARK, PROGRESS_THUMB_ON_LIGHT, TEXT_COLOR } from './colors';
-import { SMALL_TABLET, TABLET } from './constants';
+import { SMALL_TABLET, TABLET, MOBILE } from './constants';
 import detectIt from 'detect-it';
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
@@ -154,26 +154,46 @@ export default function homepageAnimations() {
                         if (self.isActive) {
                             item.classList.add('active');
                             setActiveAlbumItem(itemIndex);
+                            if (window.matchMedia(`(max-width: ${MOBILE}px)`).matches) {
+                                gsap.to('.our-clients', {
+                                    autoAlpha: 0,
+                                    duration: 0.3
+                                })
+                            }
                         } else {
                             setActiveAlbumItem(null);
+                            if (window.matchMedia(`(max-width: ${MOBILE}px)`).matches) {
+                                gsap.to('.our-clients', {
+                                    autoAlpha: 1,
+                                    duration: 0.3
+                                })
+                            }
+                          
                         }
                     }
                 });
             });
+
+
+           
+        }
+        
+
+        if (!window.matchMedia(`(max-width: ${MOBILE}px)`).matches) {
+            gsap.to('.portfolio__albums-backgrounds', {
+                duration: 1, 
+                clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0 0%)',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.portfolio__content',
+                    start: 'bottom bottom',
+                    scrub: true,
+                    end: "+=100%"
+                }
+            })
         }
 
-
-        gsap.to('.portfolio__albums-backgrounds', {
-            duration: 1, 
-            clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0 0%)',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.portfolio__content',
-                start: 'bottom bottom',
-                scrub: true,
-                end: "+=100%"
-            }
-        })
+       
     }
 
    

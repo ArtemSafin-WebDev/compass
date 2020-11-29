@@ -1297,19 +1297,21 @@ select:-webkit-autofill:focus {
       align-self: flex-start;
   margin-bottom: auto;
   color: var(--logo-color); }
+  .page-header__logo-link img,
+  .page-header__logo-link svg {
+    width: 21rem;
+    height: auto;
+    max-width: 100%; }
+    @media only screen and (max-width: 968px) {
+      .page-header__logo-link img,
+      .page-header__logo-link svg {
+        width: 30rem; } }
+    @media only screen and (max-width: 640px) {
+      .page-header__logo-link img,
+      .page-header__logo-link svg {
+        width: 12rem; } }
   .page-header__logo-link:link, .page-header__logo-link:visited {
     color: var(--logo-color); }
-
-.page-header__logo-image {
-  width: 21rem;
-  height: auto;
-  max-width: 100%; }
-  @media only screen and (max-width: 968px) {
-    .page-header__logo-image {
-      width: 30rem; } }
-  @media only screen and (max-width: 640px) {
-    .page-header__logo-image {
-      width: 12rem; } }
 
 .page-header__row {
   padding-top: var(--top-offset);
