@@ -7,6 +7,7 @@ import blogFiltering from './blogFiltering';
 import anchorLinks from './anchorLinks';
 import clientsLogos from './clientsLogos';
 import blogAnimations from './blogAnimations';
+import menu from './menu';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     anchorLinks();
     clientsLogos();
     blogAnimations();
+    menu();
     $('.sidebar').midnight();
     $('.page-header').midnight();
 });

@@ -13,20 +13,18 @@ export default function homepageAnimations() {
     const arrows = document.querySelector('#arrows');
 
     const portfolioIntro = document.querySelector('.portfolio__intro');
- 
- 
 
     if (!window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches && intro && portfolio) {
         const introFadeTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: portfolio,
                 scrub: false,
-                start: 'top bottom-=100px',
+                start: 'top bottom-=30%',
                 toggleActions: 'play none none reverse'
             }
         });
 
-        introFadeTimeline.timeScale(1.5);
+        introFadeTimeline.timeScale(2.6);
 
         introFadeTimeline
             .to(
@@ -73,8 +71,7 @@ export default function homepageAnimations() {
                     duration: 1
                 },
                 0
-            )
-           
+            );
     } else {
         portfolio.setAttribute('data-midnight', 'dark');
     }
@@ -158,7 +155,7 @@ export default function homepageAnimations() {
                                 gsap.to('.our-clients', {
                                     autoAlpha: 0,
                                     duration: 0.3
-                                })
+                                });
                             }
                         } else {
                             setActiveAlbumItem(null);
@@ -166,35 +163,26 @@ export default function homepageAnimations() {
                                 gsap.to('.our-clients', {
                                     autoAlpha: 1,
                                     duration: 0.3
-                                })
+                                });
                             }
-                          
                         }
                     }
                 });
             });
-
-
-           
         }
-        
 
         if (!window.matchMedia(`(max-width: ${MOBILE}px)`).matches) {
             gsap.to('.portfolio__albums-backgrounds', {
-                duration: 1, 
+                duration: 1,
                 clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0 0%)',
                 ease: 'none',
                 scrollTrigger: {
                     trigger: '.portfolio__content',
                     start: 'bottom bottom',
                     scrub: true,
-                    end: "+=100%"
+                    end: '+=100%'
                 }
-            })
+            });
         }
-
-       
     }
-
-   
 }
