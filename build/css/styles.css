@@ -1062,7 +1062,8 @@ body {
           flex-direction: column;
   font-family: sans-serif;
   color: var(--dark);
-  font-family: var(--golos); }
+  font-family: var(--golos);
+  position: relative; }
 
 main {
   display: block; }
@@ -3003,7 +3004,9 @@ select:-webkit-autofill:focus {
   transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s;
   transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s, -webkit-transform 0.3s;
   -webkit-transform: translateY(-100%);
-          transform: translateY(-100%); }
+          transform: translateY(-100%);
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain; }
   @media only screen and (max-width: 968px) {
     .menu {
       -webkit-transform: none;
@@ -3600,3 +3603,39 @@ select:-webkit-autofill:focus {
       font-size: 1.6rem;
       line-height: 1.9rem;
       margin-right: 1.5rem; } }
+
+.custom-cursor {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  border: 2px solid #ff4545;
+  position: fixed;
+  z-index: 6000;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  -webkit-transition: border-width .3s, -webkit-transform .3s;
+  transition: border-width .3s, -webkit-transform .3s;
+  transition: transform .3s, border-width .3s;
+  transition: transform .3s, border-width .3s, -webkit-transform .3s; }
+  .custom-cursor::before {
+    content: '';
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #ff4545;
+    -webkit-transition: background-color 0.2s, -webkit-transform 0.3s;
+    transition: background-color 0.2s, -webkit-transform 0.3s;
+    transition: background-color 0.2s, transform 0.3s;
+    transition: background-color 0.2s, transform 0.3s, -webkit-transform 0.3s; }
+  .custom-cursor.expand {
+    -webkit-transform: translate(-50%, -50%) scale(0.7);
+            transform: translate(-50%, -50%) scale(0.7); }
+    .custom-cursor.expand::before {
+      -webkit-transform: translate(-50%, -50%) scale(2);
+              transform: translate(-50%, -50%) scale(2); }

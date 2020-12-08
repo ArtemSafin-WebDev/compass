@@ -22,7 +22,7 @@
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s;
     transform: translateY(-100%);
-
+    overscroll-behavior: contain;
     @include breakpoint(small-tablet) {
         transform: none;
         background-size: contain;

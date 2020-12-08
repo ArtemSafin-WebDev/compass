@@ -8,6 +8,7 @@ import anchorLinks from './anchorLinks';
 import clientsLogos from './clientsLogos';
 import blogAnimations from './blogAnimations';
 import menu from './menu';
+import customCursor from './customCursor';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     clientsLogos();
     blogAnimations();
     menu();
+    customCursor();
     $('.sidebar').midnight();
     $('.page-header').midnight();
 });

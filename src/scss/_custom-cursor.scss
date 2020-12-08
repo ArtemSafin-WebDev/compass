@@ -1,0 +1,34 @@
+.custom-cursor {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    border: 2px solid #ff4545;
+    position: fixed;
+    z-index: 6000;
+
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform .3s, border-width .3s;
+    &::before {
+        content: '';
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ff4545;
+        transition: background-color 0.2s, transform 0.3s;
+       
+    }
+
+
+    &.expand {
+        transform: translate(-50%, -50%) scale(0.7);
+        
+        &::before {
+            transform: translate(-50%, -50%) scale(2);
+        }
+    }
+}
