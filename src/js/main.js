@@ -11,6 +11,8 @@ import menu from './menu';
 
 
 document.addEventListener('DOMContentLoaded', function() {
+
+ 
     polyfills();
     detectTouch();
     commonAnimations();

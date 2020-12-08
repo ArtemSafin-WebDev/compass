@@ -273,6 +273,20 @@
     .page-header__social {
         color: #202020;
     }
+
+    .portfolio-catalog__nav-link {
+        color: #ababab;
+
+        &:link,
+        &:visited {
+            color: #ababab;
+        }
+
+        &.active,
+        &:hover {
+            color: #202020;
+        }
+    }
 }
 
 .page-header .midnightHeader.dark {
@@ -296,5 +310,19 @@
 
     .page-header__social {
         color: white;
+    }
+
+    .portfolio-catalog__nav-link {
+        color: rgba(white, 0.7);
+
+        &:link,
+        &:visited {
+            color: rgba(white, 0.7);
+        }
+
+        &.active,
+        &:hover {
+            color: white;
+        }
     }
 }

@@ -1,7 +1,5 @@
-  
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-
 
 export default function anchorLinks() {
     document.addEventListener('click', event => {
@@ -19,12 +17,22 @@ export default function anchorLinks() {
                         duration: 2,
                         scrollTo: {
                             y: elementToScroll,
-                            autoKill: true,
-                           
+                            autoKill: true
                         }
                     });
                 }
             }
+        }
+
+        if (event.target.closest('.js-scroll-top') || event.target.closest('.js-scroll-top')) {
+            event.preventDefault();
+            gsap.to(window, {
+                duration: 2,
+                scrollTo: {
+                    y: 0,
+                    autoKill: true
+                }
+            });
         }
     });
 }
