@@ -3164,7 +3164,8 @@ select:-webkit-autofill:focus {
           flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  position: relative; }
   @media only screen and (max-width: 968px) {
     .menu__nav {
       margin-bottom: 6rem; } }
@@ -3184,21 +3185,8 @@ select:-webkit-autofill:focus {
     margin-bottom: 0; }
   .menu__nav-link:link, .menu__nav-link:visited {
     color: rgba(255, 255, 255, 0.3); }
-  .menu__nav-link:hover, .menu__nav-link.active {
+  .menu__nav-link.active {
     color: white; }
-  .menu__nav-link.active::before {
-    content: '';
-    left: calc(-1 * var(--inner-left-padding) - 2px);
-    height: 1.7rem;
-    width: 2px;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); }
-    @media only screen and (max-width: 968px) {
-      .menu__nav-link.active::before {
-        display: none; } }
   @media only screen and (max-width: 968px) {
     .menu__nav-link {
       font-size: 5rem;
@@ -3209,6 +3197,18 @@ select:-webkit-autofill:focus {
       font-size: 2.6rem;
       line-height: 1.2;
       margin-bottom: 1rem; } }
+
+.menu__nav-link-pointer {
+  content: '';
+  left: calc(-1 * var(--inner-left-padding) - 2px);
+  height: 1.7rem;
+  width: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 0; }
+  @media only screen and (max-width: 968px) {
+    .menu__nav-link-pointer {
+      display: none; } }
 
 .menu__nav-link-text {
   display: block; }
@@ -3470,12 +3470,8 @@ select:-webkit-autofill:focus {
   .portfolio-catalog__card:link, .portfolio-catalog__card:visited {
     color: #202020; }
   .portfolio-catalog__card:hover .portfolio-catalog__card-image {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-    -webkit-transition: -webkit-transform 0.5s ease-out;
-    transition: -webkit-transform 0.5s ease-out;
-    transition: transform 0.5s ease-out;
-    transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
+    -webkit-transform: scale(1.3) rotate(10deg);
+            transform: scale(1.3) rotate(10deg); }
 
 .portfolio-catalog__card-image-container {
   position: relative;
@@ -3499,10 +3495,12 @@ select:-webkit-autofill:focus {
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: -webkit-transform 1s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: transform 1s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: transform 1s cubic-bezier(0.475, 0.425, 0, 0.995), -webkit-transform 1s cubic-bezier(0.475, 0.425, 0, 0.995);
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
