@@ -1,32 +1,73 @@
-
 import gsap from 'gsap';
 
 export default function customCursor() {
-    const cursor = document.createElement('div');
+    const cursorMain = document.createElement('div');
 
-    cursor.className = 'custom-cursor';
+    cursorMain.className = 'custom-cursor-main';
 
-    document.body.appendChild(cursor);
+    document.body.appendChild(cursorMain);
 
+    const cursorSecondary = document.createElement('div');
+
+    cursorSecondary.className = 'custom-cursor-secondary';
+
+    document.body.appendChild(cursorSecondary);
+    
+    let xmouse = 0, ymouse = 0, x = 0, y = 0, dx = 0, dy = 0, key = -1;
+
+    const delay = 0.125;
 
     document.addEventListener('mousemove', e => {
-        cursor.style.top = (e.pageY - scrollY) + 'px';
-        cursor.style.left = e.pageX + 'px';
-    })
+        xmouse = e.clientX || e.pageX;
+        ymouse = e.clientY || e.pageY - pageYOffset;
+        cursorMain.style.left = xmouse + 'px';
+        cursorMain.style.top = ymouse + 'px';
+    });
 
+    function followCursor() {
+        key = requestAnimationFrame(followCursor);
+        if (!x || !y) {
+            x = xmouse;
+            y = ymouse;
+        } else {
+            dx = (xmouse - x) * delay;
+            dy = (ymouse - y) * delay;
 
-    // document.addEventListener('click', () => {
-    //     cursor.classList.add('expand');
-    //     setTimeout(() => {
-    //         cursor.classList.remove('expand')
-    //     }, 300)
-    // })
+            if (Math.abs(dx) + Math.abs(dy) < 0.1) {
+                x = xmouse;
+                y = ymouse;
+            } else {
+                x += dx;
+                y += dy;
+            }
+        }
+
+        cursorSecondary.style.left = x + 'px';
+        cursorSecondary.style.top = y + 'px';
+    }
+
+    followCursor();
+
     document.addEventListener('mousedown', () => {
-        cursor.classList.add('expand');
-       
-    })
+        cursorSecondary.classList.add('expand');
+        cursorMain.classList.add('expand');
+    });
 
     document.addEventListener('mouseup', () => {
-        cursor.classList.remove('expand')
-    })
+        cursorSecondary.classList.remove('expand');
+        cursorMain.classList.remove('expand');
+    });
+
+    const interactiveElements = Array.from(document.querySelectorAll('a, button'));
+
+    interactiveElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            cursorMain.classList.add('interactive');
+            cursorSecondary.classList.add('interactive');
+        });
+        element.addEventListener('mouseleave', () => {
+            cursorMain.classList.remove('interactive');
+            cursorSecondary.classList.remove('interactive');
+        });
+    });
 }

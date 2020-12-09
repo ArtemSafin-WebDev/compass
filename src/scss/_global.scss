@@ -14,16 +14,15 @@
     --bottom-offset: 6rem;
     --top-page-padding: 11.2rem;
     --top-offset: 6rem;
-    --primary-color: #FF4545;
+    --primary-color: #ff4545;
     --golos: 'Golos', sans-serif;
     --roboto: 'Roboto', sans-serif;
     --dark: #202020;
-    --logo-color: #FF0000;
-    --progress-color: #E9E9E9;
+    --logo-color: #ff0000;
+    --progress-color: #e9e9e9;
     --progress-thumb-color: #202020;
     --page-header-text-color: #202020;
     --social-color: #202020;
-  
 
     @include breakpoint(small-tablet) {
         --sidebar-width: 0;
@@ -32,7 +31,7 @@
 
     @include breakpoint(mobile) {
         --content-padding: 2rem;
-       
+
         --top-offset: 2.8rem;
         --bottom-offset: 2.8rem;
     }
@@ -42,7 +41,7 @@ html {
     box-sizing: border-box;
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
-  
+   
     @include noHighlight();
 
     @media screen and (min-width: 2048px) {
@@ -76,7 +75,6 @@ html {
         font-size: 32px;
     }
 
-
     @media screen and (max-width: 1800px) {
         font-size: 9px;
     }
@@ -106,6 +104,10 @@ html {
     }
 }
 
+html * {
+    cursor: none;
+}
+
 body {
     min-width: 320px;
     font-size: 1.6rem;
@@ -117,7 +119,8 @@ body {
     color: var(--dark);
     font-family: var(--golos);
     position: relative;
-    // cursor: none !important;
+    cursor: none;
+    
 }
 
 main {
@@ -209,7 +212,7 @@ button {
 a {
     background-color: transparent;
     text-decoration: none;
-    transition: color .2s;
+    transition: color 0.2s;
     &:link,
     &:visited {
         color: inherit;
@@ -219,7 +222,7 @@ a {
 svg {
     flex-shrink: 0;
     fill: currentColor;
-    transition: fill .2s;
+    transition: fill 0.2s;
 }
 
 img {
@@ -247,7 +250,8 @@ th {
     font-weight: 400;
 }
 
-td, th {
+td,
+th {
     text-align: left;
     vertical-align: top;
 }
