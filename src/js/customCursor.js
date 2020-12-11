@@ -95,18 +95,18 @@ export default function customCursor() {
         cursorSlider.classList.remove('expand');
     });
 
-    const interactiveElements = Array.from(document.querySelectorAll('a:not([data-slider-card]), button:not([data-slider-card])'));
+    // const interactiveElements = Array.from(document.querySelectorAll('a:not([data-slider-card]), button:not([data-slider-card])'));
 
-    interactiveElements.forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            cursorMain.classList.add('interactive');
-            cursorSecondary.classList.add('interactive');
-        });
-        element.addEventListener('mouseleave', () => {
-            cursorMain.classList.remove('interactive');
-            cursorSecondary.classList.remove('interactive');
-        });
-    });
+    // interactiveElements.forEach(element => {
+    //     element.addEventListener('mouseenter', () => {
+    //         cursorMain.classList.add('interactive');
+    //         cursorSecondary.classList.add('interactive');
+    //     });
+    //     element.addEventListener('mouseleave', () => {
+    //         cursorMain.classList.remove('interactive');
+    //         cursorSecondary.classList.remove('interactive');
+    //     });
+    // });
 
     const sliderElements = Array.from(document.querySelectorAll('.swiper-container'));
 
@@ -128,17 +128,17 @@ export default function customCursor() {
         });
     });
 
-    // document.addEventListener('mouseover', event => {
-    //     if (event.target.matches('a, button') || event.target.closest('button') || event.target.closest('a')) {
-    //         cursorMain.classList.add('interactive');
-    //         cursorSecondary.classList.add('interactive');
-    //     } else {
-    //         console.log('Event target is not interactive', event.target);
-    //     }
-    // });
-    // document.addEventListener('mouseout', event => {
+    document.addEventListener('mouseover', event => {
+        if (event.target.matches('a, button') || event.target.closest('button') || event.target.closest('a')) {
+            cursorMain.classList.add('interactive');
+            cursorSecondary.classList.add('interactive');
+        } else {
+            console.log('Event target is not interactive', event.target);
+        }
+    });
+    document.addEventListener('mouseout', event => {
 
-    //     cursorMain.classList.remove('interactive');
-    //     cursorSecondary.classList.remove('interactive');
-    // });
+        cursorMain.classList.remove('interactive');
+        cursorSecondary.classList.remove('interactive');
+    });
 }

@@ -15,6 +15,7 @@ import mediaPlayer from './mediaPlayer';
 import { MOBILE, SMALL_TABLET } from './constants';
 
 document.addEventListener('DOMContentLoaded', function() {
+    customCursor();
     polyfills();
     detectTouch();
     commonAnimations();
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.sidebar').midnight();
         $('.page-header').midnight();
 
-        customCursor();
+        
     });
 
     document.addEventListener('lazyloaded', function(e){
