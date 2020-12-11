@@ -1,0 +1,233 @@
+.credits {
+    padding-left: var(--inner-left-padding);
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+    position: relative;
+    z-index: 1000;
+    background-color: #fff;
+
+    @include breakpoint(mobile) {
+        padding: 6rem 0;
+        z-index: 10;
+    }
+}
+
+.credits__row {
+    display: flex;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+}
+
+.credits__left-col {
+    width: 88.6rem;
+    margin-right: 3rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        display: contents;
+    }
+}
+
+.credits__right-col {
+    width: 27.4rem;
+    margin-left: auto;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        width: 100%;
+        display: contents;
+    }
+}
+
+.credits__short-info-items {
+    @include breakpoint(mobile) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 7rem;
+    }
+}
+
+.credits__short-info {
+    margin-bottom: 3rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-right: 2rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.credits__short-info-key {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.credits__short-info-key-value {
+    font-size: 2rem;
+    line-height: 2.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+}
+
+.credits__names-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column-gap: 3.2rem;
+    grid-row-gap: 3.2rem;
+    margin-bottom: 6.5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1.8rem;
+        margin-bottom: 7rem;
+    }
+}
+
+.credits__names-card-role {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #ababab;
+    margin-bottom: 0.9rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-bottom: 0.7rem;
+    }
+}
+
+.credits__names-card-title {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+}
+
+.credits__awards {
+    @include breakpoint(mobile) {
+        order: 3;
+    }
+}
+
+.credits__awards-heading {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+}
+
+.credits__awards-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-row-gap: 2.5rem;
+    grid-column-gap: 5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-row-gap: 3rem;
+        grid-column-gap: 4rem;
+    }
+}
+
+.credits__awards-card {
+    border-top: 1px solid #202020;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        transform-origin: center top;
+
+        top: -1px;
+        left: -2rem;
+        right: -2rem;
+        bottom: 0;
+        pointer-events: none;
+        background-color: #202020;
+        transition: transform 0.3s;
+        transform: scaleY(0);
+
+        @include breakpoint(mobile) {
+            left: -1rem;
+            right: -1rem;
+        }
+    }
+
+    &:hover {
+        color: white;
+        &::before {
+            transform: scaleY(1);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.2rem 0;
+    }
+}
+
+.credits__awards-card-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-bottom: 0.6rem;
+
+    svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        flex-shrink: 0;
+        margin-left: 0.7rem;
+        fill: #ff0000;
+
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 1rem;
+            margin-top: 0.2rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+    }
+}
+
+.credits__awards-card-role {
+    color: #ababab;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+}

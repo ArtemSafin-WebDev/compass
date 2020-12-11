@@ -4,7 +4,7 @@
     top: 0;
     pointer-events: none;
     width: 100%;
-    z-index: 1000;
+    z-index: 1200;
     color: var(--page-header-text-color);
 }
 
@@ -152,6 +152,10 @@
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    &:hover {
+        color: var(--primary-color-hover);
     }
 
     @include breakpoint(small-tablet) {

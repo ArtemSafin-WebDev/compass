@@ -12,8 +12,38 @@ export default function customCursor() {
     cursorSecondary.className = 'custom-cursor-secondary';
 
     document.body.appendChild(cursorSecondary);
+
+    const cursorSlider = document.createElement('div');
     
-    let xmouse = 0, ymouse = 0, x = 0, y = 0, dx = 0, dy = 0, key = -1;
+
+    cursorSlider.className = 'custom-cursor-slider';
+
+    cursorSlider.innerHTML = `
+        <svg width="14" height="14" aria-hidden="true" class="icon-cursor-arrow-left">
+            <use xlink:href="#cursor-arrow-left"></use>
+        </svg>
+        <span class="custom-cursor-slider__content">
+           
+        </span>
+        <svg width="14" height="14" aria-hidden="true" class="icon-cursor-plus">
+            <use xlink:href="#cursor-plus"></use>
+        </svg>
+        <svg width="14" height="14" aria-hidden="true" class="icon-cursor-arrow-right">
+            <use xlink:href="#cursor-arrow-right"></use>
+        </svg>
+    `;
+
+    document.body.appendChild(cursorSlider);
+
+    let sliderCursorEnabled = false;
+
+    let xmouse = 0,
+        ymouse = 0,
+        x = 0,
+        y = 0,
+        dx = 0,
+        dy = 0,
+        key = -1;
 
     const delay = 0.125;
 
@@ -22,10 +52,15 @@ export default function customCursor() {
         ymouse = e.clientY || e.pageY - pageYOffset;
         cursorMain.style.left = xmouse + 'px';
         cursorMain.style.top = ymouse + 'px';
+
+        if (!sliderCursorEnabled) return;
+        cursorSlider.style.left = xmouse + 'px';
+        cursorSlider.style.top = ymouse + 'px';
     });
 
     function followCursor() {
         key = requestAnimationFrame(followCursor);
+       
         if (!x || !y) {
             x = xmouse;
             y = ymouse;
@@ -51,14 +86,16 @@ export default function customCursor() {
     document.addEventListener('mousedown', () => {
         cursorSecondary.classList.add('expand');
         cursorMain.classList.add('expand');
+        cursorSlider.classList.add('expand');
     });
 
     document.addEventListener('mouseup', () => {
         cursorSecondary.classList.remove('expand');
         cursorMain.classList.remove('expand');
+        cursorSlider.classList.remove('expand');
     });
 
-    const interactiveElements = Array.from(document.querySelectorAll('a, button'));
+    const interactiveElements = Array.from(document.querySelectorAll('a:not([data-slider-card]), button:not([data-slider-card])'));
 
     interactiveElements.forEach(element => {
         element.addEventListener('mouseenter', () => {
@@ -70,4 +107,38 @@ export default function customCursor() {
             cursorSecondary.classList.remove('interactive');
         });
     });
+
+    const sliderElements = Array.from(document.querySelectorAll('.swiper-container'));
+
+    sliderElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            cursorSlider.classList.add('visible');
+            cursorMain.classList.add('hidden');
+            cursorSecondary.classList.add('hidden');
+
+            sliderCursorEnabled = true;
+        });
+
+        element.addEventListener('mouseleave', () => {
+            cursorSlider.classList.remove('visible');
+            cursorMain.classList.remove('hidden');
+            cursorSecondary.classList.remove('hidden');
+
+            sliderCursorEnabled = false;
+        });
+    });
+
+    // document.addEventListener('mouseover', event => {
+    //     if (event.target.matches('a, button') || event.target.closest('button') || event.target.closest('a')) {
+    //         cursorMain.classList.add('interactive');
+    //         cursorSecondary.classList.add('interactive');
+    //     } else {
+    //         console.log('Event target is not interactive', event.target);
+    //     }
+    // });
+    // document.addEventListener('mouseout', event => {
+
+    //     cursorMain.classList.remove('interactive');
+    //     cursorSecondary.classList.remove('interactive');
+    // });
 }

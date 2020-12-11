@@ -9,11 +9,12 @@ import clientsLogos from './clientsLogos';
 import blogAnimations from './blogAnimations';
 import menu from './menu';
 import customCursor from './customCursor';
-
+import imagesLoaded from 'imagesloaded';
+import caseSlider from './caseSlider';
+import mediaPlayer from './mediaPlayer';
+import { MOBILE, SMALL_TABLET } from './constants';
 
 document.addEventListener('DOMContentLoaded', function() {
-
- 
     polyfills();
     detectTouch();
     commonAnimations();
@@ -24,9 +25,34 @@ document.addEventListener('DOMContentLoaded', function() {
     clientsLogos();
     blogAnimations();
     menu();
-    customCursor();
-    $('.sidebar').midnight();
-    $('.page-header').midnight();
+    caseSlider();
+    mediaPlayer();
+   
+
+    const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
+
+    imgLoaded.on('always', () => {
+        console.log('ALWAYS - all images have been loaded');
+        if (window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches) {
+            const mobileMidnight = Array.from(document.querySelectorAll('[data-mobile-midnight]'));
+
+            mobileMidnight.forEach(item => {
+                item.setAttribute('data-midnight', item.getAttribute('data-mobile-midnight'))
+            })
+        }
+        
+
+        $('.sidebar').midnight();
+        $('.page-header').midnight();
+
+        customCursor();
+    });
+
+    document.addEventListener('lazyloaded', function(e){
+        console.log('Lazyloaded image', e.target)
+    });
+
+
 });
 
 window.addEventListener('load', function() {
