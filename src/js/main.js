@@ -13,6 +13,7 @@ import imagesLoaded from 'imagesloaded';
 import caseSlider from './caseSlider';
 import mediaPlayer from './mediaPlayer';
 import { MOBILE, SMALL_TABLET } from './constants';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 document.addEventListener('DOMContentLoaded', function() {
     customCursor();
@@ -51,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('lazyloaded', function(e){
         console.log('Lazyloaded image', e.target)
+
+        ScrollTrigger.refresh();
     });
 
 

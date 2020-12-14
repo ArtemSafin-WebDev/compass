@@ -2703,7 +2703,7 @@ select:-webkit-autofill:focus {
   display: grid;
   grid-template-columns: minmax(0, 37.6rem) 1fr minmax(0, var(--right-col-width));
   grid-column-gap: 3.2rem;
-  grid-template-rows: repeat(3, minmax(auto, 1fr));
+  grid-template-rows: repeat(3, auto);
   grid-template-areas: 'e up nav' 'btn btn btn' 'x copyright madeby'; }
   @media only screen and (max-width: 968px) {
     .page-footer__content {
@@ -2741,16 +2741,17 @@ select:-webkit-autofill:focus {
   .page-footer__write-us-btn:hover .page-footer__write-us-main-content svg {
     -webkit-transform: translateX(15%);
             transform: translateX(15%); }
-  .page-footer__write-us-btn:hover .page-footer__write-us-main-content-text::after {
-    background-color: white;
-    -webkit-transform: scaleY(3);
-            transform: scaleY(3); }
+  .page-footer__write-us-btn:hover .page-footer__write-us-main-content-text span {
+    border-color: white; }
 
 .page-footer__write-us-btn-interested {
   font-weight: 500;
   font-size: 4rem;
   line-height: 1;
   color: #ababab; }
+  .page-footer__write-us-btn-interested--case {
+    font-weight: 400;
+    margin-bottom: 3rem; }
   @media only screen and (max-width: 640px) {
     .page-footer__write-us-btn-interested {
       font-size: 2.8rem;
@@ -2800,30 +2801,22 @@ select:-webkit-autofill:focus {
       line-height: 7.2rem;
       display: inline;
       font-weight: 400; } }
+  @media only screen and (max-width: 640px) {
+    .page-footer__write-us-main-content--case {
+      font-size: 4rem;
+      line-height: 1.2; } }
 
 .page-footer__write-us-main-content-text {
   position: relative;
-  margin-left: -.8rem;
   white-space: nowrap; }
-  .page-footer__write-us-main-content-text::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: calc(100% - 1.8rem);
-    top: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.3);
-    margin-top: 0.8rem;
-    -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
-    transition: background-color 0.3s, -webkit-transform 0.3s;
-    transition: transform 0.3s, background-color 0.3s;
-    transition: transform 0.3s, background-color 0.3s, -webkit-transform 0.3s;
-    -webkit-transform-origin: center top;
-            transform-origin: center top;
-    margin-left: 1rem; }
-    @media only screen and (max-width: 640px) {
-      .page-footer__write-us-main-content-text::after {
-        display: none; } }
+  .page-footer__write-us-main-content-text span {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-transition: border-color .2s;
+    transition: border-color .2s; }
+  .page-footer__write-us-main-content-text--case {
+    font-weight: 400; }
+    .page-footer__write-us-main-content-text--case::after {
+      display: none; }
   @media only screen and (max-width: 640px) {
     .page-footer__write-us-main-content-text {
       display: inline;

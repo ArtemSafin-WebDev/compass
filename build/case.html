@@ -246,8 +246,8 @@
         <div class="case__content">
             <div class="case__content-image-block case__content-image-block--fullwidth-on-mobile">
                 <picture>
-                    <source srcset="img/case/1-mobile.jpg" media="(max-width: 640px)">
-                    <img src="img/case/1.jpg" alt="MDN">
+                    <source data-srcset="img/case/1-mobile.jpg" media="(max-width: 640px)">
+                    <img data-src="img/case/1.jpg" alt="MDN" class="lazyload" data-sizes="auto">
                 </picture>
             </div>
             <div class="case__content-text-block">
@@ -280,8 +280,8 @@
 
             <div class="case__content-image-block">
                 <picture>
-                    <source srcset="img/case/2-mobile.jpg" media="(max-width: 640px)">
-                    <img src="img/case/2.jpg" alt="MDN">
+                    <source data-srcset="img/case/2-mobile.jpg" media="(max-width: 640px)">
+                    <img data-src="img/case/2.jpg" alt="MDN" class="lazyload" data-sizes="auto">
                 </picture>
             </div>
             <div class="case__content-image-block case__content-image-block--fullwidth">
@@ -289,8 +289,8 @@
 
 
                 <picture>
-                    <source srcset="img/case/3-mobile.jpg" media="(max-width: 640px)">
-                    <img src="img/case/3.jpg" alt="MDN">
+                    <source data-srcset="img/case/3-mobile.jpg" media="(max-width: 640px)">
+                    <img data-src="img/case/3.jpg" alt="MDN" class="lazyload" data-sizes="auto">
                 </picture>
             </div>
 
@@ -311,12 +311,12 @@
 
             <div class="case__content-image-block case__content-image-block--asymmetrical">
                 <picture>
-                    <source srcset="img/case/4-mobile.jpg" media="(max-width: 640px)">
-                    <img src="img/case/4.jpg" alt="MDN">
+                    <source data-srcset="img/case/4-mobile.jpg" media="(max-width: 640px)">
+                    <img data-src="img/case/4.jpg" alt="MDN" class="lazyload" data-sizes="auto">
                 </picture>
                 <picture>
-                    <source srcset="img/case/5-mobile.jpg" media="(max-width: 640px)">
-                    <img src="img/case/5.jpg" alt="MDN">
+                    <source data-srcset="img/case/5-mobile.jpg" media="(max-width: 640px)">
+                    <img data-src="img/case/5.jpg" alt="MDN" class="lazyload" data-sizes="auto">
                 </picture>
             </div>
 
@@ -335,8 +335,8 @@
             </div>
 
             <div class="case__content-image-block case__content-image-block--symmetrical">
-                <img src="img/case/6.jpg" alt="">
-                <img src="img/case/7.jpg" alt="">
+                <img data-src="img/case/6.jpg" alt="" class="lazyload">
+                <img data-src="img/case/7.jpg" alt="" class="lazyload">
             </div>
 
             <div class="case__content-text-block">
@@ -356,8 +356,8 @@
 
             <div
                 class="case__content-image-block case__content-image-block--fullwidth case__content-image-block--symmetrical">
-                <img src="img/case/8.jpg" alt="">
-                <img src="img/case/9.jpg" alt="">
+                <img data-src="img/case/8.jpg" alt="" class="lazyload">
+                <img data-src="img/case/9.jpg" alt="" class="lazyload">
             </div>
 
 
@@ -368,24 +368,24 @@
                             <div class="swiper-slide">
                                 <a href="#" class="case__content-slider-card" data-slider-card>
                                     <div class="case__content-slider-card-image-container">
-                                        <img src="img/slider/1.jpg" alt=""
-                                            class="case__content-slider-card-image">
+                                        <img data-src="img/slider/1.jpg" alt=""
+                                            class="case__content-slider-card-image lazyload">
                                     </div>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="case__content-slider-card" data-slider-card>
                                     <div class="case__content-slider-card-image-container">
-                                        <img src="img/slider/2.jpg" alt=""
-                                            class="case__content-slider-card-image">
+                                        <img data-src="img/slider/2.jpg" alt=""
+                                            class="case__content-slider-card-image lazyload">
                                     </div>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="case__content-slider-card" data-slider-card>
                                     <div class="case__content-slider-card-image-container">
-                                        <img src="img/slider/3.jpg" alt=""
-                                            class="case__content-slider-card-image">
+                                        <img data-src="img/slider/3.jpg" alt=""
+                                            class="case__content-slider-card-image lazyload">
                                     </div>
                                 </a>
                             </div>
@@ -686,10 +686,10 @@
                         <a href="#" class="page-footer__nav-link">
                             Behance
                         </a>
-                       
-                       
+        
+        
                     </nav>
-                    
+        
                     <div class="page-footer__copyright">
                         © 2019 Compass Brand
                     </div>
@@ -697,17 +697,21 @@
                         Website by
                         <img src="img/markweber.svg" alt="" class="page-footer__madeby-image" width="80">
                     </a>
+        
                     <a href="#" class="page-footer__write-us-btn">
-                        <div class="page-footer__write-us-btn-interested">
-                            Заинтересовало?
+                        <div class="page-footer__write-us-btn-interested page-footer__write-us-btn-interested--case">
+                            Следующий проект
                         </div>
-                        <div class="page-footer__write-us-main-content">
-                            <div class="page-footer__write-us-main-content-text">
-                                Напишите нам</div><svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
-                                <use xlink:href="#arrow-right"></use>
-                            </svg>
+                        <div class="page-footer__write-us-main-content page-footer__write-us-main-content--case">
+                            <div class="page-footer__write-us-main-content-text page-footer__write-us-main-content-text--case">
+                                <span>
+                                    Музей Казанской<br> Иконы
+                            </div>
+                            </span>
+        
                         </div>
                     </a>
+        
                 </div>
             </div>
         </footer>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
