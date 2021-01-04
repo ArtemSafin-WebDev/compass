@@ -3,7 +3,7 @@
     padding-top: 15rem;
     padding-bottom: 10rem;
     position: relative;
-    z-index: 1000;
+   
     background-color: #fff;
 
     @include breakpoint(mobile) {
@@ -158,6 +158,7 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     position: relative;
+    z-index: 1;
     &::before {
         content: '';
         position: absolute;

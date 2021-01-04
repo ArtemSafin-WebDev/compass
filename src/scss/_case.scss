@@ -223,8 +223,8 @@
     &--fullwidth {
         margin-left: calc(-1 * (var(--inner-left-padding) + var(--sidebar-width)));
         width: calc(100vw - var(--content-padding) * 2);
-        position: relative;
-        z-index: 1000;
+        // position: relative;
+        // z-index: 1000;
 
         @include breakpoint(mobile) {
             margin-left: calc(-1 * var(--content-padding));
@@ -558,8 +558,8 @@
     margin-bottom: 12rem;
     position: relative;
     padding: 10rem 0;
-    color: white;
-    z-index: 1000;
+    
+   
     &::before {
         content: '';
         position: absolute;
@@ -570,7 +570,7 @@
         height: 100%;
         z-index: -1;
         pointer-events: none;
-        background: #202020;
+        background-color: #f9f9f9;
 
         @include breakpoint(mobile) {
             left: calc(-1 * var(--content-padding));
@@ -631,12 +631,9 @@
     align-items: baseline;
     font-size: 2rem;
     line-height: 2.4rem;
-    color: #ababab;
+  
     margin-right: 2rem;
-    &:link,
-    &:visited {
-        color: #ababab;
-    }
+   
     svg {
         width: 1.1rem;
         height: 1.1rem;
@@ -710,7 +707,7 @@
 }
 
 .case__content-quote-name {
-    color: #ffffff;
+ 
     margin-bottom: 0.6rem;
 }
 
