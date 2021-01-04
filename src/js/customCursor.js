@@ -45,7 +45,7 @@ export default function customCursor() {
         dy = 0,
         key = -1;
 
-    const delay = 0.125;
+    const delay = 0.18;
 
     document.addEventListener('mousemove', e => {
         xmouse = e.clientX || e.pageX;

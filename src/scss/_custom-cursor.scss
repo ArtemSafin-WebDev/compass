@@ -10,6 +10,7 @@
     background-color: #ff4545;
     transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
     pointer-events: none;
+    display: none;
     &.expand {
         transform: translate(-50%, -50%) scale(1.4);
     }
@@ -28,8 +29,8 @@
 
 
 .custom-cursor-secondary {
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 3.8rem;
+    height: 3.8rem;
     position: fixed;
     z-index: 6000;
     border-radius: 50%;

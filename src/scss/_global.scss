@@ -104,9 +104,9 @@ html {
     }
 }
 
-html * {
-    cursor: none;
-}
+// html * {
+//     cursor: none;
+// }
 
 body {
     min-width: 320px;
@@ -119,7 +119,7 @@ body {
     color: var(--dark);
     font-family: var(--golos);
     position: relative;
-    cursor: none;
+    // cursor: none;
     
 }
 

@@ -1048,9 +1048,6 @@ html {
     html {
       font-size: 10px; } }
 
-html * {
-  cursor: none; }
-
 body {
   min-width: 320px;
   font-size: 1.6rem;
@@ -1066,8 +1063,7 @@ body {
   font-family: sans-serif;
   color: var(--dark);
   font-family: var(--golos);
-  position: relative;
-  cursor: none; }
+  position: relative; }
 
 main {
   display: block; }
@@ -3615,7 +3611,8 @@ select:-webkit-autofill:focus {
   transition: background-color 0.3s, opacity 0.3s, -webkit-transform 0.3s;
   transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
   transition: background-color 0.3s, transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-  pointer-events: none; }
+  pointer-events: none;
+  display: none; }
   .custom-cursor-main.expand {
     -webkit-transform: translate(-50%, -50%) scale(1.4);
             transform: translate(-50%, -50%) scale(1.4); }
@@ -3625,8 +3622,8 @@ select:-webkit-autofill:focus {
     display: none; }
 
 .custom-cursor-secondary {
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 3.8rem;
+  height: 3.8rem;
   position: fixed;
   z-index: 6000;
   border-radius: 50%;
