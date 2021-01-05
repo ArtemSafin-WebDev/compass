@@ -36,14 +36,16 @@
     border-radius: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid #ff4545;
-    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s, height .3s, width .3s;
     pointer-events: none;
     &.expand {
-        transform: translate(-50%, -50%) scale(0.7);
+        width: 3.2rem;
+        height: 3.2rem;
     }
 
     &.interactive {
-        transform: translate(-50%, -50%) scale(2);
+        width: 6rem;
+        height: 6rem;
         opacity: 0;
     }
 

@@ -1,140 +1,35 @@
 .portfolio {
-    @include breakpoint(small-tablet) {
-        background-color: var(--dark);
-        color: white;
-    }
-}
-
-.portfolio__content {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 23rem;
-    padding-left: var(--inner-left-padding);
+    background-color: var(--dark);
+    color: white;
+    padding-top: 10rem;
     padding-bottom: var(--bottom-offset);
+    padding-left: var(--inner-left-padding);
     position: relative;
-    z-index: 5;
-
-    @include breakpoint(small-tablet) {
-        min-height: auto;
-    }
+    z-index: 1;
+    overflow: hidden;
+    top: -1px;
 
     @include breakpoint(mobile) {
-        padding-top: 15rem;
-        padding-bottom: 4rem;
+        padding-top: 4.5rem;
     }
 }
 
-.portfolio__intro {
-    max-width: 70rem;
-    margin-bottom: 10rem;
-
-    @include breakpoint(tablet) {
-        margin-bottom: 4rem;
-    }
-
-    @include breakpoint(small-tablet) {
-        min-height: auto;
-        max-width: 85rem;
-    }
-}
-
-.portfolio__intro-heading {
-    font-weight: 500;
-    font-size: 6rem;
-    line-height: 7.2rem;
-    margin-bottom: 4.5rem;
-
-    @include breakpoint(mobile) {
-        font-weight: 500;
-        font-size: 4rem;
-        line-height: 4.8rem;
-        margin-bottom: 3rem;
-    }
-}
-
-.portfolio__intro-text {
-    font-weight: 500;
-    font-size: 3rem;
-    line-height: 3.6rem;
-    margin-bottom: 4rem;
-    p {
-        margin-bottom: 1.5rem;
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    @include breakpoint(mobile) {
-        font-weight: 500;
-        font-size: 1.6rem;
-        line-height: 2.1rem;
-        margin-bottom: 3rem;
-    }
-}
-
-.portfolio__intro-link {
-    color: var(--primary-color);
-    font-weight: 500;
-    font-size: 3rem;
-    line-height: 3.6rem;
-    display: inline-flex;
-    align-items: baseline;
-    justify-content: center;
-
-    svg {
-        width: 2rem;
-        height: 2rem;
-        fill: currentColor;
-        flex-shrink: 0;
-        margin-left: 1.2rem;
-        transition: transform .2s;
-    }
-    &:link,
-    &:visited {
-        color: var(--primary-color);
-    }
-
-    &:hover {
-        color: #D03838;
-
-        svg {
-            transform: translateX(.3rem);
-        }
-    }
-
-    @include breakpoint(mobile) {
-        font-weight: 500;
-        font-size: 1.6rem;
-        line-height: 1.9rem;
-
-        svg {
-            width: 1.4rem;
-            height: 1.4rem;
-            margin-left: 0.8rem;
-            position: relative;
-            bottom: -0.2rem;
-        }
-    }
-}
-
-.portfolio__albums {
-    padding-top: 5rem;
-}
-
-.portfolio__albums-backgrounds {
-    position: fixed;
+.portfolio__albums-backgrounds-wrapper {
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
+}
+
+.portfolio__albums-backgrounds {
+    height: 100vh;
+
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    backface-visibility: hidden;
-    transform: translateZ(0);
+
     &.shown {
         opacity: 1;
         visibility: visible;
@@ -150,6 +45,33 @@
         background: rgba(black, 0.5);
         z-index: 40;
     }
+
+    @include breakpoint(tablet) {
+        height: 100%;
+    }
+
+
+    @include breakpoint(mobile) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0s linear 0.3s;
+      
+        backface-visibility: hidden;
+        transform: translateZ(0);
+    }
+}
+
+.portfolio__albums-backgrounds-wrapper-test-block {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100vh;
+    display: block;
 }
 
 .portfolio__albums-background-list,
@@ -181,15 +103,18 @@
 
 .portfolio__albums-heading {
     font-weight: 500;
-    font-size: 6rem;
-    line-height: 7.2rem;
-    margin-bottom: 6rem;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    margin-bottom: 10rem;
 
     @include breakpoint(mobile) {
         font-weight: 500;
-        font-size: 4rem;
-        line-height: 4.8rem;
+
         margin-bottom: 4.5rem;
+
+      
+        font-size: 2.8rem;
+        line-height: 1.2;
     }
 }
 
@@ -223,8 +148,8 @@
 
 .portfolio__albums-card-title {
     font-weight: 500;
-    font-size: 6.2rem;
-    line-height: 7.4rem;
+    font-size: 8rem;
+    line-height: 9.6rem;
     width: 50%;
     flex-grow: 1;
 
@@ -281,7 +206,7 @@
     min-height: 20rem;
     color: white;
     border-bottom: 0.5rem solid #ababab;
-    transition: border-color 0.3s, color .3s;
+    transition: border-color 0.3s, color 0.3s;
     svg {
         width: 2.8rem;
         height: 2.8rem;
@@ -299,7 +224,7 @@
 
     &:hover {
         // border-color: white;
-        color: #ABABAB;
+        color: var(--primary-color);
     }
 
     @include breakpoint(small-tablet) {

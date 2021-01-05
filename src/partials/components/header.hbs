@@ -10,6 +10,10 @@
                 <button class="page-header__burger-btn js-menu-open">
                     <span class="page-header__burger-btn-content"></span>
                 </button>
+
+                <a href="#" class="page-header__language-link">
+                    En
+                </a>
                 <a href="#" class="page-header__contact-link">
                     Связаться
 
@@ -58,8 +62,10 @@
                         <svg width="14" height="14" aria-hidden="true" class="icon-cross">
                             <use xlink:href="#cross"></use>
                         </svg>
+                        <span class="menu__close-content-text">
+                            Закрыть
+                        </span>
 
-                        Закрыть
                     </span>
 
                 </button>
@@ -67,7 +73,7 @@
 
             <div class="menu__inner-middle-row">
                 <nav class="menu__nav">
-                   
+
                     <a href="#" class="menu__nav-link">
                         <span class="menu__nav-link-text">
                             Главная
@@ -154,45 +160,45 @@
         </a>
 
         {{#if portfolioCatalog}}
-            <nav class="portfolio-catalog__nav portfolio-catalog__nav--sidebar">
-                <a href="#" class="portfolio-catalog__nav-link active">
-                    Все категории
-                </a>
-                <a href="#" class="portfolio-catalog__nav-link">
-                    Брендинг
-                </a>
-                <a href="#" class="portfolio-catalog__nav-link">
-                    Полиграфия
-                </a>
-                <a href="#" class="portfolio-catalog__nav-link">
-                    Разработка упаковки
-                </a>
-            </nav>
+        <nav class="portfolio-catalog__nav portfolio-catalog__nav--sidebar">
+            <a href="#" class="portfolio-catalog__nav-link active">
+                Все категории
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Брендинг
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Полиграфия
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Разработка упаковки
+            </a>
+        </nav>
         {{/if}}
         {{!-- {{#if casePage}}
-            <nav class="portfolio-catalog__nav portfolio-catalog__nav--sidebar">
-                <a href="#" class="portfolio-catalog__nav-link active">
-                    Приветствие
-                </a>
-                <a href="#" class="portfolio-catalog__nav-link">
-                    Задача
-                </a>
-                <a href="#" class="portfolio-catalog__nav-link">
-                    Проблематика
-                </a>
-                <a href="#" class="portfolio-catalog__nav-link">
-                    Цель
-                </a>
-                <a href="#" class="portfolio-catalog__nav-link">
-                    Исследования и аналитика
-                </a>
-                <a href="#" class="portfolio-catalog__nav-link">
-                    Аудитория
-                </a>
-                <a href="#" class="portfolio-catalog__nav-link">
-                    Решение
-                </a>
-            </nav>
+        <nav class="portfolio-catalog__nav portfolio-catalog__nav--sidebar">
+            <a href="#" class="portfolio-catalog__nav-link active">
+                Приветствие
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Задача
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Проблематика
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Цель
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Исследования и аналитика
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Аудитория
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Решение
+            </a>
+        </nav>
         {{/if}} --}}
 
         <div class="page-header__social">

@@ -23,8 +23,8 @@
 
         max-width: 100%;
 
-        @include breakpoint(small-tablet) {
-            width: 30rem;
+        @include breakpoint(tablet) {
+            width: 24rem;
         }
 
         @include breakpoint(mobile) {
@@ -57,10 +57,9 @@
     align-items: center;
 
     @include breakpoint(mobile) {
-        padding-top: 0.35rem;
+     
         flex-shrink: 1;
-        width: 30%;
-        flex-grow: 1;
+        width: auto;
     }
 }
 
@@ -86,11 +85,14 @@
 }
 
 .page-header__burger-btn {
-    margin-right: auto;
+   
     flex-shrink: 0;
     pointer-events: initial;
     backface-visibility: hidden;
     transform: translateZ(0);
+  
+    margin-right: 4.8rem;
+
     &:hover .page-header__burger-btn-content {
         &::before {
             transform: translateY(-0.3rem);
@@ -101,8 +103,7 @@
     }
 
     @include breakpoint(mobile) {
-        margin: 0;
-        margin-left: auto;
+        margin-right: 0;
     }
 }
 
@@ -147,8 +148,9 @@
     margin-left: 3rem;
     font-weight: 500;
     pointer-events: initial;
-    // padding: 2rem;
-    // margin: -2rem;
+   
+   
+    margin-left: auto;
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -158,10 +160,12 @@
         color: var(--primary-color-hover);
     }
 
-    @include breakpoint(small-tablet) {
+    @include breakpoint(tablet) {
         font-size: 2.4rem;
         line-height: 1.2;
     }
+
+    
 
     @include breakpoint(mobile) {
         display: none;
@@ -189,7 +193,7 @@
         transform: scaleY(var(--scroll-progress, 0));
     }
 
-    @include breakpoint(small-tablet) {
+    @include breakpoint(tablet) {
         display: none;
     }
 }
@@ -199,7 +203,7 @@
     width: 100%;
     margin-top: auto;
     color: var(--social-color);
-    @include breakpoint(small-tablet) {
+    @include breakpoint(tablet) {
         display: none;
     }
 }
@@ -218,6 +222,31 @@
     }
 }
 
+.page-header__language-link {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-weight: 500;
+    pointer-events: initial;
+    margin-right: 3rem;
+    flex-shrink: 0;
+    &:hover {
+        color: var(--primary-color);
+    }
+
+    @include breakpoint(tablet) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-right: 2rem;
+        order: -1;
+    }
+}
+
 .sidebar {
     position: fixed;
     left: 0;
@@ -232,7 +261,7 @@
     display: flex;
     flex-direction: column;
 
-    @include breakpoint(small-tablet) {
+    @include breakpoint(tablet) {
         bottom: auto;
         width: auto;
     }
@@ -248,7 +277,7 @@
     padding-left: var(--content-padding);
     padding-top: var(--top-offset);
     padding-bottom: var(--bottom-offset);
-    @include breakpoint(small-tablet) {
+    @include breakpoint(tablet) {
         padding-bottom: 0;
         height: auto;
     }

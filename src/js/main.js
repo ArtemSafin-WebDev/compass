@@ -1,6 +1,6 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
-import homepageAnimations from './homepageAnimations';
+// import homepageAnimations from './homepageAnimations';
 import commonAnimations from './commonAnimations';
 import clientsSlider from './clientsSlider';
 import blogFiltering from './blogFiltering';
@@ -12,15 +12,17 @@ import customCursor from './customCursor';
 import imagesLoaded from 'imagesloaded';
 import caseSlider from './caseSlider';
 import mediaPlayer from './mediaPlayer';
-import { MOBILE, SMALL_TABLET } from './constants';
+import { SMALL_TABLET } from './constants';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import newHomepageAnimations from './newHomepageAnimations';
+import bottomLinks from './bottomLinks';
 
 document.addEventListener('DOMContentLoaded', function() {
     customCursor();
     polyfills();
     detectTouch();
     commonAnimations();
-    homepageAnimations();
+    newHomepageAnimations();
     clientsSlider();
     blogFiltering();
     anchorLinks();
@@ -29,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     caseSlider();
     mediaPlayer();
+    bottomLinks();
    
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));

@@ -47,34 +47,39 @@
             </a>
 
             {{#if casePage}}
-            <a href="#" class="page-footer__write-us-btn">
-                <div class="page-footer__write-us-btn-interested page-footer__write-us-btn-interested--case">
+            <div class="page-footer__write-us">
+                <div class="page-footer__write-us-interested">
                     Следующий проект
                 </div>
-                <div class="page-footer__write-us-main-content page-footer__write-us-main-content--case">
-                    <div class="page-footer__write-us-main-content-text page-footer__write-us-main-content-text--case">
-                        <span>
-                            Музей Казанской<br> Иконы
-                    </div>
+                <a href="#" class="page-footer__write-us-btn">
+                    Музей Казанской<br> Иконы
+                    <span class="page-footer__write-us-btn-arrow">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-fillable-right-arrow">
+                            <use xlink:href="#fillable-right-arrow"></use>
+                        </svg>
                     </span>
-
-                </div>
-            </a>
+                </a>
+            </div>
             {{else}}
-            <a href="#" class="page-footer__write-us-btn">
-                <div class="page-footer__write-us-btn-interested">
+
+
+            <div class="page-footer__write-us">
+                <div class="page-footer__write-us-interested">
                     Заинтересовало?
                 </div>
-                <div class="page-footer__write-us-main-content">
-                    <div class="page-footer__write-us-main-content-text">
-                        <span>
-                            Напишите нам
-                        </span>
-                    </div><svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </div>
-            </a>
+                <a href="#" class="page-footer__write-us-btn">
+                    <span class="page-footer__write-us-btn-text">
+                        Напишите нам</span><span class="page-footer__write-us-btn-arrow">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-fillable-right-arrow">
+                            <use xlink:href="#fillable-right-arrow"></use>
+                        </svg>
+                    </span>
+
+
+                </a>
+            </div>
+
+
             {{/if}}
 
         </div>

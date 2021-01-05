@@ -81,24 +81,26 @@ export default function clientsLogos() {
             });
         };
 
-        let timer = setInterval(() => {
+        // setInterval(() => {
+        //     const randomNumber = getRandomNumberInRange(range);
+        //     replaceItem(randomNumber);
+        // }, 1500);
+
+
+
+
+        const replaceLogos = () => {
             const randomNumber = getRandomNumberInRange(range);
             replaceItem(randomNumber);
-        }, 1500);
 
-        document.addEventListener('visibilitychange', function() {
-            if (document.hidden) {
-                clearInterval(timer);
-            } else {
-                timer = setInterval(() => {
-                    const randomNumber = getRandomNumberInRange(range);
-                    replaceItem(randomNumber);
-                }, 1500);
-            }
-        });
+            gsap.delayedCall(1.5, () => {
+                replaceLogos();
+            })
+        }
 
-        window.addEventListener('pagehide', event => {
-            clearInterval(timer);
-        }, false);
+        gsap.delayedCall(1.5, () => {
+            replaceLogos();
+        })
+
     });
 }

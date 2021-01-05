@@ -3,7 +3,7 @@
     padding: 0 var(--content-padding);
     padding-left: calc(var(--content-padding) + var(--sidebar-width));
 
-    @include breakpoint(small-tablet) {
+    @include breakpoint(tablet) {
         padding: 0 var(--content-padding);
     }
 }

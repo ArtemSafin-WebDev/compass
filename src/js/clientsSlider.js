@@ -28,12 +28,11 @@ export default function clientsSlider() {
         if (window.matchMedia(`(max-width: ${MOBILE}px)`).matches) {
             slider.on('slideChange', () => {
                 ScrollTrigger.refresh(true);
-                
-            })
+            });
         }
 
-        const setAutoplay = (index) => {
-            const nextIndex = (index + 1 >= slider.slides.length) ? 0 : index + 1;
+        const setAutoplay = index => {
+            const nextIndex = index + 1 >= slider.slides.length ? 0 : index + 1;
             // console.log("next index", nextIndex)
             gsap.to(progress, {
                 '--slider-progress': 1,
@@ -44,29 +43,35 @@ export default function clientsSlider() {
                     slider.slideTo(nextIndex);
                     setAutoplay(nextIndex);
                 }
-            })
-        }
+            });
+        };
 
         const removeAutoplay = () => {
-            gsap.killTweensOf(progress)
+            gsap.killTweensOf(progress);
             gsap.to(progress, {
                 '--slider-progress': 0,
                 duration: 0.4
-            })
-          
-        }
-
+            });
+        };
 
         setAutoplay(0);
 
-        [slider.navigation.nextEl, slider.navigation.prevEl].forEach(nav => {
-            nav.addEventListener('click', () => {
-                removeAutoplay();
-            })
+        slider.on('slideChange', swiper => {
+            gsap.killTweensOf(progress);
+            gsap.set(progress, {
+                '--slider-progress': 0
+            });
+            setAutoplay(swiper.realIndex);
         });
 
-        slider.on('sliderMove', () => {
-            removeAutoplay();
-        })
+        // [slider.navigation.nextEl, slider.navigation.prevEl].forEach(nav => {
+        //     nav.addEventListener('click', () => {
+        //         removeAutoplay();
+        //     })
+        // });
+
+        // slider.on('sliderMove', () => {
+        //     removeAutoplay();
+        // })
     });
 }

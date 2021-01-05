@@ -1,4 +1,6 @@
-import { lockScroll, unlockScroll } from './scrollBlocker';
+// import { lockScroll, unlockScroll } from './scrollBlocker';
+
+import { enableBodyScroll, disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import gsap from 'gsap';
 import { SMALL_TABLET } from './constants';
 import { debounce } from 'lodash';
@@ -14,7 +16,10 @@ export default function menu() {
         const menuNav = document.querySelector('.menu__nav');
 
         const openMenu = () => {
-            lockScroll(menu);
+            // lockScroll(menu);
+            disableBodyScroll(menu, {
+                reserveScrollBarGap: true,
+            });
             document.body.classList.add('menu-shown');
             menuIsOpen = true;
 
@@ -62,7 +67,8 @@ export default function menu() {
         };
 
         const closeMenu = () => {
-            unlockScroll();
+            // unlockScroll();
+            clearAllBodyScrollLocks();
             document.body.classList.remove('menu-shown');
             menuIsOpen = false;
         };
@@ -123,9 +129,12 @@ export default function menu() {
                 }
             });
 
-            window.addEventListener('resize', debounce(() => {
-                setActiveLink(activeIndex);
-            }, 200));
+            window.addEventListener(
+                'resize',
+                debounce(() => {
+                    setActiveLink(activeIndex);
+                }, 200)
+            );
         }
 
         document.addEventListener('click', event => {

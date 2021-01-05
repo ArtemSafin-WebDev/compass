@@ -15,6 +15,7 @@
     --top-page-padding: 11.2rem;
     --top-offset: 6rem;
     --primary-color: #ff4545;
+ 
     --golos: 'Golos', sans-serif;
     --roboto: 'Roboto', sans-serif;
     --dark: #202020;
@@ -24,7 +25,7 @@
     --page-header-text-color: #202020;
     --social-color: #202020;
 
-    @include breakpoint(small-tablet) {
+    @include breakpoint(tablet) {
         --sidebar-width: 0;
         --inner-left-padding: 0;
     }
@@ -79,9 +80,7 @@ html {
         font-size: 9px;
     }
 
-    @include breakpoint(large-desktop) {
-        font-size: 9px;
-    }
+   
 
     @include breakpoint(desktop) {
         font-size: 8px;
@@ -92,7 +91,7 @@ html {
     }
 
     @include breakpoint(tablet) {
-        font-size: 7px;
+        font-size: 8px;
     }
 
     @include breakpoint(small-tablet) {
