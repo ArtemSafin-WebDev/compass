@@ -50,9 +50,9 @@
 .case__main-heading {
     font-size: 12rem;
     line-height: 14rem;
-    margin-top: 15rem;
-    margin-bottom: 3.8rem;
-    font-weight: 400;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+    font-weight: 500;
 
     @include breakpoint(mobile) {
         font-size: 6rem;
@@ -66,38 +66,36 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    margin-bottom: 18rem;
+    margin-bottom: 6.8rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 12rem;
+        margin-bottom: 5rem;
     }
 }
 
-.case__tag {
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    flex-shrink: 0;
-    white-space: nowrap;
+
+.case__tags-list-item {
     margin-right: 2rem;
-    margin-bottom: 19rem;
+    margin-bottom: 2rem;
     &:last-child {
         margin-right: 0;
     }
 
-    &::before {
-        content: '#';
-        color: #ababab;
-        margin-right: 0.1rem;
-        flex-shrink: 0;
-        font-size: 1.6rem;
-        line-height: 1.9rem;
-        transition: color 0.2s;
 
-        @include breakpoint(mobile) {
-            font-size: 1.2rem;
-            line-height: 1.4rem;
-        }
+    @include breakpoint(mobile) {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
     }
+}
+
+.case__tag {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+   
+    border-bottom: 1px solid currentColor;
+   
 
     &:link,
     &:visited {
@@ -112,10 +110,10 @@
     }
 
     @include breakpoint(mobile) {
-        font-size: 1.2rem;
-        line-height: 1.4rem;
+        font-size: 1.6rem;
+        line-height: 1.2;
         margin-right: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -130,7 +128,7 @@
 }
 
 .case__nav-link {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.4rem;
     margin-right: 2rem;
     color: #ababab;
@@ -209,10 +207,10 @@
 }
 
 .case__content-image-block {
-    margin-bottom: 12rem;
+    margin-bottom: 9rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
     }
     img {
         display: block;
@@ -231,8 +229,6 @@
             width: 100vw;
             z-index: 10;
         }
-
-       
     }
 
     &--fullwidth-on-mobile {
@@ -283,11 +279,11 @@
     z-index: 1000;
     padding: 12rem 0;
     color: white;
-    margin-bottom: 12rem;
+    margin-bottom: 9rem;
 
     @include breakpoint(mobile) {
         margin: 0;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
         z-index: 10;
         padding-top: 6.3rem;
         padding-bottom: 9.5rem;
@@ -341,7 +337,7 @@
 }
 
 .case__content-soundtrack {
-    margin-bottom: 12rem;
+    margin-bottom:  9rem;
     background: #202020;
     color: white;
     padding: 4.4rem 5rem;
@@ -349,7 +345,7 @@
     --plyr-color-main: #ff4545;
     --plyr-audio-controls-background: transparent;
     --plyr-audio-control-color: white;
-   
+
     .case__content-soundtrack-heading {
         font-size: 3rem;
         line-height: 3.6rem;
@@ -363,13 +359,12 @@
         }
     }
 
-
     @include breakpoint(mobile) {
         padding: 3rem 0;
         background: transparent;
         position: relative;
         z-index: 1;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
 
         .plyr__controls {
             padding: 0;
@@ -393,7 +388,6 @@
     line-height: 3.5rem;
     margin-bottom: 8rem;
 
-
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         line-height: 2.7rem;
@@ -406,16 +400,15 @@
     width: calc(100vw - var(--content-padding) * 2);
     position: relative;
     z-index: 1000;
-    margin-bottom: 12rem;
+    margin-bottom: 9rem;
 
     --plyr-color-main: #ff4545;
     --plyr-audio-controls-background: transparent;
     --plyr-audio-control-color: white;
-   
 
     @include breakpoint(mobile) {
         z-index: 10;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
         margin-left: calc(-1 * var(--content-padding));
         width: 100vw;
     }
@@ -429,7 +422,6 @@
     .swiper-container {
         overflow: visible;
     }
-
 
     @include breakpoint(mobile) {
         max-width: none;
@@ -447,8 +439,6 @@
     top: 100%;
     margin-top: 3.4rem;
     z-index: 100;
-
-
 
     &::before {
         content: '';
@@ -555,11 +545,10 @@
 }
 
 .case__content-quote {
-    margin-bottom: 12rem;
+    margin-bottom: 9rem;
     position: relative;
-    padding: 10rem 0;
-    
-   
+    padding: 9rem 0;
+
     &::before {
         content: '';
         position: absolute;
@@ -580,13 +569,13 @@
 
     @include breakpoint(mobile) {
         z-index: 10;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
         padding: 4rem 0;
     }
 }
 
 .case__content-quote-text {
-    margin-bottom: 20rem;
+    margin-bottom: 18rem;
     font-size: 6rem;
     line-height: 7.9rem;
 
@@ -607,7 +596,6 @@
             height: 2.4rem;
         }
     }
-
 
     @include breakpoint(mobile) {
         margin-bottom: 6rem;
@@ -631,9 +619,9 @@
     align-items: baseline;
     font-size: 2rem;
     line-height: 2.4rem;
-  
+
     margin-right: 2rem;
-   
+
     svg {
         width: 1.1rem;
         height: 1.1rem;
@@ -645,7 +633,6 @@
     &:hover {
         color: var(--primary-color);
     }
-
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
@@ -661,7 +648,6 @@
     width: 75rem;
     margin-left: auto;
 
-
     @include breakpoint(mobile) {
         width: 100%;
         margin: 0;
@@ -676,7 +662,6 @@
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-
 
     @include breakpoint(mobile) {
         width: 6rem;
@@ -707,10 +692,21 @@
 }
 
 .case__content-quote-name {
- 
     margin-bottom: 0.6rem;
 }
 
 .case__content-quote-role {
     color: #ababab;
+}
+
+.case__content-leading-text {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    margin-bottom: 7rem;
+    max-width: 88.6rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+        font-size: 2rem;
+        line-height: 1.3;
+    }
 }
