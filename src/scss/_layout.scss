@@ -20,3 +20,36 @@
     display: flex;
     flex-direction: column;
 }
+
+
+.mobile-contact-link {
+    position: fixed;
+    right: var(--content-padding);
+    bottom: 8rem;
+    z-index: 90;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    background: #FF0000;
+    transition: color .2s, background-color .2s;
+    padding: 1.1rem 1.3rem;
+    border-radius: 6rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        background-color: white;
+        color: #FF0000;
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}

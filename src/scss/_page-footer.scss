@@ -56,7 +56,7 @@
     font-size: 4rem;
     line-height: 1;
     color: #ababab;
-
+    margin-bottom: 1rem;
  
     @include breakpoint(tablet) {
         margin-bottom: 2rem;
@@ -111,20 +111,20 @@
 
 .page-footer__write-us-btn-arrow {
     flex-shrink: 0;
-    margin-left: 5rem;
+    margin-left: 3rem;
     color: transparent;
     display: inline-block;
     vertical-align: middle;
     @include breakpoint(tablet) {
-        margin-left: 4rem;
+        margin-left: 3rem;
     }
 
     @include breakpoint(mobile) {
         margin-left: 2rem;
     }
     svg {
-        width: 18rem;
-        height: 18rem;
+        width: 14rem;
+        height: 14rem;
         flex-shrink: 0;
         display: block;
      
