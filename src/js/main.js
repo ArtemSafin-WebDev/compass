@@ -16,6 +16,9 @@ import { SMALL_TABLET } from './constants';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import newHomepageAnimations from './newHomepageAnimations';
 import bottomLinks from './bottomLinks';
+import validation from './validation';
+import phoneMask from './phoneMask';
+import fileUpload from './fileUpload';
 
 document.addEventListener('DOMContentLoaded', function() {
     customCursor();
@@ -32,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
     caseSlider();
     mediaPlayer();
     bottomLinks();
+    phoneMask();
+    validation();
+    fileUpload();
+
    
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));

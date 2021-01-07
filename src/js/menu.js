@@ -9,6 +9,12 @@ export default function menu() {
     const menu = document.querySelector('.menu');
     const menuItems = Array.from(document.querySelectorAll('.menu__nav-link-text'));
 
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    document.documentElement.style.setProperty('--sb-width', scrollbarWidth + "px");
+
+    console.log('Scrollbar width', scrollbarWidth)
+
     if (menu) {
         let menuIsOpen = false;
         const menuNavLinks = Array.from(document.querySelectorAll('.menu__nav-link'));

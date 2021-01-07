@@ -148,9 +148,10 @@
     margin-left: 3rem;
     font-weight: 500;
     pointer-events: initial;
-   
-   
+    
     margin-left: auto;
+   
+   
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -161,7 +162,7 @@
     }
 
     @include breakpoint(tablet) {
-        font-size: 2.4rem;
+        font-size: 2rem;
         line-height: 1.2;
     }
 
@@ -234,7 +235,7 @@
     }
 
     @include breakpoint(tablet) {
-        font-size: 2.4rem;
+        font-size: 2rem;
         line-height: 1.2;
     }
 

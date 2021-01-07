@@ -28,6 +28,7 @@
     "lodash": "^4.17.20",
     "moment": "^2.24.0",
     "object-fit-images": "^3.2.4",
+    "parsleyjs": "^2.9.2",
     "picturefill": "^3.0.3",
     "plyr": "^3.6.3",
     "sticky-sidebar": "^3.3.1",

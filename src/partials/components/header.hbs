@@ -14,7 +14,7 @@
                 <a href="#" class="page-header__language-link">
                     En
                 </a>
-                <a href="#" class="page-header__contact-link">
+                <a href="contact-us.html" class="page-header__contact-link">
                     Связаться
 
                 </a>
@@ -137,9 +137,14 @@
     </div>
 </div>
 
-<a href="#" class="mobile-contact-link">
+
+
+{{#unless noContactBtn}}
+<a href="contact-us.html" class="mobile-contact-link">
     Связаться
 </a>
+{{/unless}}
+
 
 <div class="sidebar">
     <div class="sidebar__inner">

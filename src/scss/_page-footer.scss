@@ -25,9 +25,6 @@
         grid-template-areas: 'up nav' 'btn btn' 'copyright madeby';
     }
 
-
-    
-
     @include breakpoint(mobile) {
         min-height: 66.7rem;
         min-height: 100vh;
@@ -41,15 +38,9 @@
     }
 }
 
-
 .page-footer__write-us {
     grid-area: btn;
 }
-
-
-
-
-
 
 .page-footer__write-us-interested {
     font-weight: 500;
@@ -57,7 +48,7 @@
     line-height: 1;
     color: #ababab;
     margin-bottom: 1rem;
- 
+
     @include breakpoint(tablet) {
         margin-bottom: 2rem;
         font-weight: 400;
@@ -66,11 +57,8 @@
     @include breakpoint(mobile) {
         font-size: 2.8rem;
         line-height: 3.4rem;
-      
     }
 }
-
-
 
 .page-footer__write-us-btn {
     vertical-align: middle;
@@ -79,7 +67,7 @@
     font-size: 12rem;
     line-height: 1;
     color: white;
-    transition: all .2s;
+    transition: all 0.2s;
 
     @include breakpointMF(laptop) {
         -webkit-text-stroke-width: 1px;
@@ -87,26 +75,21 @@
         -webkit-text-stroke-color: white;
     }
 
-
     @include breakpoint(tablet) {
         font-size: 10rem;
         font-weight: 400;
     }
 
-
     @include breakpoint(mobile) {
         font-size: 6rem;
         line-height: 7.2rem;
-        
     }
-
 }
 
 .page-footer__write-us-btn-text {
     @include breakpoint(tablet) {
-        border-bottom: 1px solid rgba(white, .1);
+        border-bottom: 1px solid rgba(white, 0.1);
     }
-   
 }
 
 .page-footer__write-us-btn-arrow {
@@ -127,38 +110,26 @@
         height: 14rem;
         flex-shrink: 0;
         display: block;
-     
+
         transition: none;
         position: relative;
-        
-
 
         @include breakpoint(tablet) {
-            color:  var(--primary-color);
+            color: var(--primary-color);
             width: 14rem;
             height: 14rem;
         }
 
-
         @include breakpoint(mobile) {
             width: 4.5rem;
             height: 4.5rem;
-            
         }
     }
 }
 
-
 .page-footer__copyright {
     grid-area: copyright;
     align-self: flex-end;
-
-
-    @include breakpoint(tablet) {
-        font-size: 2.2rem;
-        line-height: 1.2;
-    }
-   
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -190,14 +161,14 @@
         color: white;
     }
 
-
     @include breakpoint(tablet) {
         justify-self: flex-end;
-        font-size: 2rem;
-        line-height: 1.2;
     }
 
-  
+    @include breakpoint(small-tablet) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -219,10 +190,9 @@
     position: relative;
     bottom: -0.85rem;
 
-    @include breakpoint(tablet) {
-        width: 11rem;
-        bottom: -1.2rem;
-        margin-left: .8rem;
+    @include breakpoint(small-tablet) {
+        width: 9rem;
+        bottom: -.9rem;
     }
 
     @include breakpoint(mobile) {
@@ -251,13 +221,13 @@
     }
 
     @include breakpoint(tablet) {
-        font-size: 2.2rem;
+        font-size: 2rem;
         line-height: 1.2;
         font-weight: 400;
         svg {
             width: 1.8rem;
             height: 1.8rem;
-            bottom: -.2rem;
+            bottom: -0.2rem;
         }
     }
 
@@ -293,7 +263,7 @@
     }
 
     @include breakpoint(tablet) {
-        font-size: 2.2rem;
+        font-size: 2rem;
         line-height: 1.2;
         margin-bottom: 1.6rem;
     }
@@ -303,8 +273,6 @@
         line-height: 1.4rem;
     }
 }
-
-
 
 .page-footer__nav-social {
     display: none;

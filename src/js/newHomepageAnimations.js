@@ -9,61 +9,63 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 export default function newHomepageAnimations() {
     ScrollTrigger.matchMedia({
         '(min-width: 641px)': () => {
-            const portfolioFadeTimeline = gsap.timeline({
-                scrollTrigger: {
-                    trigger: '.portfolio-intro',
-                    start: 'bottom bottom+=100px',
-                    toggleActions: 'play none none reverse'
-                }
-            });
+            if (document.querySelector('.portfolio-intro')) {
+                const portfolioFadeTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '.portfolio-intro',
+                        start: 'bottom bottom+=100px',
+                        toggleActions: 'play none none reverse'
+                    }
+                });
 
-            portfolioFadeTimeline
-                .to(
-                    '.intro',
-                    {
-                        duration: 0.3,
-                        backgroundColor: DARK_BG,
-                        color: '#ffffff'
-                    },
-                    0
-                )
-                .to(
-                    '.portfolio-intro',
-                    {
-                        duration: 0.3,
-                        backgroundColor: DARK_BG,
-                        color: '#ffffff'
-                    },
-                    0
-                )
-                .to(
-                    '.page-header',
-                    {
-                        '--page-header-text-color': '#ffffff',
-                        duration: 0.3
-                    },
-                    0
-                )
-                .to(
-                    '.intro__arrows',
-                    {
-                        '--arrows-gradient-first-color': 'rgba(32, 32, 32, 0)',
-                        '--arrows-gradient-second-color': 'rgba(32, 32, 32, 0.8)',
-                        duration: 0.3
-                    },
-                    0
-                )
-                .to(
-                    'html',
-                    {
-                        '--logo-color': LOGO_ON_DARK,
-                        '--progress-color': PROGRESS_ON_DARK,
-                        '--progress-thumb-color': PROGRESS_THUMB_ON_DARK,
-                        '--social-color': '#ffffff',
-                        duration: 0.3
-                    },
-                    0
-                );
+                portfolioFadeTimeline
+                    .to(
+                        '.intro',
+                        {
+                            duration: 0.3,
+                            backgroundColor: DARK_BG,
+                            color: '#ffffff'
+                        },
+                        0
+                    )
+                    .to(
+                        '.portfolio-intro',
+                        {
+                            duration: 0.3,
+                            backgroundColor: DARK_BG,
+                            color: '#ffffff'
+                        },
+                        0
+                    )
+                    .to(
+                        '.page-header',
+                        {
+                            '--page-header-text-color': '#ffffff',
+                            duration: 0.3
+                        },
+                        0
+                    )
+                    .to(
+                        '.intro__arrows',
+                        {
+                            '--arrows-gradient-first-color': 'rgba(32, 32, 32, 0)',
+                            '--arrows-gradient-second-color': 'rgba(32, 32, 32, 0.8)',
+                            duration: 0.3
+                        },
+                        0
+                    )
+                    .to(
+                        'html',
+                        {
+                            '--logo-color': LOGO_ON_DARK,
+                            '--progress-color': PROGRESS_ON_DARK,
+                            '--progress-thumb-color': PROGRESS_THUMB_ON_DARK,
+                            '--social-color': '#ffffff',
+                            duration: 0.3
+                        },
+                        0
+                    );
+            }
         },
         '(min-width: 1025px)': () => {
             ScrollTrigger.create({
