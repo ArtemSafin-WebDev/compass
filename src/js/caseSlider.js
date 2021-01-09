@@ -14,6 +14,7 @@ export default function caseSlider() {
             centeredSlides: true,
             loop: true,
             loopedSlides: 3,
+            touchStartPreventDefault: false,
             breakpoints: {
                 641: {
                     slidesPerView: 'auto',

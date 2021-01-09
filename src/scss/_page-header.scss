@@ -57,7 +57,6 @@
     align-items: center;
 
     @include breakpoint(mobile) {
-     
         flex-shrink: 1;
         width: auto;
     }
@@ -85,12 +84,11 @@
 }
 
 .page-header__burger-btn {
-   
     flex-shrink: 0;
     pointer-events: initial;
     backface-visibility: hidden;
     transform: translateZ(0);
-  
+
     margin-right: 4.8rem;
 
     &:hover .page-header__burger-btn-content {
@@ -148,10 +146,9 @@
     margin-left: 3rem;
     font-weight: 500;
     pointer-events: initial;
-    
+
     margin-left: auto;
-   
-   
+
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -165,8 +162,6 @@
         font-size: 2rem;
         line-height: 1.2;
     }
-
-    
 
     @include breakpoint(mobile) {
         display: none;
@@ -238,7 +233,6 @@
         font-size: 2rem;
         line-height: 1.2;
     }
-
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
@@ -356,6 +350,84 @@
 
         &.active,
         &:hover {
+            color: white;
+        }
+    }
+}
+
+.page-header .midnightHeader.red {
+    color: white;
+}
+
+.midnightHeader.red {
+    .page-header__logo-link {
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
+    }
+
+    .page-header__scroll-progress {
+        background-color: #ff4e4e;
+        &::before {
+            background-color: white;
+        }
+    }
+
+    .page-header__social {
+        color: white;
+    }
+
+    .portfolio-catalog__nav-link {
+        color: rgba(white, 0.7);
+
+        &:link,
+        &:visited {
+            color: rgba(white, 0.7);
+        }
+
+        &.active,
+        &:hover {
+            color: white;
+        }
+    }
+
+    .page-header__contact-link {
+        &:link,
+        &:visited {
+            color: white;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .page-header__language-link {
+        &:hover {
+            color: white;
+        }
+    }
+
+    .page-header__social-link {
+        &:hover {
+            color: var(--dark);
+        }
+    }
+
+    .express-contact-btn {
+        background-color: #fff;
+      
+        color: var(--dark);
+        &:link,
+        &:visited {
+            color: var(--dark);
+        }
+
+        &:hover {
+            background-color: var(--dark);
+          
             color: white;
         }
     }

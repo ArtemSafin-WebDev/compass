@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 standardLayer.classList.remove('active');
                 successLayer.classList.add('active');
                 contactUsForm.reset();
+                var heightChangeEvent = new CustomEvent('heightchange');
+
+                document.dispatchEvent(heightChangeEvent);
             }
         });
 
@@ -21,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             standardLayer.classList.add('active');
             successLayer.classList.remove('active');
+            var heightChangeEvent = new CustomEvent('heightchange');
+
+            document.dispatchEvent(heightChangeEvent);
         })
     }
 })

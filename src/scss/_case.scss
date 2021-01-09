@@ -524,6 +524,13 @@
     }
 }
 
+.case__content-slider-card {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
+    user-select: none;
+}
+
 .case__content-slider-card-image-container {
     position: relative;
     &::after {

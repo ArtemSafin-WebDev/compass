@@ -19,6 +19,7 @@ import bottomLinks from './bottomLinks';
 import validation from './validation';
 import phoneMask from './phoneMask';
 import fileUpload from './fileUpload';
+import newCustomCursor from './newCustomCursor';
 
 document.addEventListener('DOMContentLoaded', function() {
     customCursor();
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneMask();
     validation();
     fileUpload();
-
+    // newCustomCursor();
    
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
@@ -66,6 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
         ScrollTrigger.refresh();
     });
 
+
+
+    document.addEventListener('heightchange', () => {
+        ScrollTrigger.refresh();
+    })
 
 });
 
