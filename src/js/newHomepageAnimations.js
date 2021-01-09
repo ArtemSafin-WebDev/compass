@@ -66,14 +66,13 @@ export default function newHomepageAnimations() {
                         0
                     );
             }
-        },
-        '(min-width: 1025px)': () => {
+
             ScrollTrigger.create({
                 trigger: '.portfolio',
                 start: 'top top',
                 end: 'bottom bottom',
                 pin: '.portfolio__albums-backgrounds',
-                // anticipatePin: 1,
+
                 pinSpacing: false,
                 markers: false
             });
@@ -139,6 +138,20 @@ export default function newHomepageAnimations() {
                             }
                         }
                     });
+                });
+            } else {
+                ScrollTrigger.create({
+                    trigger: '.portfolio',
+                    start: 'top bottom',
+                    end: 'bottom center',
+                  
+    
+                    onLeave: () => {
+                      
+                        albumsItems.forEach(item => item.classList.remove('active'));
+                        setActiveAlbumItem(null);
+                      
+                    }
                 });
             }
         }

@@ -14,6 +14,7 @@ export default function clientsSlider() {
         const slider = new Swiper(container, {
             effect: 'fade',
             watchOverflow: true,
+            touchStartPreventDefault: false,
             fadeEffect: {
                 crossFade: true
             },
