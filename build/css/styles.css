@@ -3987,7 +3987,7 @@ select:-webkit-autofill:focus {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: auto 0; }
-  @media only screen and (max-width: 968px) {
+  @media only screen and (max-width: 1024px) {
     .portfolio-catalog__nav--sidebar {
       display: none; } }
   .portfolio-catalog__nav--content {

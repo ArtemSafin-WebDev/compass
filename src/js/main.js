@@ -21,11 +21,13 @@ import phoneMask from './phoneMask';
 import fileUpload from './fileUpload';
 import newCustomCursor from './newCustomCursor';
 import ShowFooterBg from './showFooterBg';
+import { loader } from './loader';
 
 document.addEventListener('DOMContentLoaded', function() {
     customCursor();
     polyfills();
     detectTouch();
+    loader();
     commonAnimations();
     newHomepageAnimations();
     clientsSlider();

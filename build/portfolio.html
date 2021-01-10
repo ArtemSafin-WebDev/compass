@@ -475,8 +475,124 @@
                 </div>
             </div>
         </footer>
-
-
+        <div class="loader">
+            <div class="loader__message">
+                <div class="loader__circle">
+        
+                </div>
+                Вы в правильном<br> направлении
+            </div>
+        </div>
+        
+        
+        <style>
+            .loader {
+                position: fixed;
+                z-index: 1600;
+                background-color: var(--dark);
+                color: white;
+                display: flex;
+                flex-direction: column;
+                padding: 0 var(--content-padding);
+                padding-bottom: var(--bottom-offset);
+                padding-top: var(--top-offset);
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                transition: transform .4s;
+                transform-origin: left bottom;
+                font-family: 'Helvetica Neue', 'Arial', sans-serif;
+                font-weight: 500;
+            }
+        
+            .loader.hidden {
+                transform-origin: left top;
+                transform: scaleY(0);
+                opacity: 0;
+                visibility: hidden;
+                transition: transform .4s ease .4s, opacity 0s linear .8s, visibility 0s linear .8s;
+            }
+        
+            .loader__message {
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                font-size: 2.4rem;
+                line-height: 2.9rem;
+                margin-top: auto;
+                margin-right: auto;
+                transition: opacity .2s ease .8s;
+        
+        
+            }
+        
+        
+            .loader.hidden .loader__message {
+                opacity: 0;
+                transition: opacity .2s;
+            }
+        
+            .loader__circle {
+                width: 6.8rem;
+                height: 6.8rem;
+                flex-shrink: 0;
+                border-radius: 50%;
+                background-color: #fff;
+                position: relative;
+                margin-right: 3rem;
+                animation-name: rotating;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-duration: .8s;
+        
+            }
+        
+            .loader__circle::after {
+                content: '';
+                position: absolute;
+                width: 1.2rem;
+                height: 1.2rem;
+                border-radius: 50%;
+                right: .8rem;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: var(--dark);
+            }
+        
+        
+        
+            @keyframes rotating {
+                from {
+                    transform: rotate(0deg);
+                }
+        
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        
+        
+            @media screen and (max-width: 640px) {
+                .loader__message {
+                    font-size: 2rem;
+                    line-height: 1.2;
+                }
+        
+                .loader__circle {
+                    width: 5.4rem;
+                    height: 5.4rem;
+                    margin-right: 1.8rem;
+                }
+        
+                .loader__circle::after {
+                    width: 1rem;
+                    height: 1rem;
+                    right: .5rem;
+                }
+        
+            }
+        </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="assets/js/midnight.jquery.min.js"></script>
         <script src="js/app.js"></script>

@@ -272,7 +272,7 @@
     margin: auto 0;
 
     &--sidebar {
-        @include breakpoint(small-tablet) {
+        @include breakpoint(tablet) {
             display: none;
         }
     }
