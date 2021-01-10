@@ -3102,7 +3102,7 @@ select:-webkit-autofill:focus {
   vertical-align: middle; }
   @media only screen and (max-width: 1024px) {
     .page-footer__write-us-btn-arrow {
-      margin-left: 3rem; } }
+      margin-left: 2rem; } }
   @media only screen and (max-width: 640px) {
     .page-footer__write-us-btn-arrow {
       margin-left: 2rem; } }
@@ -3118,8 +3118,8 @@ select:-webkit-autofill:focus {
     @media only screen and (max-width: 1024px) {
       .page-footer__write-us-btn-arrow svg {
         color: var(--primary-color);
-        width: 14rem;
-        height: 14rem; } }
+        width: 8rem;
+        height: 8rem; } }
     @media only screen and (max-width: 640px) {
       .page-footer__write-us-btn-arrow svg {
         width: 4.5rem;
@@ -4250,6 +4250,11 @@ select:-webkit-autofill:focus {
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
     fill: currentColor; }
+    @media only screen and (max-width: 1024px) {
+      .case__back-link svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        bottom: -.5rem; } }
     @media only screen and (max-width: 640px) {
       .case__back-link svg {
         width: 1rem;
@@ -4261,6 +4266,11 @@ select:-webkit-autofill:focus {
     color: #202020; }
   .case__back-link:hover {
     color: var(--primary-color); }
+  @media only screen and (max-width: 1024px) {
+    .case__back-link {
+      margin-top: 7rem;
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media only screen and (max-width: 640px) {
     .case__back-link {
       margin-top: 5rem;
@@ -4407,10 +4417,12 @@ select:-webkit-autofill:focus {
   margin-bottom: 9rem;
   position: relative;
   z-index: 1000; }
+  @media only screen and (max-width: 1024px) {
+    .case__content-image-block {
+      z-index: 1; } }
   @media only screen and (max-width: 640px) {
     .case__content-image-block {
-      margin-bottom: 4rem;
-      z-index: 1; } }
+      margin-bottom: 4rem; } }
   .case__content-image-block img {
     display: block;
     width: 100%;
@@ -4461,11 +4473,13 @@ select:-webkit-autofill:focus {
   padding: 12rem 0;
   color: white;
   margin-bottom: 9rem; }
+  @media only screen and (max-width: 1024px) {
+    .case__content-slider-block {
+      z-index: 10; } }
   @media only screen and (max-width: 640px) {
     .case__content-slider-block {
       margin: 0;
       margin-bottom: 4rem;
-      z-index: 10;
       padding-top: 6.3rem;
       padding-bottom: 9.5rem; } }
   .case__content-slider-block::before {
@@ -4563,9 +4577,11 @@ select:-webkit-autofill:focus {
   --plyr-color-main: #ff4545;
   --plyr-audio-controls-background: transparent;
   --plyr-audio-control-color: white; }
+  @media only screen and (max-width: 1024px) {
+    .case__content-video {
+      z-index: 10; } }
   @media only screen and (max-width: 640px) {
     .case__content-video {
-      z-index: 10;
       margin-bottom: 4rem;
       margin-left: calc(-1 * var(--content-padding));
       width: 100vw; } }

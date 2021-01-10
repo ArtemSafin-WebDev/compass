@@ -146,7 +146,7 @@
     display: inline-block;
     vertical-align: middle;
     @include breakpoint(tablet) {
-        margin-left: 3rem;
+        margin-left: 2rem;
     }
 
     @include breakpoint(mobile) {
@@ -163,8 +163,8 @@
 
         @include breakpoint(tablet) {
             color: var(--primary-color);
-            width: 14rem;
-            height: 14rem;
+            width: 8rem;
+            height: 8rem;
         }
 
         @include breakpoint(mobile) {

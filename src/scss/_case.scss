@@ -21,6 +21,12 @@
         transform: scaleX(-1);
         fill: currentColor;
 
+        @include breakpoint(tablet) {
+            width: 1.5rem;
+            height: 1.5rem;
+            bottom: -.5rem;
+        }
+
         @include breakpoint(mobile) {
             width: 1rem;
             height: 1rem;
@@ -37,6 +43,13 @@
 
     &:hover {
         color: var(--primary-color);
+    }
+
+
+    @include breakpoint(tablet) {
+        margin-top: 7rem;
+        font-size: 2rem;
+        line-height: 1.2;
     }
 
     @include breakpoint(mobile) {
@@ -213,9 +226,14 @@
     margin-bottom: 9rem;
     position: relative;
     z-index: 1000;
+    @include breakpoint(tablet) {
+      
+        z-index: 1;
+    }
+
+
     @include breakpoint(mobile) {
         margin-bottom: 4rem;
-        z-index: 1;
     }
     img {
         display: block;
@@ -286,10 +304,14 @@
     color: white;
     margin-bottom: 9rem;
 
+    @include breakpoint(tablet) {
+        z-index: 10;
+    }
+
     @include breakpoint(mobile) {
         margin: 0;
         margin-bottom: 4rem;
-        z-index: 10;
+      
         padding-top: 6.3rem;
         padding-bottom: 9.5rem;
     }
@@ -411,8 +433,13 @@
     --plyr-audio-controls-background: transparent;
     --plyr-audio-control-color: white;
 
-    @include breakpoint(mobile) {
+
+    @include breakpoint(tablet) {
         z-index: 10;
+    }
+
+    @include breakpoint(mobile) {
+       
         margin-bottom: 4rem;
         margin-left: calc(-1 * var(--content-padding));
         width: 100vw;
