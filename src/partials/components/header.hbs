@@ -187,37 +187,65 @@
 
 
         {{#if expressPage}}
-            <a href="#" class="express-contact-btn">
-                Заказать
-            </a>
+        <a href="#" class="express-contact-btn">
+            Заказать
+        </a>
 
         {{/if}}
-        {{!-- {{#if casePage}}
-        <nav class="portfolio-catalog__nav portfolio-catalog__nav--sidebar">
-            <a href="#" class="portfolio-catalog__nav-link active">
-                Приветствие
+        {{#if casePage}}
+        <div class="case-nav">
+            <ul class="case-nav__list">
+                <li class="case-nav__list-item">
+                    <a href="#to-greeting" class="case-nav__link" data-text="Приветствие">
+                        Приветствие
+                    </a>
+                </li>
+                <li class="case-nav__list-item">
+                    <a href="#to-task" class="case-nav__link" data-text="Задача">
+                        Задача
+                    </a>
+                </li>
+                <li class="case-nav__list-item">
+                    <a href="#to-problematic" class="case-nav__link" data-text="Проблематика">
+                        Проблематика
+                    </a>
+                </li>
+                <li class="case-nav__list-item">
+                    <a href="#to-goal" class="case-nav__link" data-text="Цель">
+                        Цель
+                    </a>
+                </li>
+                <li class="case-nav__list-item">
+                    <a href="#to-research" class="case-nav__link" data-text="Исследования и аналитика">
+                        Исследования и аналитика
+                    </a>
+                </li>
+                <li class="case-nav__list-item">
+                    <a href="#to-audience" class="case-nav__link" data-text="Аудитория">
+                        Аудитория
+                    </a>
+                </li>
+                <li class="case-nav__list-item">
+                    <a href="#to-solution" class="case-nav__link" data-text="Решение">
+                        Решение
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="case-nav__process-link">
+                Процесс
             </a>
-            <a href="#" class="portfolio-catalog__nav-link">
-                Задача
-            </a>
-            <a href="#" class="portfolio-catalog__nav-link">
-                Проблематика
-            </a>
-            <a href="#" class="portfolio-catalog__nav-link">
-                Цель
-            </a>
-            <a href="#" class="portfolio-catalog__nav-link">
-                Исследования и аналитика
-            </a>
-            <a href="#" class="portfolio-catalog__nav-link">
-                Аудитория
-            </a>
-            <a href="#" class="portfolio-catalog__nav-link">
-                Решение
-            </a>
-        </nav>
-        {{/if}} --}}
+        </div>
+        {{/if}}
 
+
+        {{#if casePage}}
+        <a href="#" class="case-share-link">
+            Поделиться
+            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-rounded">
+                <use xlink:href="#arrow-rounded"></use>
+            </svg>
+        </a>
+        {{else}}
         <div class="page-header__social">
             <ul class="page-header__social-list">
                 <li class="page-header__social-list-item">
@@ -237,6 +265,9 @@
                 </li>
             </ul>
         </div>
+        {{/if}}
+
+
         <div class="page-header__scroll-progress">
 
         </div>

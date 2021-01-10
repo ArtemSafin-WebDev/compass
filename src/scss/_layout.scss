@@ -88,3 +88,32 @@
 .express-contact-btn ~ .page-header__social {
     margin-top: 0;
 }
+
+
+.case-share-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    transition: color .2s;
+    color: #202020;
+    font-weight: 500;
+    &:link,
+    &:visited {
+        color: #202020;
+    }
+    svg {
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0.8rem;
+        flex-shrink: 0;
+        fill: var(--primary-color);
+        position: relative;
+        bottom: -.1rem;
+    }
+
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+}

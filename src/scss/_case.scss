@@ -133,12 +133,15 @@
     margin-right: 2rem;
     color: #ababab;
     font-weight: 500;
+   
     &:last-child {
         margin-right: 0;
     }
     &:link,
     &:visited {
         color: #ababab;
+
+        
     }
 
     &.active,
@@ -208,9 +211,11 @@
 
 .case__content-image-block {
     margin-bottom: 9rem;
-
+    position: relative;
+    z-index: 1000;
     @include breakpoint(mobile) {
         margin-bottom: 4rem;
+        z-index: 1;
     }
     img {
         display: block;

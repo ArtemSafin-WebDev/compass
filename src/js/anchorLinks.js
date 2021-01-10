@@ -14,12 +14,15 @@ export default function anchorLinks() {
                     event.preventDefault();
 
                     gsap.to(window, {
-                        duration: 2,
+                        duration: 1,
                         scrollTo: {
+                            offsetY: 60,
                             y: elementToScroll,
-                            autoKill: true
+                            autoKill: false
                         }
                     });
+                } else {
+                    console.warn('Scroll element not found', hash)
                 }
             }
         }

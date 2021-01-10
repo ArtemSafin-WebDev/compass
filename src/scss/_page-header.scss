@@ -353,6 +353,38 @@
             color: white;
         }
     }
+
+    .case-nav__link {
+        color: rgba(white, .55);
+
+        &:link,
+        &:visited {
+            color: rgba(white, .55);
+        }
+        &::after {
+            color: white;
+        }
+    }
+
+    .case-nav__process-link {
+        color: #ff4545;
+        &:link,
+        &:visited {
+            color: #ff4545;
+        }
+
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+
+    .case-share-link {
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
+    }
 }
 
 .page-header .midnightHeader.red {

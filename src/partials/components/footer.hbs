@@ -1,4 +1,10 @@
 <footer class="page-footer" id="footer" data-midnight="dark">
+    {{#if casePage}}
+        <div class="page-footer__bg">
+            <img data-src="img/case/3.jpg" alt="" class="page-footer__bg-image lazyload">
+        </div>
+    {{/if}}
+
     <div class="container">
         <div class="page-footer__content">
             <a href="#" class="page-footer__scroll-top js-scroll-top">
@@ -47,7 +53,7 @@
             </a>
 
             {{#if casePage}}
-            <div class="page-footer__write-us">
+            <div class="page-footer__write-us js-show-footer-bg">
                 <div class="page-footer__write-us-interested">
                     Следующий проект
                 </div>

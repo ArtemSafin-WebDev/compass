@@ -20,6 +20,7 @@ import validation from './validation';
 import phoneMask from './phoneMask';
 import fileUpload from './fileUpload';
 import newCustomCursor from './newCustomCursor';
+import ShowFooterBg from './showFooterBg';
 
 document.addEventListener('DOMContentLoaded', function() {
     customCursor();
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneMask();
     validation();
     fileUpload();
+    ShowFooterBg();
     // newCustomCursor();
    
 
