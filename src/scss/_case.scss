@@ -63,7 +63,7 @@
 .case__main-heading {
     font-size: 12rem;
     line-height: 14rem;
-    margin-top: 10rem;
+    margin-top: 8rem;
     margin-bottom: 4rem;
     font-weight: 500;
 
@@ -79,10 +79,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    margin-bottom: 6.8rem;
+    margin-bottom: 3.8rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
     }
 }
 

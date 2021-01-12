@@ -14,7 +14,7 @@ export function loader() {
            
             console.log('Catched link', link);
 
-            if (link.hostname !== location.hostname || link.href.match(/^mailto\:/) || link.href.match(/^tel\:/) || link.hash || link.matches("[href^='#']")) {
+            if (link.hostname !== location.hostname || link.href.match(/^mailto\:/) || link.href.match(/^tel\:/) || link.matches('[data-fancybox]') || link.hash || link.matches("[href^='#']")) {
                 console.log('Link not internal', link);
                 return;
             } else {

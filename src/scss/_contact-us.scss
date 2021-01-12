@@ -163,6 +163,13 @@
     font-size: 1.6rem;
     line-height: 2.2rem;
 
+    p {
+        margin-bottom: 0.4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     a {
         &:link,
         &:visited {

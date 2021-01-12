@@ -116,6 +116,10 @@ export default function customCursor() {
             cursorMain.classList.add('hidden');
             cursorSecondary.classList.add('hidden');
 
+            if (element.closest('.js-cursor-no-plus')) {
+                cursorSlider.classList.add('no-plus');
+            }
+
             sliderCursorEnabled = true;
         });
 
@@ -124,10 +128,34 @@ export default function customCursor() {
             cursorMain.classList.remove('hidden');
             cursorSecondary.classList.remove('hidden');
 
+            if (element.closest('.js-cursor-no-plus')) {
+                cursorSlider.classList.remove('no-plus');
+            }
+
             sliderCursorEnabled = false;
         });
     });
 
+
+    
+
+    
+
+    const blackCursorBlock = document.querySelector('.js-black-cursor');
+    if (blackCursorBlock) {
+        document.addEventListener('mousemove', (event) => {
+            if (event.pageY <= blackCursorBlock.offsetHeight) {
+                cursorSecondary.classList.add('black-cursor');
+            } else {
+                cursorSecondary.classList.remove('black-cursor');
+            }
+        })    
+
+
+       
+    }
+
+   
     document.addEventListener('mouseover', event => {
         if (event.target.matches('a, button') || event.target.closest('button') || event.target.closest('a')) {
             cursorMain.classList.add('interactive');

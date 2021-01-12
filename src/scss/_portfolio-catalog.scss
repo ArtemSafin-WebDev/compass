@@ -39,19 +39,21 @@
         font-weight: 500;
         font-size: 2.4rem;
         line-height: 2.9rem;
-        margin-bottom: 2rem;
+        margin-bottom: 2.4rem;
         width: 100%;
         flex-grow: 0;
     }
 }
 
 .portfolio-catalog__top-row {
-    margin-bottom: 12rem;
-    margin-top: 10rem;
+    margin-bottom: 8rem;
+    margin-top: 8rem;
     display: flex;
     @include breakpoint(mobile) {
-        margin: 9rem 0;
-        margin-top: 11rem;
+      
+        margin-top: 10rem;
+        margin-bottom: 7rem;
+      
         flex-direction: column;
     }
 }
@@ -60,7 +62,7 @@
     flex-shrink: 0;
     width: var(--right-col-width);
     margin-left: 3rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 110%;
     color: #ababab;
     font-weight: 500;
@@ -69,7 +71,7 @@
         margin-bottom: 1.3rem;
 
         @include breakpoint(mobile) {
-            margin-bottom: 1rem;
+            margin-bottom: 0;
         }
         &:last-child {
             margin-bottom: 0;
@@ -77,13 +79,27 @@
     }
 
     @include breakpoint(mobile) {
-        font-size: 1.6rem;
-        line-height: 1.9rem;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
         font-weight: 400;
         width: 100%;
         margin: 0;
         flex-shrink: 1;
         padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 1.5rem;
+
+    }
+}
+
+.portfolio-catalog__numbers-number {
+    @include breakpoint(mobile) {
+        display: block;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        text-transform: uppercase;
+        margin-bottom: 0.3rem;
     }
 }
 
@@ -208,7 +224,7 @@
         color: #202020;
     }
 
-    &:hover {
+    .no-touch &:hover {
         .portfolio-catalog__card-image {
             transform: scale(1.15) rotate(3deg);
         }
@@ -371,9 +387,9 @@
 .portfolio-catalog__filtered-by {
     font-size: 6rem;
     line-height: 110%;
-    margin-bottom: 12rem;
+    margin-bottom: 8rem;
     font-weight: 500;
-    margin-top: 10rem;
+    margin-top: 8rem;
     color: #ABABAB;
     em {
         font-style: normal;
@@ -383,7 +399,7 @@
 
     @include breakpoint(mobile) {
         font-size: 3.2rem;
-        margin-top: 5rem;
+        margin-top: 4rem;
         margin-bottom: 4rem;
     }
 }

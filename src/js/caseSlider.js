@@ -73,5 +73,10 @@ export default function caseSlider() {
                 }
             }
         });
+
+
+        $('[data-fancybox="case-gallery"]').fancybox({
+            backFocus: false
+        });
     });
 }
