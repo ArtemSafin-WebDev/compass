@@ -151,7 +151,8 @@
     padding: 0.8rem;
     padding-right: 0;
     margin-left: auto;
-
+    font-size: 1.8rem;
+    line-height: 1.2;
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -209,7 +210,7 @@
 }
 
 .page-header__social-list-item {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
     &:last-child {
         margin-bottom: 0;
     }
@@ -217,14 +218,16 @@
 
 .page-header__social-link {
     font-family: var(--roboto);
+    font-size: 1.8rem;
+    line-height: 1.2;
     &:hover {
         color: var(--primary-color);
     }
 }
 
 .page-header__language-link {
-    font-size: 1.6rem;
-    line-height: 1.9rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
     font-weight: 500;
     pointer-events: initial;
     margin-right: 3rem;

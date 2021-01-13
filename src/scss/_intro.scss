@@ -106,8 +106,8 @@
 
 .intro__agency-text {
     font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
     margin-right: 2rem;
 
     @include breakpoint(tablet) {
@@ -147,8 +147,8 @@
 
 .intro__nav-link {
     font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
     margin-bottom: 1.6rem;
     &:last-child {
         margin-bottom: 0;

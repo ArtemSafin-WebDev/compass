@@ -101,6 +101,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
         transition: opacity .3s;
+        opacity: 0;
     }
 
     &.expand {
@@ -121,9 +122,9 @@
     }
 
 
-    &.no-plus {
+    &.plus {
         .icon-cursor-plus {
-            opacity: 0;
+            opacity: 1;
         }
     }
 }

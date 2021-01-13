@@ -1388,8 +1388,8 @@ select:-webkit-autofill:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   -webkit-transition: color .2s;
   transition: color .2s;
   color: #202020;
@@ -1397,9 +1397,9 @@ select:-webkit-autofill:focus {
   .case-share-link:link, .case-share-link:visited {
     color: #202020; }
   .case-share-link svg {
-    width: 1rem;
-    height: 1rem;
-    margin-left: 0.8rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 1rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     fill: var(--primary-color);
@@ -1561,7 +1561,9 @@ select:-webkit-autofill:focus {
   pointer-events: initial;
   padding: 0.8rem;
   padding-right: 0;
-  margin-left: auto; }
+  margin-left: auto;
+  font-size: 1.8rem;
+  line-height: 1.2; }
   .page-header__contact-link:link, .page-header__contact-link:visited {
     color: var(--primary-color); }
   .page-header__contact-link:hover {
@@ -1609,18 +1611,20 @@ select:-webkit-autofill:focus {
       display: none; } }
 
 .page-header__social-list-item {
-  margin-bottom: 1.2rem; }
+  margin-bottom: 1.6rem; }
   .page-header__social-list-item:last-child {
     margin-bottom: 0; }
 
 .page-header__social-link {
-  font-family: var(--roboto); }
+  font-family: var(--roboto);
+  font-size: 1.8rem;
+  line-height: 1.2; }
   .page-header__social-link:hover {
     color: var(--primary-color); }
 
 .page-header__language-link {
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   font-weight: 500;
   pointer-events: initial;
   margin-right: 3rem;
@@ -1892,8 +1896,8 @@ select:-webkit-autofill:focus {
 
 .intro__agency-text {
   font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   margin-right: 2rem; }
   @media only screen and (max-width: 1024px) {
     .intro__agency-text {
@@ -1933,8 +1937,8 @@ select:-webkit-autofill:focus {
 
 .intro__nav-link {
   font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   margin-bottom: 1.6rem; }
   .intro__nav-link:last-child {
     margin-bottom: 0; }
@@ -2222,7 +2226,9 @@ select:-webkit-autofill:focus {
   margin-left: 3rem;
   color: rgba(171, 171, 171, 0.3);
   -webkit-transition: color 0.3s;
-  transition: color 0.3s; }
+  transition: color 0.3s;
+  font-size: 1.8rem;
+  line-height: 1.2; }
   .portfolio__albums-list-item.active .portfolio__albums-card-brief {
     color: white; }
   @media only screen and (max-width: 640px) {
@@ -2791,8 +2797,8 @@ select:-webkit-autofill:focus {
 .blog__menu-nav-link {
   color: #ababab;
   margin-bottom: 1.8rem;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   font-weight: 500; }
   .blog__menu-nav-link:last-child {
     margin-bottom: 0; }
@@ -2827,8 +2833,8 @@ select:-webkit-autofill:focus {
 .blog__menu-nav-details-link {
   color: var(--primary-color);
   font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2914,8 +2920,8 @@ select:-webkit-autofill:focus {
   .blog__post-card:hover {
     color: var(--primary-color); }
     .blog__post-card:hover .blog__post-card-image {
-      -webkit-transform: scale(1.3) rotate(10deg);
-              transform: scale(1.3) rotate(10deg); }
+      -webkit-transform: scale(1.15) rotate(3deg);
+              transform: scale(1.15) rotate(3deg); }
 
 .blog__post-card-image-container {
   position: relative;
@@ -3295,7 +3301,9 @@ select:-webkit-autofill:focus {
       display: none; } }
 
 .page-footer__nav-link {
-  margin-bottom: 1.2rem; }
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.2; }
   .page-footer__nav-link:last-child {
     margin-bottom: 0; }
   .page-footer__nav-link:hover {
@@ -3759,8 +3767,8 @@ select:-webkit-autofill:focus {
 
 .portfolio-catalog__heading {
   font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   margin-right: 2rem; }
   @media only screen and (max-width: 968px) {
     .portfolio-catalog__heading {
@@ -3827,8 +3835,8 @@ select:-webkit-autofill:focus {
       flex-shrink: 0;
   width: var(--right-col-width);
   margin-left: 3rem;
-  font-size: 1.6rem;
-  line-height: 110%;
+  font-size: 1.8rem;
+  line-height: 1.2;
   color: #ababab;
   font-weight: 500;
   padding-top: 1rem; }
@@ -4091,8 +4099,8 @@ select:-webkit-autofill:focus {
           height: 1px; } }
 
 .portfolio-catalog__nav-link {
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   color: #ababab;
   margin-bottom: 1.6rem;
   -ms-flex-negative: 0;
@@ -4109,7 +4117,7 @@ select:-webkit-autofill:focus {
     content: '';
     position: absolute;
     right: 100%;
-    top: .65rem;
+    top: .8rem;
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
@@ -4256,7 +4264,8 @@ select:-webkit-autofill:focus {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     -webkit-transition: opacity .3s;
-    transition: opacity .3s; }
+    transition: opacity .3s;
+    opacity: 0; }
   .custom-cursor-slider.expand .custom-cursor-slider__content {
     -webkit-transform: translate(-50%, -50%) scale(0.7) !important;
             transform: translate(-50%, -50%) scale(0.7) !important; }
@@ -4268,8 +4277,8 @@ select:-webkit-autofill:focus {
             transform: translateY(-50%) translateX(0.5rem); }
   .touch .custom-cursor-slider {
     display: none; }
-  .custom-cursor-slider.no-plus .icon-cursor-plus {
-    opacity: 0; }
+  .custom-cursor-slider.plus .icon-cursor-plus {
+    opacity: 1; }
 
 .custom-cursor-slider__content {
   position: absolute;
@@ -4299,8 +4308,8 @@ select:-webkit-autofill:focus {
 
 .case__back-link {
   font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -4308,11 +4317,11 @@ select:-webkit-autofill:focus {
       -ms-flex-align: center;
           align-items: center; }
   .case__back-link svg {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.4rem;
+    height: 1.4rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    margin-right: 0.8rem;
+    margin-right: 1rem;
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
     fill: currentColor; }
@@ -5307,8 +5316,8 @@ select:-webkit-autofill:focus {
 
 .contact-us__top-text {
   font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   margin-right: 2rem;
   margin-bottom: 12rem; }
   @media only screen and (max-width: 1024px) {
@@ -6082,8 +6091,8 @@ select:-webkit-autofill:focus {
 
 .express-intro__top-text {
   font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   margin-right: 2rem;
   margin-bottom: 12rem; }
   @media only screen and (max-width: 1024px) {
@@ -6614,14 +6623,14 @@ select:-webkit-autofill:focus {
   margin-bottom: 7rem; }
 
 .case-nav__list-item {
-  margin-bottom: 1.6rem; }
+  margin-bottom: 1.8rem; }
   .case-nav__list-item:last-child {
     margin-bottom: 0; }
 
 .case-nav__link {
   position: relative;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   color: #ababab;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
@@ -6631,7 +6640,7 @@ select:-webkit-autofill:focus {
     content: '';
     position: absolute;
     right: 100%;
-    top: .65rem;
+    top: .8rem;
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
@@ -6667,8 +6676,8 @@ select:-webkit-autofill:focus {
     opacity: 1; }
 
 .case-nav__process-link {
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   color: #ff0000;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
@@ -6699,8 +6708,8 @@ select:-webkit-autofill:focus {
 
 .error-page__intro-text {
   font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
   margin-right: 2rem;
   margin-bottom: 12rem; }
   @media only screen and (max-width: 1024px) {

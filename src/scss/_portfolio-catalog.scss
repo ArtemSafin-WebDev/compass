@@ -1,7 +1,7 @@
 .portfolio-catalog__heading {
     font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
     margin-right: 2rem;
 
     @include breakpoint(small-tablet) {
@@ -62,8 +62,8 @@
     flex-shrink: 0;
     width: var(--right-col-width);
     margin-left: 3rem;
-    font-size: 1.6rem;
-    line-height: 110%;
+    font-size: 1.8rem;
+    line-height: 1.2;
     color: #ababab;
     font-weight: 500;
     padding-top: 1rem;
@@ -318,8 +318,8 @@
 }
 
 .portfolio-catalog__nav-link {
-    font-size: 1.6rem;
-    line-height: 1.9rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
     color: #ababab;
     margin-bottom: 1.6rem;
     flex-shrink: 0;
@@ -343,7 +343,7 @@
             content: '';
             position: absolute;
             right: 100%;
-            top: .65rem;
+            top: .8rem;
             width: 0.5rem;
             height: 0.5rem;
             border-radius: 50%;

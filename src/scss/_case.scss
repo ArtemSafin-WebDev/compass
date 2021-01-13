@@ -8,16 +8,16 @@
 
 .case__back-link {
     font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
     display: inline-flex;
     align-items: center;
 
     svg {
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.4rem;
+        height: 1.4rem;
         flex-shrink: 0;
-        margin-right: 0.8rem;
+        margin-right: 1rem;
         transform: scaleX(-1);
         fill: currentColor;
 

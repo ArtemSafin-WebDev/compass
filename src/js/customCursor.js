@@ -116,8 +116,8 @@ export default function customCursor() {
             cursorMain.classList.add('hidden');
             cursorSecondary.classList.add('hidden');
 
-            if (element.closest('.js-cursor-no-plus')) {
-                cursorSlider.classList.add('no-plus');
+            if (element.closest('.js-cursor-plus')) {
+                cursorSlider.classList.add('plus');
             }
 
             sliderCursorEnabled = true;
@@ -128,8 +128,8 @@ export default function customCursor() {
             cursorMain.classList.remove('hidden');
             cursorSecondary.classList.remove('hidden');
 
-            if (element.closest('.js-cursor-no-plus')) {
-                cursorSlider.classList.remove('no-plus');
+            if (element.closest('.js-cursor-plus')) {
+                cursorSlider.classList.remove('plus');
             }
 
             sliderCursorEnabled = false;
