@@ -43,7 +43,7 @@ export default function сaseNav() {
             });
         };
 
-        links.forEach(link => {
+        links.forEach((link, linkIndex) => {
             const id = link.hash.replace('to-', '');
             const section = document.querySelector(id);
 
@@ -52,12 +52,23 @@ export default function сaseNav() {
                 return;
             }
 
+            const nextLink = links[linkIndex + 1];
+
+            let nextSection = null;
+
+            if (nextLink) {
+                const nextId = nextLink.hash.replace('to-', '');
+                nextSection = document.querySelector(nextId)
+            }
+
             console.log('Section', section);
+            console.log('Next section', nextSection)
 
             ScrollTrigger.create({
                 trigger: section,
                 start: 'top top+=70px',
-                end: () => `"+=${section.offsetHeight}"`,
+                endTrigger: nextSection || null,
+                end: nextSection ? 'top top+=70px' : () => `"+=${section.offsetHeight}"`,
                 markers: false,
                 onEnter: () => {
                     setActiveLink(id);
