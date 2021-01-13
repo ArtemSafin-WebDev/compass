@@ -4109,14 +4109,12 @@ select:-webkit-autofill:focus {
     content: '';
     position: absolute;
     right: 100%;
-    top: 50%;
+    top: .65rem;
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
     background-color: var(--primary-color);
-    margin-right: 0.7rem;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); }
+    margin-right: 0.7rem; }
     @media only screen and (max-width: 1024px) {
       .portfolio-catalog__nav-link.active::before {
         display: none; } }
@@ -6629,6 +6627,19 @@ select:-webkit-autofill:focus {
   transition: color 0.2s;
   font-weight: 500;
   display: block; }
+  .case-nav__link::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: .65rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    margin-right: 0.7rem;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    opacity: 0; }
   .case-nav__link::after {
     content: attr(data-text);
     position: absolute;
@@ -6652,6 +6663,8 @@ select:-webkit-autofill:focus {
     transition: clip-path 1.2s, -webkit-clip-path 1.2s;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  .case-nav__link.active::before {
+    opacity: 1; }
 
 .case-nav__process-link {
   font-size: 1.6rem;

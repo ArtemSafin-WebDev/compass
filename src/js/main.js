@@ -22,6 +22,7 @@ import fileUpload from './fileUpload';
 import newCustomCursor from './newCustomCursor';
 import ShowFooterBg from './showFooterBg';
 import { loader } from './loader';
+import caseNav from './caseNav';
 
 document.addEventListener('DOMContentLoaded', function() {
     customCursor();
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneMask();
     validation();
     fileUpload();
+    caseNav();
     ShowFooterBg();
     // newCustomCursor();
    

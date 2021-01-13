@@ -343,13 +343,13 @@
             content: '';
             position: absolute;
             right: 100%;
-            top: 50%;
+            top: .65rem;
             width: 0.5rem;
             height: 0.5rem;
             border-radius: 50%;
             background-color: var(--primary-color);
             margin-right: 0.7rem;
-            transform: translateY(-50%);
+            
 
             @include breakpoint(tablet) {
                 display: none;

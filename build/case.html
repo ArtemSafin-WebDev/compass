@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script>
         window.MSInputMethodContext && document.documentMode && document.write('<script src="assets/js/ie11CustomProperties.js"><\x2fscript>');
+
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
     </script>
     <script src="assets/js/svgInject.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -194,7 +198,7 @@
         
         
         
-                <div class="case-nav">
+                <div class="case-nav js-case-nav">
                     <ul class="case-nav__list">
                         <li class="case-nav__list-item">
                             <a href="#to-greeting" class="case-nav__link" data-text="Приветствие">
@@ -311,9 +315,9 @@
                     <img data-src="img/case/1.jpg" alt="MDN" class="lazyload" data-sizes="auto">
                 </picture>
             </div>
-            <div class="case__content-text-block" id="goal">
+            <div class="case__content-text-block" id="greeting">
                 <h2>
-                    Цель
+                    Приветствие
                 </h2>
                 <p>
                     Увеличение доли рынка и расширение сбытовых каналов в розничных сетях за пределами Республики
@@ -321,9 +325,9 @@
                 </p>
             </div>
 
-            <div class="case__content-text-block" id="problematic">
+            <div class="case__content-text-block" id="task">
                 <h3>
-                    Проблематика
+                    Задача
                 </h3>
                 <p>
                     Яичная лапша — традиционный для некоторых регионов ингредиент для татарского супа-лапши "Токмач".
@@ -356,7 +360,7 @@
             </div>
 
 
-            <div class="case__content-text-block">
+            <div class="case__content-text-block" id="problematic">
                 <h3>
                     Проблематика
                 </h3>
@@ -381,9 +385,9 @@
                 </picture>
             </div>
 
-            <div class="case__content-text-block">
+            <div class="case__content-text-block" id="goal">
                 <h3>
-                    Проблематика
+                    Цель
                 </h3>
                 <p>
                     Яичная лапша — традиционный для некоторых регионов ингредиент для татарского супа-лапши "Токмач".
@@ -400,10 +404,24 @@
                 <img data-src="img/case/7.jpg" alt="" class="lazyload">
             </div>
 
-            <div class="case__content-text-block">
+            <div class="case__content-text-block" id="research">
                 <h3>
-                    Проблематика
+                    Исследования и аналитика
                 </h3>
+                <p>
+                    Яичная лапша — традиционный для некоторых регионов ингредиент для татарского супа-лапши "Токмач".
+                    Лапша для такого супа, как правило, изготовлена вручную и тонкость ее нарезки — своеобразное мерило
+                    мастерства хозяйки. Таким образом, в регионах популярности татарской лапши ее воспринимают как
+                    натуральный продукт, изготовленный вручную.
+
+                </p>
+                <p>
+                    Яичная лапша — традиционный для некоторых регионов ингредиент для татарского супа-лапши "Токмач".
+                    Лапша для такого супа, как правило, изготовлена вручную и тонкость ее нарезки — своеобразное мерило
+                    мастерства хозяйки. Таким образом, в регионах популярности татарской лапши ее воспринимают как
+                    натуральный продукт, изготовленный вручную.
+
+                </p>
                 <p>
                     Яичная лапша — традиционный для некоторых регионов ингредиент для татарского супа-лапши "Токмач".
                     Лапша для такого супа, как правило, изготовлена вручную и тонкость ее нарезки — своеобразное мерило
@@ -472,9 +490,9 @@
                 </div>
             </div>
 
-            <div class="case__content-brand-power">
+            <div class="case__content-brand-power" id="audience">
                 <h2 class="case__content-brand-power-heading">
-                    Суть бренда
+                    Аудитория
                 </h2>
                 <div class="case__content-brand-power-text">
                     <p>
@@ -520,9 +538,9 @@
             </div>
 
 
-            <div class="case__content-text-block">
+            <div class="case__content-text-block" id="solution">
                 <h3>
-                    Проблематика
+                    Решение 
                 </h3>
                 <p>
                     Яичная лапша — традиционный для некоторых регионов ингредиент для татарского супа-лапши "Токмач".

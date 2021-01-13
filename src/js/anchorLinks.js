@@ -1,6 +1,8 @@
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
+gsap.registerPlugin(ScrollToPlugin);
+
 export default function anchorLinks() {
     document.addEventListener('click', event => {
         if (event.target.matches('a') || event.target.closest('a')) {
@@ -33,7 +35,7 @@ export default function anchorLinks() {
                 duration: 2,
                 scrollTo: {
                     y: 0,
-                    autoKill: true
+                    autoKill: false
                 }
             });
         }
