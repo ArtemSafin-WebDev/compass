@@ -3,6 +3,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function сaseNav() {
+
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+        return;
+    }
     const caseNav = document.querySelector('.js-case-nav');
 
     if (caseNav) {
@@ -54,7 +58,7 @@ export default function сaseNav() {
                 trigger: section,
                 start: 'top top+=70px',
                 end: () => `"+=${section.offsetHeight}"`,
-                markers: true,
+                markers: false,
                 onEnter: () => {
                     setActiveLink(id);
                 },

@@ -23,6 +23,11 @@ import newCustomCursor from './newCustomCursor';
 import ShowFooterBg from './showFooterBg';
 import { loader } from './loader';
 import caseNav from './caseNav';
+import gsap from 'gsap';
+
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 document.addEventListener('DOMContentLoaded', function() {
     customCursor();
@@ -71,6 +76,28 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Lazyloaded image', e.target)
 
         ScrollTrigger.refresh();
+
+        if (gsap.isTweening(window)) {
+            console.log('Window was tweening during lazyload update');
+            if (window.currentAnchor) {
+                gsap.to(window, {
+                    duration: 1,
+                    scrollTo: {
+                        offsetY: 60,
+                        y: window.currentAnchor,
+                        autoKill: false
+                    },
+                    onComplete: () => {
+                      
+                        window.currentAnchor = null;
+                    },
+                    onInterrupt: () => {
+                        window.currentAnchor = null;
+
+                    }
+                });
+            }
+        }
     });
 
 

@@ -15,12 +15,22 @@ export default function anchorLinks() {
                 if (elementToScroll) {
                     event.preventDefault();
 
+                    window.currentAnchor = elementToScroll;
+
                     gsap.to(window, {
                         duration: 1,
                         scrollTo: {
                             offsetY: 60,
                             y: elementToScroll,
                             autoKill: false
+                        },
+                        onComplete: () => {
+                            console.log('Anchor scrolling completed');
+                            window.currentAnchor = null;
+                        },
+                        onInterrupt: () => {
+                            window.currentAnchor = null;
+
                         }
                     });
                 } else {
