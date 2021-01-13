@@ -177,6 +177,8 @@
 .page-footer__copyright {
     grid-area: copyright;
     align-self: flex-end;
+    font-size: 1.8rem;
+    line-height: 1.2;
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -254,6 +256,8 @@
     align-self: flex-start;
     font-weight: 500;
     grid-area: up;
+    font-size: 1.8rem;
+    line-height: 1.2;
     svg {
         width: 1.6rem;
         height: 1.6rem;
@@ -280,6 +284,8 @@
 
     @include breakpoint(mobile) {
         display: none;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
     }
 }
 

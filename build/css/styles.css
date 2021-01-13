@@ -996,10 +996,10 @@ html {
   font-size: 10px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent; }
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1681px) {
     html {
       font-size: 11px; } }
-  @media screen and (min-width: 2048px) {
+  @media screen and (min-width: 1940px) {
     html {
       font-size: 12px; } }
   @media screen and (min-width: 2128px) {
@@ -1068,12 +1068,9 @@ html {
   @media screen and (min-width: 4850px) {
     html {
       font-size: 34px; } }
-  @media screen and (max-width: 1800px) {
-    html {
-      font-size: 9px; } }
   @media only screen and (max-width: 1400px) {
     html {
-      font-size: 8px; } }
+      font-size: 9px; } }
   @media only screen and (max-width: 1200px) {
     html {
       font-size: 7px; } }
@@ -3184,7 +3181,9 @@ select:-webkit-autofill:focus {
 
 .page-footer__copyright {
   grid-area: copyright;
-  align-self: flex-end; }
+  align-self: flex-end;
+  font-size: 1.8rem;
+  line-height: 1.2; }
   @media only screen and (max-width: 640px) {
     .page-footer__copyright {
       font-size: 1.2rem;
@@ -3253,7 +3252,9 @@ select:-webkit-autofill:focus {
   justify-self: flex-start;
   align-self: flex-start;
   font-weight: 500;
-  grid-area: up; }
+  grid-area: up;
+  font-size: 1.8rem;
+  line-height: 1.2; }
   .page-footer__scroll-top svg {
     width: 1.6rem;
     height: 1.6rem;
@@ -3275,7 +3276,9 @@ select:-webkit-autofill:focus {
         bottom: -0.2rem; } }
   @media only screen and (max-width: 640px) {
     .page-footer__scroll-top {
-      display: none; } }
+      display: none;
+      font-size: 1.6rem;
+      line-height: 1.9rem; } }
 
 .page-footer__nav {
   display: -webkit-box;

@@ -45,11 +45,13 @@ html {
    
     @include noHighlight();
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: 1681px) {
         font-size: 11px;
     }
 
-    @media screen and (min-width: 2048px) {
+
+
+    @media screen and (min-width: 1940px) {
         font-size: 12px;
     }
     @media screen and (min-width: 2128px) {
@@ -119,13 +121,11 @@ html {
         font-size: 34px;
     }
 
-    @media screen and (max-width: 1800px) {
-        font-size: 9px;
-    }
+    
 
 
     @include breakpoint(desktop) {
-        font-size: 8px;
+        font-size: 9px;
     }
 
     @include breakpoint(laptop) {
