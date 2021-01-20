@@ -161,7 +161,7 @@ export default function customCursor() {
             cursorMain.classList.add('interactive');
             cursorSecondary.classList.add('interactive');
         } else {
-            console.log('Event target is not interactive', event.target);
+            // console.log('Event target is not interactive', event.target);
         }
     });
     document.addEventListener('mouseout', event => {

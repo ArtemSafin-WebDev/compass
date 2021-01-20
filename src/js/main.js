@@ -1,11 +1,11 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
-// import homepageAnimations from './homepageAnimations';
+
 import commonAnimations from './commonAnimations';
 import clientsSlider from './clientsSlider';
 import blogFiltering from './blogFiltering';
 import anchorLinks from './anchorLinks';
-import clientsLogos from './clientsLogos';
+
 import blogAnimations from './blogAnimations';
 import menu from './menu';
 import customCursor from './customCursor';
@@ -19,7 +19,7 @@ import bottomLinks from './bottomLinks';
 import validation from './validation';
 import phoneMask from './phoneMask';
 import fileUpload from './fileUpload';
-import newCustomCursor from './newCustomCursor';
+
 import ShowFooterBg from './showFooterBg';
 import { loader } from './loader';
 import caseNav from './caseNav';
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     clientsSlider();
     blogFiltering();
     anchorLinks();
-    clientsLogos();
+  
     blogAnimations();
     menu();
     caseSlider();
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fileUpload();
     caseNav();
     ShowFooterBg();
-    // newCustomCursor();
+  
    
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
@@ -73,12 +73,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.addEventListener('lazyloaded', function(e){
-        console.log('Lazyloaded image', e.target)
+        // console.log('Lazyloaded image', e.target)
 
         ScrollTrigger.refresh();
 
         if (gsap.isTweening(window)) {
-            console.log('Window was tweening during lazyload update');
+            // console.log('Window was tweening during lazyload update');
             if (window.currentAnchor) {
                 gsap.to(window, {
                     duration: 1,

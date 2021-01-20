@@ -414,13 +414,15 @@
 }
 
 .menu__social-list-item {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
     &:last-child {
         margin-bottom: 0;
     }
 }
 
 .menu__social-link {
+    font-size: 1.8rem;
+    line-height: 1.2;
     font-family: var(--roboto);
     &:hover {
         color: var(--primary-color);

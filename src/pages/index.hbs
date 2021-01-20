@@ -2,9 +2,7 @@
 {{#content "main"}}
 
 <section class="intro" id="intro">
-    <div class="intro__arrows" id="arrows">
 
-    </div>
     <div class="container">
         <div class="intro__content">
             <p class="intro__agency-text">
@@ -24,6 +22,8 @@
             <h1 class="intro__main-heading">
                 Мы Компасс.<br> И мы умеем быстро находить нужное
                 направление!
+
+                <img src="img/main-heading-arrow.svg" width="30" alt="" class="intro__main-heading-arrow">
             </h1>
             <a href="#" class="intro__association">
                 <img src="img/association.svg" alt="" class="intro-association-logo" width="122"
@@ -36,29 +36,38 @@
 <section class="portfolio-intro" id="portfolio" data-mobile-midnight="dark">
     <div class="container">
         <div class="portfolio-intro__content">
-            <div class="portfolio-intro__info">
-
-                <div class="portfolio-intro__text">
-                    <p>
-                        Перед вами ваш рынок – ландшафт, в котором вам предстоит увлекательное путешествие к вашей цели.
-                        Вы берете в руки COMPASS и начинаете путь.
-                    </p>
-                    <p>
-                        Вы уверены в успехе, потому что COMPASS не заблуждается. Механизм COMPASS надежен, потому что
-                        каждая деталь на своем месте и работает слаженно – как команда COMPASS.
-                    </p>
-                    <p>
-                        Достигая вершины, перед вами раскрываются новые горизонты и вы видите новые возможности, ставите
-                        новую цель, берете в руки COMPASS, отправляясь в новое путешествие. Ведь с COMPASS нет границ,
-                        и мир открыт вам.
-                    </p>
+            <div class="portfolio-intro__row">
+                <div class="portfolio-intro__left-col">
+                    <div class="portfolio-intro__large-text">
+                        <p>
+                            Перед вами ваш рынок – ландшафт, в котором вам предстоит увлекательное путешествие к вашей
+                            цели. Вы берете в руки COMPASS и начинаете путь.
+                        </p>
+                    </div>
                 </div>
-                <a href="#" class="portfolio-intro__link">
-                    Об агенстве
-                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </a>
+                <div class="portfolio-intro__right-col">
+                    <div class="portfolio-intro__small-text">
+                     
+                        <p>
+                            Вы уверены в успехе, потому что COMPASS не заблуждается. Механизм COMPASS надежен, потому
+                            что
+                            каждая деталь на своем месте и работает слаженно – как команда COMPASS.
+                        </p>
+                        <p>
+                            Достигая вершины, перед вами раскрываются новые горизонты и вы видите новые возможности,
+                            ставите
+                            новую цель, берете в руки COMPASS, отправляясь в новое путешествие. Ведь с COMPASS нет
+                            границ,
+                            и мир открыт вам.
+                        </p>
+                    </div>
+                    <a href="#" class="portfolio-intro__link">
+                        Об агенстве
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -85,7 +94,8 @@
                             <img src="img/bulgarpivo.jpg" alt="" class="portfolio__albums-background-image">
                         </li>
                         <li class="portfolio__albums-background-list-item">
-                            <img src="https://static.tildacdn.com/tild3939-6166-4338-b861-336436633462/--1-min.jpg" alt="" class="portfolio__albums-background-image">
+                            <img src="https://static.tildacdn.com/tild3939-6166-4338-b861-336436633462/--1-min.jpg"
+                                alt="" class="portfolio__albums-background-image">
                         </li>
                         <li class="portfolio__albums-background-list-item">
                             <img src="img/vilka.jpg" alt="" class="portfolio__albums-background-image">
@@ -145,7 +155,7 @@
                                 <use xlink:href="#arrow-right"></use>
                             </svg>
                         </h4>
-                     
+
                     </a>
                 </li>
                 <li class="portfolio__albums-list-item">
@@ -176,9 +186,7 @@
                 </li>
             </ul>
             <a href="#" class="portfolio__more-link">
-                <svg width="14" height="14" aria-hidden="true" class="icon-plus">
-                    <use xlink:href="#plus"></use>
-                </svg>
+              
                 Смотреть еще
                 <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
                     <use xlink:href="#arrow-right"></use>
@@ -195,12 +203,9 @@
             <h2 class="our-clients__heading">
                 Наши клиенты
             </h2>
-            <div class="our-clients__row">
+            <div class="our-clients__row js-clients-slider">
                 <div class="our-clients__left-col ">
-
-
-
-                    <div class="our-clients__slider js-clients-slider">
+                    <div class="our-clients__slider">
                         <div class="our-clients__slider-progressbar">
 
                         </div>
@@ -267,50 +272,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="our-clients__right-col js-our-clients-logos">
-                    <div class="our-clients__logos">
-
-
-                        <ul class="our-clients__logos-list our-clients__logos-list--hidden">
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/ozon.png" alt="">
-                            </li>
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/comos.png" alt="">
-                            </li>
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/irbis.png" alt="">
-                            </li>
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/tele2.png" alt="">
-                            </li>
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/ozon.png" alt="">
-                            </li>
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/comos.png" alt="">
-                            </li>
-                        </ul>
-                        <ul class="our-clients__logos-list">
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/ozon.png" alt="">
-                            </li>
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/comos.png" alt="">
-                            </li>
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/irbis.png" alt="">
-                            </li>
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/tele2.png" alt="">
-                            </li>
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/ozon.png" alt="">
-                            </li>
-                            <li class="our-clients__logos-list-item">
-                                <img src="img/logos/comos.png" alt="">
-                            </li>
-                        </ul>
+                <div class="our-clients__right-col">
+                    <div class="our-clients__names">
+                        <a href="#" class="our-clients__name">
+                            Александра Ромашка
+                        </a>
+                        <a href="#" class="our-clients__name">
+                            Александра Ромашка
+                        </a>
                     </div>
                 </div>
             </div>

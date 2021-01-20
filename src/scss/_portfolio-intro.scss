@@ -1,10 +1,6 @@
 .portfolio-intro {
-    @include breakpoint(mobile) {
-        background-color: var(--dark);
-        color: white;
-    }
+  
 }
-
 
 .portfolio-intro__content {
     min-height: 100vh;
@@ -21,16 +17,18 @@
         padding-bottom: 12rem;
     }
 
+    @include breakpoint(small-tablet) {
+        padding-top: 0;
+    }
+
     @include breakpoint(mobile) {
-        padding-top: 15rem;
+        padding-top: 0;
         padding-bottom: 4rem;
-      
-    }   
+    }
 }
 
 .portfolio-intro__info {
     max-width: 70rem;
-    
 
     @include breakpoint(tablet) {
         margin-bottom: 4rem;
@@ -43,35 +41,9 @@
     }
 }
 
-
-
-.portfolio-intro__text {
-    font-weight: 400;
-    font-size: 3rem;
-    line-height: 3.6rem;
-    margin-bottom: 4rem;
-    p {
-        margin-bottom: 2.4rem;
-
-        @include breakpoint(mobile) {
-            margin-bottom: 1.6rem;
-        }
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    @include breakpoint(mobile) {
-        font-weight: 500;
-        font-size: 1.6rem;
-        line-height: 2.1rem;
-        margin-bottom: 3rem;
-    }
-}
-
 .portfolio-intro__link {
     color: var(--primary-color);
-   
+
     font-size: 2.4rem;
     line-height: 2.9rem;
     align-items: center;
@@ -82,10 +54,10 @@
         height: 1.8rem;
         fill: currentColor;
         flex-shrink: 0;
-        margin-left: .7rem;
-        transition: transform .2s;
+        margin-left: 0.7rem;
+        transition: transform 0.2s;
         position: relative;
-        bottom: -.25rem;
+        bottom: -0.25rem;
     }
     &:link,
     &:visited {
@@ -93,10 +65,10 @@
     }
 
     &:hover {
-        color: #D03838;
+        color: #d03838;
 
         svg {
-            transform: translateX(.3rem);
+            transform: translateX(0.3rem);
         }
     }
 
@@ -111,6 +83,64 @@
             margin-left: 0.8rem;
             position: relative;
             bottom: -0.2rem;
+        }
+    }
+}
+
+.portfolio-intro__row {
+    display: flex;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+}
+
+.portfolio-intro__left-col {
+    width: 58rem;
+    margin-right: 3.2rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.portfolio-intro__right-col {
+    width: 47.8rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.portfolio-intro__large-text {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.6rem;
+
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+    }
+}
+
+.portfolio-intro__small-text {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+    }
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }

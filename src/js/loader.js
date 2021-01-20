@@ -12,16 +12,16 @@ export function loader() {
         if (event.target.matches('a') || event.target.closest('a')) {
             const link = event.target.matches('a') ? event.target : event.target.closest('a');
            
-            console.log('Catched link', link);
+            // console.log('Catched link', link);
 
             if (link.hostname !== location.hostname || link.href.match(/^mailto\:/) || link.href.match(/^tel\:/) || link.matches('[data-fancybox]') || link.hash || link.matches("[href^='#']")) {
-                console.log('Link not internal', link);
+                // console.log('Link not internal', link);
                 return;
             } else {
                 
                 event.preventDefault();
                 loader.classList.remove('hidden');
-                console.log('Link is internal', link)
+                // console.log('Link is internal', link)
 
                 setTimeout(() => {
                     window.location = link.href;

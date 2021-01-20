@@ -9,6 +9,17 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 export default function newHomepageAnimations() {
     ScrollTrigger.matchMedia({
         '(min-width: 641px)': () => {
+            ScrollTrigger.create({
+                trigger: '.portfolio',
+                start: 'top top',
+                end: 'bottom bottom',
+                pin: '.portfolio__albums-backgrounds',
+
+                pinSpacing: false,
+                markers: false
+            });
+        },
+        '(min-width: 1024px)': () => {
             if (document.querySelector('.portfolio-intro')) {
                 const portfolioFadeTimeline = gsap.timeline({
                     scrollTrigger: {
@@ -66,17 +77,8 @@ export default function newHomepageAnimations() {
                         0
                     );
             }
-
-            ScrollTrigger.create({
-                trigger: '.portfolio',
-                start: 'top top',
-                end: 'bottom bottom',
-                pin: '.portfolio__albums-backgrounds',
-
-                pinSpacing: false,
-                markers: false
-            });
-        }
+        },
+        
     });
 
     const albumsItems = Array.from(document.querySelectorAll('.portfolio__albums-list-item'));

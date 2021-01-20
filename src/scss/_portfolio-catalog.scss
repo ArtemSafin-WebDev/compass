@@ -3,7 +3,7 @@
     font-size: 1.8rem;
     line-height: 1.2;
     margin-right: 2rem;
-
+    margin-top: 0.5rem;
     @include breakpoint(small-tablet) {
         margin-top: 7rem;
         font-size: 2.4rem;
@@ -31,14 +31,14 @@
 }
 
 .portfolio-catalog__secondary-heading {
-    font-size: 6rem;
-    font-weight: 500;
+    font-size: 8rem;
+    line-height: 1.2;
+    font-weight: 400;
     width: 50%;
     flex-grow: 1;
     @include breakpoint(mobile) {
-        font-weight: 500;
-        font-size: 2.4rem;
-        line-height: 2.9rem;
+        font-size: 3rem;
+        line-height: 1.2;
         margin-bottom: 2.4rem;
         width: 100%;
         flex-grow: 0;
@@ -50,10 +50,9 @@
     margin-top: 8rem;
     display: flex;
     @include breakpoint(mobile) {
-      
         margin-top: 10rem;
         margin-bottom: 7rem;
-      
+
         flex-direction: column;
     }
 }
@@ -62,11 +61,11 @@
     flex-shrink: 0;
     width: var(--right-col-width);
     margin-left: 3rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.2;
     color: #ababab;
-    font-weight: 500;
-    padding-top: 1rem;
+    font-weight: 400;
+    padding-top: 3.4rem;
     p {
         margin-bottom: 1.3rem;
 
@@ -89,7 +88,6 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-gap: 1.5rem;
-
     }
 }
 
@@ -163,7 +161,7 @@
 
     &:hover {
         .portfolio-catalog__large-card-image {
-            transform: scale(1.15) rotate(3deg);
+            transform: scale(1.05);
         }
     }
 }
@@ -181,25 +179,20 @@
 }
 
 .portfolio-catalog__large-card-heading {
-    font-size: 4rem;
-    line-height: 4.8rem;
-    margin-bottom: 1.6rem;
+    font-size: 3rem;
+    line-height: 1.2;
     font-weight: 500;
-    margin-top: -1rem;
-
+    margin-bottom: 1.1rem;
     @include breakpoint(mobile) {
-        font-weight: 600;
         font-size: 2rem;
         line-height: 2.4rem;
-        margin-top: 0;
         margin-bottom: 0.4rem;
     }
 }
 
 .portfolio-catalog__large-card-text {
-    font-size: 2.4rem;
-    line-height: 2.9rem;
-
+    font-size: 2rem;
+    line-height: 2.4rem;
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         line-height: 1.9rem;
@@ -225,8 +218,9 @@
     }
 
     .no-touch &:hover {
-        .portfolio-catalog__card-image {
-            transform: scale(1.15) rotate(3deg);
+        .portfolio-catalog__card-image,
+        video {
+            transform: scale(1.05);
         }
     }
 }
@@ -235,6 +229,7 @@
     position: relative;
     margin-bottom: 2.8rem;
     overflow: hidden;
+    background-color: lightgrey;
     &::after {
         content: '';
         display: block;
@@ -248,24 +243,24 @@
 }
 
 .portfolio-catalog__large-card-image,
-.portfolio-catalog__card-image {
+.portfolio-catalog__card-image,
+.portfolio-catalog__card-image-container video {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     transform: scale(1) rotate(0deg);
-    transition: transform 1.3s cubic-bezier(0.475, 0.425, 0, 0.995);
+    transition: transform 0.6s;
     @include objectFitCover();
 }
 
 .portfolio-catalog__card-title {
-    font-weight: 600;
     font-size: 3rem;
-    line-height: 3.6rem;
+    line-height: 1.2;
+    font-weight: 500;
     margin-bottom: 1.1rem;
     @include breakpoint(mobile) {
-        font-weight: 600;
         font-size: 2rem;
         line-height: 2.4rem;
         margin-bottom: 0.4rem;
@@ -318,12 +313,12 @@
 }
 
 .portfolio-catalog__nav-link {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.2;
     color: #ababab;
     margin-bottom: 1.6rem;
     flex-shrink: 0;
-    font-weight: 500;
+    font-weight: 400;
     position: relative;
     &:last-child {
         margin-bottom: 0;
@@ -343,13 +338,12 @@
             content: '';
             position: absolute;
             right: 100%;
-            top: .8rem;
+            top: 0.65rem;
             width: 0.5rem;
             height: 0.5rem;
             border-radius: 50%;
             background-color: var(--primary-color);
             margin-right: 0.7rem;
-            
 
             @include breakpoint(tablet) {
                 display: none;
@@ -390,12 +384,11 @@
     margin-bottom: 8rem;
     font-weight: 500;
     margin-top: 8rem;
-    color: #ABABAB;
+    color: #ababab;
     em {
         font-style: normal;
         color: var(--dark);
     }
-
 
     @include breakpoint(mobile) {
         font-size: 3.2rem;

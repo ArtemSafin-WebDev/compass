@@ -11,6 +11,7 @@ export default function clientsSlider() {
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');
         const progress = element.querySelector('.our-clients__slider-progressbar');
+        const names = Array.from(element.querySelectorAll('.our-clients__name'))
         const slider = new Swiper(container, {
             effect: 'fade',
             watchOverflow: true,
@@ -23,14 +24,20 @@ export default function clientsSlider() {
             navigation: {
                 nextEl: element.querySelector('.our-clients__slider-arrow--next'),
                 prevEl: element.querySelector('.our-clients__slider-arrow--prev')
-            }
+            },
+            init: false
         });
 
-        if (window.matchMedia(`(max-width: ${MOBILE}px)`).matches) {
-            slider.on('slideChange', () => {
-                ScrollTrigger.refresh(true);
-            });
-        }
+       
+
+        slider.on('init', swiper => {
+            names.forEach(name => name.classList.remove('active'));
+            names[swiper.realIndex].classList.add('active');
+        })
+
+        slider.init();
+
+       
 
         const setAutoplay = index => {
             const nextIndex = index + 1 >= slider.slides.length ? 0 : index + 1;
@@ -58,12 +65,29 @@ export default function clientsSlider() {
         setAutoplay(0);
 
         slider.on('slideChange', swiper => {
+
+            names.forEach(name => name.classList.remove('active'));
+            names[swiper.realIndex].classList.add('active');
+           
             gsap.killTweensOf(progress);
             gsap.set(progress, {
                 '--slider-progress': 0
             });
             setAutoplay(swiper.realIndex);
+
+            if (window.matchMedia(`(max-width: ${MOBILE}px)`).matches) {
+                ScrollTrigger.refresh(true);
+            }
         });
+
+
+        names.forEach((name, nameIndex) => {
+            name.addEventListener('click', event => {
+                event.preventDefault();
+
+                slider.slideTo(nameIndex)
+            })
+        })
 
         // [slider.navigation.nextEl, slider.navigation.prevEl].forEach(nav => {
         //     nav.addEventListener('click', () => {
