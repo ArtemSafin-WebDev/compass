@@ -1601,7 +1601,6 @@ select:-webkit-autofill:focus {
 .page-header__social {
   z-index: 600;
   width: 100%;
-  margin-top: auto;
   color: var(--social-color); }
   @media only screen and (max-width: 1024px) {
     .page-header__social {
@@ -2963,8 +2962,8 @@ select:-webkit-autofill:focus {
   .blog__post-card:hover {
     color: var(--primary-color); }
     .blog__post-card:hover .blog__post-card-image {
-      -webkit-transform: scale(1.15) rotate(3deg);
-              transform: scale(1.15) rotate(3deg); }
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05); }
 
 .blog__post-card-image-container {
   position: relative;
@@ -2987,10 +2986,10 @@ select:-webkit-autofill:focus {
   height: 100%;
   -webkit-transform: scale(1) rotate(0deg);
           transform: scale(1) rotate(0deg);
-  -webkit-transition: -webkit-transform 1s cubic-bezier(0.475, 0.425, 0, 0.995);
-  transition: -webkit-transform 1s cubic-bezier(0.475, 0.425, 0, 0.995);
-  transition: transform 1s cubic-bezier(0.475, 0.425, 0, 0.995);
-  transition: transform 1s cubic-bezier(0.475, 0.425, 0, 0.995), -webkit-transform 1s cubic-bezier(0.475, 0.425, 0, 0.995);
+  -webkit-transition: -webkit-transform .6s;
+  transition: -webkit-transform .6s;
+  transition: transform .6s;
+  transition: transform .6s, -webkit-transform .6s;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -4108,7 +4107,7 @@ select:-webkit-autofill:focus {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: auto 0; }
+  margin-bottom: auto; }
   @media only screen and (max-width: 1024px) {
     .portfolio-catalog__nav--sidebar {
       display: none; } }
@@ -5741,19 +5740,21 @@ select:-webkit-autofill:focus {
           align-items: baseline;
   letter-spacing: 0.015em;
   color: #acacac;
-  grid-area: madeby; }
+  grid-area: madeby;
+  font-size: 1.2rem; }
   .contact-us__madeby:link, .contact-us__madeby:visited {
     color: #acacac; }
   .contact-us__madeby:hover {
     color: black; }
-  @media only screen and (max-width: 968px) {
-    .contact-us__madeby {
-      font-size: 1.8rem;
-      line-height: 1.2; } }
-  @media only screen and (max-width: 640px) {
-    .contact-us__madeby {
-      font-size: 1.2rem;
-      line-height: 1.4rem; } }
+
+.contact-us__madeby-image {
+  width: 5.8rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 0.4rem;
+  height: auto;
+  position: relative;
+  bottom: -0.65rem; }
 
 .contact-us__form-heading {
   font-size: 1.6rem;

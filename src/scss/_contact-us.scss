@@ -393,7 +393,7 @@
     letter-spacing: 0.015em;
     color: #acacac;
     grid-area: madeby;
-
+    font-size: 1.2rem;
     &:link,
     &:visited {
         color: #acacac;
@@ -403,15 +403,21 @@
         color: black;
     }
 
-    @include breakpoint(small-tablet) {
-        font-size: 1.8rem;
-        line-height: 1.2;
-    }
+  
+}
 
-    @include breakpoint(mobile) {
-        font-size: 1.2rem;
-        line-height: 1.4rem;
-    }
+
+.contact-us__madeby-image {
+    width: 5.8rem;
+    flex-shrink: 0;
+    margin-left: 0.4rem;
+    height: auto;
+    position: relative;
+    bottom: -0.65rem;
+
+   
+
+   
 }
 
 .contact-us__form-heading {

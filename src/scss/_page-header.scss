@@ -202,7 +202,7 @@
 .page-header__social {
     z-index: 600;
     width: 100%;
-    margin-top: auto;
+   
     color: var(--social-color);
     @include breakpoint(tablet) {
         display: none;

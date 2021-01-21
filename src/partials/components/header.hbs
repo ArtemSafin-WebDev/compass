@@ -236,9 +236,22 @@
             </a>
         </div>
         {{/if}}
+       
+        
+        {{#if process}}
+          <nav class="portfolio-catalog__nav portfolio-catalog__nav--sidebar">
+            <a href="#" class="portfolio-catalog__nav-link active">
+                Процесс
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Описание
+            </a>
+           
+        </nav>
+        {{/if}}
 
 
-        {{#if casePage}}
+        {{#if sharing}}
         <a href="#" class="case-share-link">
             Поделиться
             <svg width="14" height="14" aria-hidden="true" class="icon-arrow-rounded">
