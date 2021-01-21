@@ -124,10 +124,14 @@
                     <source data-srcset="img/case/4-mobile.jpg" media="(max-width: 640px)">
                     <img data-src="img/case/4.jpg" alt="MDN" class="lazyload" data-sizes="auto">
                 </picture>
-                <picture>
+                {{!-- <picture>
                     <source data-srcset="img/case/5-mobile.jpg" media="(max-width: 640px)">
                     <img data-src="img/case/5.jpg" alt="MDN" class="lazyload" data-sizes="auto">
-                </picture>
+                </picture> --}}
+                <video class="lazyload" muted="" data-autoplay="" loop playsinline
+                    data-poster="assets/video/preview.jpg" preload="none">
+                    <source src="assets/video/video.mp4" type="video/mp4" />
+                </video>
             </div>
 
             <div class="case__content-text-block" id="goal">
@@ -190,7 +194,8 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="img/slider/1.jpg" class="case__content-slider-card" data-slider-card data-fancybox="case-gallery">
+                                <a href="img/slider/1.jpg" class="case__content-slider-card" data-slider-card
+                                    data-fancybox="case-gallery">
                                     <div class="case__content-slider-card-image-container">
                                         <img data-src="img/slider/1.jpg" alt=""
                                             class="case__content-slider-card-image lazyload">
@@ -198,7 +203,8 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="img/slider/2.jpg" class="case__content-slider-card" data-slider-card data-fancybox="case-gallery">
+                                <a href="img/slider/2.jpg" class="case__content-slider-card" data-slider-card
+                                    data-fancybox="case-gallery">
                                     <div class="case__content-slider-card-image-container">
                                         <img data-src="img/slider/2.jpg" alt=""
                                             class="case__content-slider-card-image lazyload">
@@ -206,7 +212,8 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="img/slider/3.jpg" class="case__content-slider-card" data-slider-card data-fancybox="case-gallery">
+                                <a href="img/slider/3.jpg" class="case__content-slider-card" data-slider-card
+                                    data-fancybox="case-gallery">
                                     <div class="case__content-slider-card-image-container">
                                         <img data-src="img/slider/3.jpg" alt=""
                                             class="case__content-slider-card-image lazyload">
@@ -285,7 +292,7 @@
 
             <div class="case__content-text-block" id="solution">
                 <h3>
-                    Решение 
+                    Решение
                 </h3>
                 <p>
                     Яичная лапша — традиционный для некоторых регионов ингредиент для татарского супа-лапши "Токмач".
@@ -301,7 +308,15 @@
 
             </div>
 
+            <div class="case__content-video case__content-video--no-player">
 
+                <video class="portfolio-catalog__card-video lazyload" muted="" data-autoplay="" loop playsinline
+                    data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" preload="none">
+                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                        type="video/mp4" />
+                </video>
+
+            </div>
             <div class="case__content-quote">
                 <div class="case__content-quote-text">
                     Мы создаем сильные бренды и эффективные коммуникации на стыке инсайтов целевой аудитории и выгодных

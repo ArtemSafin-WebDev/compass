@@ -21,11 +21,11 @@
 
 .case-nav__link {
     position: relative;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.2;
     color: #ababab;
     transition: color 0.2s;
-    font-weight: 500;
+   
     display: block;
     &::before {
         content: '';
@@ -73,11 +73,11 @@
 }
 
 .case-nav__process-link {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.2;
     color: #ff0000;
     transition: color 0.2s;
-    font-weight: 500;
+
     &:link,
     &:visited {
         color: #ff0000;

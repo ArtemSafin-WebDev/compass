@@ -134,7 +134,9 @@
 
 .page-footer__write-us-btn-text {
     @include breakpoint(tablet) {
-        border-bottom: 1px solid rgba(white, 0.1);
+        // border-bottom: 1px solid rgba(white, 0.1);
+
+        border: none;
     }
 }
 

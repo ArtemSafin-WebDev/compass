@@ -8,10 +8,10 @@ export default function caseSlider() {
         const container = element.querySelector('.swiper-container');
 
         new Swiper(container, {
-            slidesPerView: 1,
+            slidesPerView: 'auto',
             spaceBetween: 12,
             watchOverflow: true,
-            centeredSlides: true,
+            centeredSlides: window.matchMedia("(max-width: 640px)").matches ? false : true,
             loop: true,
             loopedSlides: 3,
             touchStartPreventDefault: false,

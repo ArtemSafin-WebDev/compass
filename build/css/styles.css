@@ -3190,7 +3190,7 @@ select:-webkit-autofill:focus {
 
 @media only screen and (max-width: 1024px) {
   .page-footer__write-us-btn-text {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); } }
+    border: none; } }
 
 .page-footer__write-us-btn-arrow {
   -ms-flex-negative: 0;
@@ -3858,7 +3858,7 @@ select:-webkit-autofill:focus {
           flex-grow: 1; }
   @media only screen and (max-width: 640px) {
     .portfolio-catalog__secondary-heading {
-      font-size: 3rem;
+      font-size: 3.6rem;
       line-height: 1.2;
       margin-bottom: 2.4rem;
       width: 100%;
@@ -4405,15 +4405,15 @@ select:-webkit-autofill:focus {
       line-height: 1.4rem; } }
 
 .case__main-heading {
-  font-size: 12rem;
-  line-height: 14rem;
+  font-size: 8rem;
+  font-weight: 400;
+  line-height: 1.2;
   margin-top: 8rem;
-  margin-bottom: 4rem;
-  font-weight: 500; }
+  margin-bottom: 4rem; }
   @media only screen and (max-width: 640px) {
     .case__main-heading {
-      font-size: 6rem;
-      line-height: 7.2rem;
+      font-size: 3.6rem;
+      line-height: 1.2;
       margin-bottom: 2rem;
       margin-top: 5.5rem; } }
 
@@ -4553,18 +4553,16 @@ select:-webkit-autofill:focus {
     display: block;
     width: 100%;
     height: auto; }
+  .case__content-image-block video {
+    width: 100%;
+    height: auto;
+    display: block; }
   .case__content-image-block--fullwidth {
     margin-left: calc(-1 * (var(--inner-left-padding) + var(--sidebar-width)));
     width: calc(100vw - var(--content-padding) * 2); }
     @media only screen and (max-width: 640px) {
       .case__content-image-block--fullwidth {
-        margin-left: calc(-1 * var(--content-padding));
-        width: 100vw;
         z-index: 10; } }
-  @media only screen and (max-width: 640px) {
-    .case__content-image-block--fullwidth-on-mobile {
-      margin-left: calc(-1 * var(--content-padding));
-      width: 100vw; } }
   .case__content-image-block--asymmetrical {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 37.6rem;
@@ -4604,7 +4602,8 @@ select:-webkit-autofill:focus {
       z-index: 10; } }
   @media only screen and (max-width: 640px) {
     .case__content-slider-block {
-      margin: 0;
+      margin: 0 calc(-1 * var(--content-padding));
+      width: auto;
       margin-bottom: 4rem;
       padding-top: 6.3rem;
       padding-bottom: 9.5rem; } }
@@ -4618,6 +4617,9 @@ select:-webkit-autofill:focus {
     width: 100vw;
     height: 100%;
     background-color: #202020; }
+    @media only screen and (max-width: 640px) {
+      .case__content-slider-block::before {
+        left: 0; } }
 
 .case__content-brand-power {
   margin-bottom: 12rem; }
@@ -4703,6 +4705,19 @@ select:-webkit-autofill:focus {
   --plyr-color-main: #ff4545;
   --plyr-audio-controls-background: transparent;
   --plyr-audio-control-color: white; }
+  .case__content-video--no-player video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .case__content-video--no-player::after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 56.25%; }
   @media only screen and (max-width: 1024px) {
     .case__content-video {
       z-index: 10; } }
@@ -4719,6 +4734,9 @@ select:-webkit-autofill:focus {
   position: relative; }
   .case__content-slider .swiper-container {
     overflow: visible; }
+  @media only screen and (max-width: 640px) {
+    .case__content-slider .swiper-slide {
+      width: 90%; } }
   @media only screen and (max-width: 640px) {
     .case__content-slider {
       max-width: none; } }
@@ -6682,12 +6700,11 @@ select:-webkit-autofill:focus {
 
 .case-nav__link {
   position: relative;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.2;
   color: #ababab;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
-  font-weight: 500;
   display: block; }
   .case-nav__link::before {
     content: '';
@@ -6729,12 +6746,11 @@ select:-webkit-autofill:focus {
     opacity: 1; }
 
 .case-nav__process-link {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.2;
   color: #ff0000;
   -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  font-weight: 500; }
+  transition: color 0.2s; }
   .case-nav__process-link:link, .case-nav__process-link:visited {
     color: #ff0000; }
   .case-nav__process-link:hover {
