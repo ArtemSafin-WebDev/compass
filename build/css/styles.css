@@ -5484,18 +5484,15 @@ select:-webkit-autofill:focus {
       margin-bottom: 1rem; } }
 
 .contact-us__main-heading {
-  font-size: 12rem;
-  line-height: 102.9%;
-  font-weight: 500;
-  margin-top: -1rem; }
-  @media only screen and (max-width: 1600px) {
-    .contact-us__main-heading {
-      font-size: 10rem; } }
+  font-size: 8rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: -2rem; }
   @media only screen and (max-width: 640px) {
     .contact-us__main-heading {
       margin: 0;
-      font-size: 4.4rem;
-      line-height: 1.1; } }
+      font-size: 3.6rem;
+      line-height: 1.2; } }
 
 .contact-us__info {
   display: -webkit-box;
@@ -5534,7 +5531,7 @@ select:-webkit-autofill:focus {
     .contact-us__email-link {
       font-size: 1.8rem;
       line-height: 1.2;
-      margin-bottom: 2rem; } }
+      margin-bottom: 1.5rem; } }
 
 .contact-us__address {
   font-size: 1.6rem;
@@ -5720,7 +5717,7 @@ select:-webkit-autofill:focus {
 .contact-us__copyright {
   font-size: 1.6rem;
   line-height: 1.9rem;
-  margin-bottom: 2.5rem; }
+  margin-bottom: 5.2rem; }
   @media only screen and (max-width: 968px) {
     .contact-us__copyright {
       font-size: 1.8rem;
@@ -6140,6 +6137,53 @@ select:-webkit-autofill:focus {
       font-size: 1.4rem;
       line-height: 1.2; } }
 
+.contact-us__address-link {
+  color: var(--primary-color);
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+  margin-top: 3rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  .contact-us__address-link svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: currentColor;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-left: 0.7rem;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    position: relative;
+    bottom: -0.25rem; }
+  .contact-us__address-link:link, .contact-us__address-link:visited {
+    color: var(--primary-color); }
+  .contact-us__address-link:hover {
+    color: #d03838; }
+    .contact-us__address-link:hover svg {
+      -webkit-transform: translateX(0.3rem);
+              transform: translateX(0.3rem); }
+  @media only screen and (max-width: 640px) {
+    .contact-us__address-link {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.9rem; }
+      .contact-us__address-link svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-left: 0.8rem;
+        position: relative;
+        bottom: -0.2rem; } }
+
 .express-intro {
   background: #ff4545;
   color: white; }
@@ -6181,42 +6225,34 @@ select:-webkit-autofill:focus {
       margin-bottom: 8rem; } }
 
 .express-intro__heading {
-  font-size: 12rem;
-  line-height: 14rem;
   margin-bottom: 7rem;
-  font-weight: 400; }
-  @media only screen and (max-width: 1024px) {
-    .express-intro__heading {
-      font-size: 10rem;
-      line-height: 1.2; } }
+  font-weight: 400;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 11rem; }
   @media only screen and (max-width: 640px) {
     .express-intro__heading {
-      font-size: 3.2rem;
-      line-height: 1.2;
+      font-size: 3.6rem;
+      line-height: 1.1;
       margin-bottom: 1.5rem; } }
 
 .express-intro__heading-arrow {
-  width: 7.6rem;
-  height: 7.6rem;
+  display: inline-block;
+  width: 7rem;
+  height: 7rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  display: inline-block;
-  margin-left: 1rem;
+  margin-left: .5rem;
   vertical-align: middle;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
   font-family: 'object-fit: contain; object-position: center;'; }
-  @media only screen and (max-width: 1024px) {
-    .express-intro__heading-arrow {
-      width: 6.4rem;
-      height: 6.4rem; } }
   @media only screen and (max-width: 640px) {
     .express-intro__heading-arrow {
-      width: 2.4rem;
-      height: 2.4rem;
-      margin-left: 0.5rem; } }
+      width: 2.6rem;
+      height: 2.6rem; } }
 
 .express-intro__subheading-text {
   max-width: 48rem;
