@@ -1,9 +1,9 @@
 <div class="loader">
     <div class="loader__message">
-        <div class="loader__circle">
+        {{!-- <div class="loader__circle">
 
-        </div>
-        Вы на правильном<br> пути
+        </div> --}}
+        Вы в правильном направлении
     </div>
 </div>
 
@@ -40,14 +40,23 @@
     .loader__message {
         display: flex;
         align-items: center;
-        font-weight: 500;
-        font-size: 2.4rem;
-        line-height: 2.9rem;
-        margin-top: auto;
-        margin-right: auto;
+
+        margin: auto;
         transition: opacity .2s ease .8s;
 
 
+
+        font-weight: 500;
+        font-size: 5.2rem;
+        line-height: 6.3rem;
+
+
+
+        animation-name: flickering;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: .8s;
+        animation-direction: alternate;
     }
 
 
@@ -67,6 +76,7 @@
         animation-name: rotating;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
+        
         animation-duration: .8s;
 
     }
@@ -96,9 +106,20 @@
     }
 
 
+    @keyframes flickering {
+        from {
+            color: #fff;
+        }
+
+        to {
+            color: rgb(156, 156, 156);
+        }
+    }
+
+
     @media screen and (max-width: 640px) {
         .loader__message {
-            font-size: 2rem;
+            font-size: 3.2rem;
             line-height: 1.2;
         }
 
