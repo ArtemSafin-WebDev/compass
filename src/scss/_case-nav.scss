@@ -1,6 +1,18 @@
 .case-nav {
     margin-bottom: auto;
     padding-right: var(--content-padding);
+    transition: opacity .4s, visibility .4s;
+
+
+    @include breakpointMF(laptop) {
+        .case-nav-hidden & {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .4s, visibility 0s linear .4s;
+        }
+    }
+
+   
     @include breakpoint(tablet) {
         display: none;
     }

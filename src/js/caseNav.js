@@ -3,8 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function сaseNav() {
-
-    if (window.matchMedia("(max-width: 1024px)").matches) {
+    if (window.matchMedia('(max-width: 1024px)').matches) {
         return;
     }
     const caseNav = document.querySelector('.js-case-nav');
@@ -58,11 +57,11 @@ export default function сaseNav() {
 
             if (nextLink) {
                 const nextId = nextLink.hash.replace('to-', '');
-                nextSection = document.querySelector(nextId)
+                nextSection = document.querySelector(nextId);
             }
 
             console.log('Section', section);
-            console.log('Next section', nextSection)
+            console.log('Next section', nextSection);
 
             ScrollTrigger.create({
                 trigger: section,
@@ -81,6 +80,28 @@ export default function сaseNav() {
                 },
                 onLeaveBack: () => {
                     cleanLinksWithId(id);
+                }
+            });
+        });
+
+        const fullwidthBlocks = Array.from(document.querySelectorAll('.js-case-fullwidth-block'));
+
+        // console.log('OFFSET FROM BOTTOM', parseInt(caseNav.getBoundingClientRect().bottom, 10) - caseNav.offsetHeight)
+
+        fullwidthBlocks.forEach(block => {
+            ScrollTrigger.create({
+                trigger: block,
+                start: () => `top bottom-=${parseInt(caseNav.getBoundingClientRect().bottom, 10) - caseNav.offsetHeight}px`,
+                end: () => `"+=${block.offsetHeight - parseInt(caseNav.getBoundingClientRect().top, 10)}"`,
+                markers: false,
+                onToggle: ({ isActive }) => {
+                    if (isActive) {
+                        console.log('Hiding case nav');
+                        document.body.classList.add('case-nav-hidden');
+                    } else {
+                        console.log('Showing case nav');
+                        document.body.classList.remove('case-nav-hidden');
+                    }
                 }
             });
         });

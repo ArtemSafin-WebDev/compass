@@ -8,23 +8,12 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 export default function newHomepageAnimations() {
     ScrollTrigger.matchMedia({
-        '(min-width: 641px)': () => {
-            ScrollTrigger.create({
-                trigger: '.portfolio',
-                start: 'top top',
-                end: 'bottom bottom',
-                pin: '.portfolio__albums-backgrounds',
-
-                pinSpacing: false,
-                markers: false
-            });
-        },
-        '(min-width: 1024px)': () => {
+        '(max-width: 1023px)': () => {
             if (document.querySelector('.portfolio-intro')) {
                 const portfolioFadeTimeline = gsap.timeline({
                     scrollTrigger: {
                         trigger: '.portfolio-intro',
-                        start: 'bottom bottom+=100px',
+                        start: 80,
                         toggleActions: 'play none none reverse'
                     }
                 });
@@ -78,7 +67,76 @@ export default function newHomepageAnimations() {
                     );
             }
         },
-        
+        '(min-width: 641px)': () => {
+            ScrollTrigger.create({
+                trigger: '.portfolio',
+                start: 'top top',
+                end: 'bottom bottom',
+                pin: '.portfolio__albums-backgrounds',
+
+                pinSpacing: false,
+                markers: false
+            });
+        },
+        '(min-width: 1024px)': () => {
+            if (document.querySelector('.portfolio-intro')) {
+                const portfolioFadeTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '.portfolio-intro',
+                        start: 'bottom bottom+=300px',
+                        toggleActions: 'play none none reverse'
+                    }
+                });
+
+                portfolioFadeTimeline
+                    .to(
+                        '.intro',
+                        {
+                            duration: 0.3,
+                            backgroundColor: DARK_BG,
+                            color: '#ffffff'
+                        },
+                        0
+                    )
+                    .to(
+                        '.portfolio-intro',
+                        {
+                            duration: 0.3,
+                            backgroundColor: DARK_BG,
+                            color: '#ffffff'
+                        },
+                        0
+                    )
+                    .to(
+                        '.page-header',
+                        {
+                            '--page-header-text-color': '#ffffff',
+                            duration: 0.3
+                        },
+                        0
+                    )
+                    .to(
+                        '.intro__arrows',
+                        {
+                            '--arrows-gradient-first-color': 'rgba(32, 32, 32, 0)',
+                            '--arrows-gradient-second-color': 'rgba(32, 32, 32, 0.8)',
+                            duration: 0.3
+                        },
+                        0
+                    )
+                    .to(
+                        'html',
+                        {
+                            '--logo-color': LOGO_ON_DARK,
+                            '--progress-color': PROGRESS_ON_DARK,
+                            '--progress-thumb-color': PROGRESS_THUMB_ON_DARK,
+                            '--social-color': '#ffffff',
+                            duration: 0.3
+                        },
+                        0
+                    );
+            }
+        }
     });
 
     const albumsItems = Array.from(document.querySelectorAll('.portfolio__albums-list-item'));
@@ -146,13 +204,10 @@ export default function newHomepageAnimations() {
                     trigger: '.portfolio',
                     start: 'top bottom',
                     end: 'bottom center',
-                  
-    
+
                     onLeave: () => {
-                      
                         albumsItems.forEach(item => item.classList.remove('active'));
                         setActiveAlbumItem(null);
-                      
                     }
                 });
             }
