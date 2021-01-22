@@ -24,7 +24,7 @@
 .mobile-contact-link {
     position: fixed;
     right: var(--content-padding);
-    bottom: 4.3rem;
+    bottom: 8.2rem;
     z-index: 90;
     text-align: center;
     display: inline-flex;
@@ -47,10 +47,12 @@
     &:hover {
         background-color: white;
         color: #ff0000;
+        
     }
 
     @include breakpoint(mobile) {
         display: block;
+       
     }
 }
 

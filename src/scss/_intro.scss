@@ -52,7 +52,7 @@
     @include breakpoint(mobile) {
         min-height: calc(100vh - 8rem);
         min-height: auto;
-        padding-bottom: 8rem;
+        padding-bottom: 16rem;
         // padding-top: 22rem;
         // padding-bottom: 25rem;
     }
@@ -74,10 +74,10 @@
    
     @include breakpoint(mobile) {
         margin: auto 0;
-        font-size: 3.6rem;
-        line-height: 1.1;
+        font-size: 4.3rem;
+        line-height: 1.2;
         font-weight: 500;
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
 }
 

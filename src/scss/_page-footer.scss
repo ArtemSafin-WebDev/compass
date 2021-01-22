@@ -297,7 +297,7 @@
     flex-direction: column;
     align-items: flex-start;
     grid-area: nav;
-    padding-top: 6rem;
+    padding-top: 8rem;
     @include breakpoint(tablet) {
         padding-top: 0;
         align-items: flex-end;

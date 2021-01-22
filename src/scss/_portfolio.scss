@@ -102,13 +102,13 @@
 }
 
 .portfolio__albums-heading {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 4rem;
     line-height: 4.8rem;
     margin-bottom: 10rem;
 
     @include breakpoint(mobile) {
-        font-weight: 500;
+      
 
         margin-bottom: 4.5rem;
 

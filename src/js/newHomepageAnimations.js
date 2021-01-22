@@ -83,7 +83,7 @@ export default function newHomepageAnimations() {
                 const portfolioFadeTimeline = gsap.timeline({
                     scrollTrigger: {
                         trigger: '.portfolio-intro',
-                        start: 'bottom bottom+=300px',
+                        start: 'bottom bottom-=100px',
                         toggleActions: 'play none none reverse'
                     }
                 });
