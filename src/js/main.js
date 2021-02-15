@@ -26,6 +26,7 @@ import caseNav from './caseNav';
 import gsap from 'gsap';
 
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import blogLayout from './blogLayout';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fileUpload();
     caseNav();
     ShowFooterBg();
+    blogLayout();
   
    
 

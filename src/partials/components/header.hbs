@@ -236,21 +236,47 @@
             </a>
         </div>
         {{/if}}
-       
-        
+
+
         {{#if process}}
-          <nav class="portfolio-catalog__nav portfolio-catalog__nav--sidebar">
+        <nav class="portfolio-catalog__nav portfolio-catalog__nav--sidebar">
             <a href="#" class="portfolio-catalog__nav-link active">
                 Процесс
             </a>
             <a href="#" class="portfolio-catalog__nav-link">
                 Описание
             </a>
-           
+
+        </nav>
+        {{/if}}
+
+        
+        {{#if blogPage}}
+        <nav class="portfolio-catalog__nav portfolio-catalog__nav--sidebar">
+            <a href="#" class="portfolio-catalog__nav-link active">
+                Все статьи
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Интервью
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Новости
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Статьи
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Вакансии
+            </a>
+            <a href="#" class="portfolio-catalog__nav-link">
+                Мы в СМИ
+            </a>
+
         </nav>
         {{/if}}
 
 
+        {{#unless noBottomLinks}}
         {{#if sharing}}
         <a href="#" class="case-share-link">
             Поделиться
@@ -279,7 +305,15 @@
             </ul>
         </div>
         {{/if}}
+        {{/unless}}
 
+
+
+        {{#if servicesPage}}
+        <a href="#" class="services-image-link">
+            <img src="img/services-image.jpg" alt="" class="services-image-link__image">
+        </a>
+        {{/if}}
 
         <div class="page-header__scroll-progress">
 

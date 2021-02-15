@@ -24,6 +24,7 @@
     "gsap": "^3.5.1",
     "imagesloaded": "^4.1.4",
     "inputmask": "^4.0.8",
+    "isotope-layout": "^3.0.6",
     "lazysizes": "^5.2.0",
     "lodash": "^4.17.20",
     "moment": "^2.24.0",
