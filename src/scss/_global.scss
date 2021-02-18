@@ -135,6 +135,10 @@ html {
         font-size: 7px;
     }
 
+    @media screen and (max-width: 680px) {
+        font-size: 6px;
+    }
+
     @include breakpoint(mobile) {
         font-size: 10px;
     }

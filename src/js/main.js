@@ -27,6 +27,8 @@ import gsap from 'gsap';
 
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import blogLayout from './blogLayout';
+import serviceNav from './serviceNav';
+import mobileContactLink from './mobileContactLink';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -52,7 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
     caseNav();
     ShowFooterBg();
     blogLayout();
-  
+    serviceNav();
+    mobileContactLink();
    
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));

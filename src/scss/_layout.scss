@@ -24,7 +24,7 @@
 .mobile-contact-link {
     position: fixed;
     right: var(--content-padding);
-    bottom: 8.2rem;
+    bottom: 2rem;
     z-index: 90;
     text-align: center;
     display: inline-flex;
@@ -35,10 +35,15 @@
     font-size: 1.2rem;
     line-height: 1.4rem;
     background: #ff0000;
-    transition: color 0.2s, background-color 0.2s;
+    transition: color 0.2s, background-color 0.2s, bottom .3s, transform .3s;
     padding: 1.1rem 1.3rem;
     border-radius: 6rem;
     z-index: 1100;
+
+    &.scrolled-to-the-bottom {
+        // bottom: 8.2rem;
+        transform: translateY(-180%);
+    }
     &:link,
     &:visited {
         color: white;
