@@ -308,41 +308,7 @@ th {
     @include visuallyHidden();
 }
 
-.services-image-link {
-    width: 17.2rem;
-    position: relative;
-    display: inline-flex;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    overflow: hidden;
 
-    @include breakpoint(tablet) {
-        display: none;
-    }
-    &::after {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-        width: 100%;
-    }
-
-    .no-touch &:hover {
-        .services-image-link__image {
-            transform: scale(1.05);
-            transition: transform .4s ease-out;
-        }
-    }
-}
-
-.services-image-link__image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform .3s;
-    @include objectFitContain();
-}
 
 .swiper-slide {
     box-sizing: border-box;

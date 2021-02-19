@@ -107,28 +107,8 @@
     font-size: 6rem;
     line-height: 7.2rem;
     margin-bottom: 5.5rem;
-
+    position: relative;
     max-width: 106.4rem;
-
-    a {
-      
-        display: inline-block;
-        margin-bottom: 0.5rem;
-
-        span {
-            border-bottom: 3px solid currentColor;
-            transition: border-color 0.2s;
-        }
-
-        .no-touch &:hover {
-            color: #ff0000;
-
-            span {
-                border-color: transparent;
-            }
-        
-        }
-    }
 
     @include breakpoint(mobile) {
         max-width: none;
@@ -136,17 +116,59 @@
         align-items: flex-start;
         font-size: 3.2rem;
         line-height: 1.3;
-        a {
-          
-            margin-bottom: 2.8rem;
+    }
+}
 
-            span {
-                border-bottom: 2px solid currentColor;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
+.services__card-tag {
+    display: inline-flex;
+    margin-bottom: 0.5rem;
+   
+    &::after {
+        content: ',';
+    }
+
+    &:last-child {
+        &::after {
+            display: none;
         }
+    }
+
+    .no-touch &:hover {
+        color: #ff0000;
+
+        .services__card-preview {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .3s, visibility .3s;
+        }
+
+        .services__card-tag-content {
+            border-color: transparent;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.8rem;
+        display: block;
+        &::after {
+            display: none;
+        }
+
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.services__card-tag-content {
+    border-bottom: 3px solid currentColor;
+    transition: border-color 0.2s;
+
+ 
+
+    @include breakpoint(mobile) {
+        border-width: 2px;
     }
 }
 
@@ -190,4 +212,43 @@
             margin-bottom: 0;
         }
     }
+}
+
+
+.services__card-preview {
+    width: 17.2rem;
+    position: absolute;
+    right: calc(100% + var(--inner-left-padding) + var(--sidebar-width));
+    transform: translateY(-50%) translateX(100%);
+    top: 50%;
+    display: inline-flex;
+    backface-visibility: hidden;
+   
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+ 
+    &::after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+        width: 100%;
+    }
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+
+   
+}
+
+.services__card-preview-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s;
+    @include objectFitContain();
 }
