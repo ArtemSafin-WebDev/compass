@@ -2282,8 +2282,8 @@ select:-webkit-autofill:focus {
   -webkit-transition: border-color 0.3s, color 0.3s;
   transition: border-color 0.3s, color 0.3s; }
   .portfolio__more-link svg {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 3.6rem;
+    height: 1.6rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-left: 1.2rem;
@@ -2894,8 +2894,8 @@ select:-webkit-autofill:focus {
       -ms-flex-pack: center;
           justify-content: center; }
   .blog__menu-nav-details-link svg {
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 3.6rem;
+    height: 1.6rem;
     fill: currentColor;
     -ms-flex-negative: 0;
         flex-shrink: 0;
