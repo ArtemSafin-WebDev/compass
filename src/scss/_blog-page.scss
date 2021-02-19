@@ -16,6 +16,7 @@
         line-height: 1.4rem;
         margin-top: 5rem;
         max-width: 12rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -34,7 +35,7 @@
     margin-bottom: 6rem;
 
     @include breakpoint(mobile) {
-        margin-top: 7rem;
+        margin-top: 0;
         margin-bottom: 7rem;
     }
 }
