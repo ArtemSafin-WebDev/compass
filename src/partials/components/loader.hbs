@@ -1,9 +1,12 @@
-<div class="loader">
+<div class="loader" data-get-loader-text="">
     <div class="loader__message">
-        {{!-- <div class="loader__circle">
+        
 
-        </div> --}}
+        {{#if blogPage}}
+        Вы на правильном пути в блог
+        {{else}}
         Вы на правильном пути
+        {{/if}}
     </div>
 </div>
 
@@ -77,7 +80,7 @@
         animation-name: rotating;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        
+
         animation-duration: .4s;
 
     }

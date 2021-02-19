@@ -1,5 +1,8 @@
+import axios from 'axios';
+
 export function loader() {
     const loader = document.querySelector('.loader');
+    const loaderMessage = document.querySelector('.loader__message');
 
     window.addEventListener('load', () => {
         setTimeout(() => {
@@ -26,12 +29,45 @@ export function loader() {
                 return;
             } else {
                 event.preventDefault();
-                loader.classList.remove('hidden');
-                // console.log('Link is internal', link)
 
-                setTimeout(() => {
-                    window.location = link.href;
-                }, 1000);
+                if (loader.hasAttribute('data-get-loader-text')) {
+                   
+                    axios
+                        .get(link.href)
+                        .then(response => {
+                            
+
+                            const parser = new DOMParser();
+                            const nextPageHtml = parser.parseFromString(response.data, 'text/html');
+
+                            const nextPageLoaderMessage = nextPageHtml.querySelector('.loader__message');
+
+                            
+
+                            if (nextPageLoaderMessage) {
+                                loaderMessage.textContent = nextPageLoaderMessage.textContent;
+
+                                loader.classList.remove('hidden');
+
+                                setTimeout(() => {
+                                    window.location = link.href;
+                                }, 1000);
+                            } else {
+                                console.error('No next page loader message');
+                            }
+                        })
+                        .catch(err => {
+                            console.error(err);
+                        });
+                } else {
+                    // console.log('Loader does not have attribute');
+                    loader.classList.remove('hidden');
+                   
+
+                    setTimeout(() => {
+                        window.location = link.href;
+                    }, 1000);
+                }
             }
         }
     });
