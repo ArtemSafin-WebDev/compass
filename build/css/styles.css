@@ -7679,9 +7679,12 @@ select:-webkit-autofill:focus {
     transition: transform .2s, -webkit-transform .2s; }
   .no-touch .service-nav__link:hover, .service-nav__link.active {
     color: #202020; }
+  .no-touch .service-nav__link:not(.active):hover svg {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
   .service-nav__link.active svg {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg); }
 
 .service-nav__dropdown {
   height: 0;

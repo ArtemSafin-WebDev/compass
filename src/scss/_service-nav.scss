@@ -43,9 +43,15 @@
         color: #202020;
     }
 
+    .no-touch &:not(.active):hover {
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+
     &.active {
         svg {
-            transform: rotate(180deg);
+            transform: rotate(270deg);
         }
     }
 }
