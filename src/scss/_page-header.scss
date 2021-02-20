@@ -182,6 +182,10 @@
     background-color: var(--progress-color);
     z-index: 600;
 
+    &--wide {
+        width: 3px;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -307,6 +311,42 @@
         background-color: #e9e9e9;
         &::before {
             background-color: #202020;
+        }
+    }
+
+    .page-header__social {
+        color: #202020;
+    }
+
+    .portfolio-catalog__nav-link {
+        color: #ababab;
+
+        &:link,
+        &:visited {
+            color: #ababab;
+        }
+
+        &.active,
+        &:hover {
+            color: #202020;
+        }
+    }
+}
+
+
+.midnightHeader.red-bar {
+    .page-header__logo-link {
+        color: #ff0000;
+        &:link,
+        &:visited {
+            color: #ff0000;
+        }
+    }
+
+    .page-header__scroll-progress {
+        background-color: #e9e9e9;
+        &::before {
+            background-color: #FF0000;
         }
     }
 

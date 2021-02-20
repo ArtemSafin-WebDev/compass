@@ -29,6 +29,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import blogLayout from './blogLayout';
 import serviceNav from './serviceNav';
 import mobileContactLink from './mobileContactLink';
+import articleSlider from './articleSlider';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     blogLayout();
     serviceNav();
     mobileContactLink();
+    articleSlider();
    
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
