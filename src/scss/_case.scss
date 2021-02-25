@@ -250,7 +250,7 @@
 
     &--fullwidth {
         margin-left: calc(-1 * (var(--inner-left-padding) + var(--sidebar-width)));
-        width: calc(100vw - var(--content-padding) * 2);
+        width: calc(100vw - var(--content-padding) * 2 - var(--sb-width, 0));
         // position: relative;
         // z-index: 1000;
 
@@ -304,25 +304,13 @@
 
 .case__content-slider-block {
     margin-left: calc(-1 * (var(--inner-left-padding) + var(--sidebar-width)));
-    width: calc(100vw - var(--content-padding) * 2);
+    width: calc(100vw - var(--content-padding) * 2 - var(--sb-width, 0));
     position: relative;
     z-index: 1000;
     padding: 12rem 0;
    
     margin-bottom: 9rem;
 
-    @include breakpoint(tablet) {
-        z-index: 10;
-    }
-
-    @include breakpoint(mobile) {
-        margin: 0 calc(-1 * var(--content-padding));
-        width: auto;
-        margin-bottom: 4rem;
-      
-        padding-top: 6.3rem;
-        padding-bottom: 9.5rem;
-    }
     &::before {
         content: '';
         pointer-events: none;
@@ -338,6 +326,28 @@
             left: 0;
         }
     }
+
+    @include breakpoint(tablet) {
+        z-index: 10;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0 calc(-1 * var(--content-padding));
+        width: auto;
+        margin-bottom: 4rem;
+      
+        padding-top: 6.3rem;
+        padding-bottom: 9.5rem;
+
+        &--about {
+            &::before {
+                display: none;
+            }
+        }
+    }
+   
+
+
 }
 
 .case__content-brand-power {
@@ -436,7 +446,7 @@
 
 .case__content-video {
     margin-left: calc(-1 * (var(--inner-left-padding) + var(--sidebar-width)));
-    width: calc(100vw - var(--content-padding) * 2);
+    width: calc(100vw - var(--content-padding) * 2 - var(--sb-width, 0));
     position: relative;
     z-index: 1000;
     margin-bottom: 9rem;

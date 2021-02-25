@@ -13,7 +13,9 @@ export default function serviceNav() {
 
     const SPEED = 0.5;
 
- 
+    const dropdownLinks = Array.from(document.querySelectorAll('.service-nav__dropdown-link'))
+
+    const activeDropdownLink = dropdownLinks.find(link => link.classList.contains('active'))
 
     const openAccordion = element => {
         gsap.to(element, {
@@ -60,4 +62,15 @@ export default function serviceNav() {
             })
         })
     })
+
+    if (activeDropdownLink) {
+        console.log('Active dropdown link', activeDropdownLink)
+        const initiallyActiveLink = activeDropdownLink.closest('.service-nav__item').querySelector('.service-nav__link');
+        const content = initiallyActiveLink.nextElementSibling;
+        gsap.set(content, {
+            height: 'auto'
+        });
+        initiallyActiveLink.classList.add('active');
+        ScrollTrigger.refresh()
+    }
 }

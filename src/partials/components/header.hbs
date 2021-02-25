@@ -278,12 +278,31 @@
 
         {{#unless noBottomLinks}}
         {{#if sharing}}
-        <a href="#" class="case-share-link">
-            Поделиться
-            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-rounded">
-                <use xlink:href="#arrow-rounded"></use>
-            </svg>
-        </a>
+        <div class="case-share-link">
+            <div class="case-share-link__content">
+                Поделиться
+                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-rounded">
+                    <use xlink:href="#arrow-rounded"></use>
+                </svg>
+            </div>
+            <div class="case-share-link__dropdown">
+                <a href="#" class="case-share-link__dropdown-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-fb">
+                        <use xlink:href="#fb"></use>
+                    </svg>
+                </a>
+                <a href="#" class="case-share-link__dropdown-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-vk">
+                        <use xlink:href="#vk"></use>
+                    </svg>
+                </a>
+                <a href="#" class="case-share-link__dropdown-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-twitter">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
         {{else}}
         <div class="page-header__social">
             <ul class="page-header__social-list">
@@ -405,7 +424,7 @@
 
 
                             </a>
-                            <a href="#" class="service-nav__dropdown-link">
+                            <a href="#" class="service-nav__dropdown-link active">
                                 Слоган / дескриптор
 
 

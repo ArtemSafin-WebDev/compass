@@ -82,7 +82,12 @@
         margin-bottom: 0;
     }
 
-    .no-touch &:hover {
+    &.active {
+        text-decoration: underline;
+        color: #202020;
+    }
+
+    .no-touch &:not(.active):hover {
         color: var(--primary-color);
     }
 }

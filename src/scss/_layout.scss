@@ -105,10 +105,34 @@
     transition: color .2s;
     color: #202020;
     font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
     &:link,
     &:visited {
         color: #202020;
     }
+   
+    &:hover {
+        .case-share-link__content {
+            transform: translateY(-100%);
+        }
+
+        .case-share-link__dropdown {
+            transform: translateY(-100%);
+        }
+    }
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+}
+
+
+.case-share-link__content {
+    display: flex;
+    align-items: center;
+    transition: transform .3s;
     svg {
         width: 1.2rem;
         height: 1.2rem;
@@ -118,9 +142,38 @@
         position: relative;
         bottom: -.1rem;
     }
+}
 
 
-    @include breakpoint(tablet) {
-        display: none;
+.case-share-link__dropdown {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s;
+    
+}
+
+
+.case-share-link__dropdown-link {
+    flex-shrink: 0;
+    margin-right: 2rem;
+    &:last-child {
+        margin-right: 0;
     }
+    svg {
+        width: 2rem;
+        height: 2rem;
+        display: block;
+        fill: currentColor;
+    }
+
+    &:hover {
+        color: var(--primary-color);
+    }
+
+    
 }
