@@ -212,7 +212,7 @@
 
 .blog-page__footer-made-by-link {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-end;
     font-size: 1.6rem;
     line-height: 114%;
     font-family: 'DundeeMedium', sans-serif;
@@ -244,7 +244,7 @@
     margin-left: 0.5rem;
     height: auto;
     position: relative;
-    bottom: -0.35rem;
+    bottom: -0.45rem;
 
     @include breakpoint(mobile) {
         width: 5.8rem;
@@ -252,6 +252,6 @@
         margin-left: 0.4rem;
         height: auto;
         position: relative;
-        bottom: -0.65rem;
+        bottom: -0.6rem;
     }
 }

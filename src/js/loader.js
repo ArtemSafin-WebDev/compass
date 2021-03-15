@@ -23,7 +23,8 @@ export function loader() {
                 link.href.match(/^tel\:/) ||
                 link.matches('[data-fancybox]') ||
                 link.hash ||
-                link.matches("[href^='#']")
+                link.matches("[href^='#']") ||
+                link.matches('.case__content-quote-detail-link')
             ) {
                 // console.log('Link not internal', link);
                 return;
@@ -31,18 +32,13 @@ export function loader() {
                 event.preventDefault();
 
                 if (loader.hasAttribute('data-get-loader-text')) {
-                   
                     axios
                         .get(link.href)
                         .then(response => {
-                            
-
                             const parser = new DOMParser();
                             const nextPageHtml = parser.parseFromString(response.data, 'text/html');
 
                             const nextPageLoaderMessage = nextPageHtml.querySelector('.loader__message');
-
-                            
 
                             if (nextPageLoaderMessage) {
                                 loaderMessage.textContent = nextPageLoaderMessage.textContent;
@@ -62,7 +58,6 @@ export function loader() {
                 } else {
                     // console.log('Loader does not have attribute');
                     loader.classList.remove('hidden');
-                   
 
                     setTimeout(() => {
                         window.location = link.href;

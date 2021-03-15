@@ -1224,6 +1224,17 @@ th {
   text-align: left;
   vertical-align: top; }
 
+figure figcaption {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 3.6rem;
+  color: #ababab;
+  margin-top: 1rem; }
+  @media only screen and (max-width: 640px) {
+    figure figcaption {
+      font-size: 1.4rem;
+      line-height: 1.2; } }
+
 .lazyload,
 .lazyloading {
   opacity: 0; }
@@ -7414,9 +7425,9 @@ select:-webkit-autofill:focus {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   font-size: 1.6rem;
   line-height: 114%;
   font-family: 'DundeeMedium', sans-serif;
@@ -7445,7 +7456,7 @@ select:-webkit-autofill:focus {
   margin-left: 0.5rem;
   height: auto;
   position: relative;
-  bottom: -0.35rem; }
+  bottom: -0.45rem; }
   @media only screen and (max-width: 640px) {
     .blog-page__footer-made-by-link-image {
       width: 5.8rem;
@@ -7454,7 +7465,7 @@ select:-webkit-autofill:focus {
       margin-left: 0.4rem;
       height: auto;
       position: relative;
-      bottom: -0.65rem; } }
+      bottom: -0.6rem; } }
 
 .service__content {
   min-height: 100vh;
@@ -7931,16 +7942,6 @@ select:-webkit-autofill:focus {
     .article__text-content figure img {
       max-width: 120rem;
       margin: 0; }
-    .article__text-content figure figcaption {
-      display: block;
-      font-size: 1.6rem;
-      line-height: 3.6rem;
-      color: #ababab;
-      margin-top: 1rem; }
-      @media only screen and (max-width: 640px) {
-        .article__text-content figure figcaption {
-          font-size: 1.4rem;
-          line-height: 1.2; } }
 
 .article__leading-text {
   font-size: 2.4rem;
@@ -8596,6 +8597,19 @@ select:-webkit-autofill:focus {
       transition: opacity 0.5s, visibility 0.5s, -webkit-transform 0.4s ease-out;
       transition: opacity 0.5s, visibility 0.5s, transform 0.4s ease-out;
       transition: opacity 0.5s, visibility 0.5s, transform 0.4s ease-out, -webkit-transform 0.4s ease-out; }
+  @media only screen and (max-width: 640px) {
+    .about__vacancy-card {
+      background-color: #202020;
+      color: white; }
+      .about__vacancy-card .about__vacancy-card-content {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+                transform: translateY(0%);
+        visibility: inherit;
+        -webkit-transition: opacity 0.5s, visibility 0.5s, -webkit-transform 0.4s ease-out;
+        transition: opacity 0.5s, visibility 0.5s, -webkit-transform 0.4s ease-out;
+        transition: opacity 0.5s, visibility 0.5s, transform 0.4s ease-out;
+        transition: opacity 0.5s, visibility 0.5s, transform 0.4s ease-out, -webkit-transform 0.4s ease-out; } }
 
 .about__vacancy-card-content {
   position: absolute;
