@@ -1,0 +1,33 @@
+.initial-loader {
+    position: fixed;
+    background-color: #fff;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.initial-loader__arrows {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    width: 16rem;
+
+    @include breakpoint(mobile) {
+        width: 6rem;
+        grid-gap: .8rem;
+    }
+}
+
+.initial-loader__arrow {
+    svg {
+        display: block;
+        width: 100%;
+    }
+}

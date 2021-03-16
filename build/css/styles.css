@@ -955,6 +955,108 @@ button.swiper-pagination-bullet {
   display: none; }
 
 /*=====  End of Choices  ======*/
+.splitting.cells img {
+  width: 100%;
+  display: block; }
+
+@supports (display: grid) {
+  .splitting.cells {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    visibility: hidden; }
+  .splitting .cell-grid {
+    background: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(var(--row-total), 1fr)/repeat(var(--col-total), 1fr); }
+  .splitting .cell {
+    background: inherit;
+    position: relative;
+    overflow: hidden; }
+  .splitting .cell-inner {
+    background: inherit;
+    position: absolute;
+    visibility: visible;
+    /* Size to fit the whole container size */
+    width: calc(100% * var(--col-total));
+    height: calc(100% * var(--row-total));
+    /* Position properly */
+    left: calc(-100% * var(--col-index));
+    top: calc(-100% * var(--row-index)); }
+  /* Helper variables for advanced effects */
+  .splitting .cell {
+    --center-x: calc((var(--col-total) - 1) / 2);
+    --center-y: calc((var(--row-total) - 1) / 2);
+    /* Offset from center, positive & negative */
+    --offset-x: calc(var(--col-index) - var(--center-x));
+    --offset-y: calc(var(--row-index) - var(--center-y));
+    /* Absolute distance from center, only positive */
+    --distance-x: calc( (var(--offset-x) * var(--offset-x)) / var(--center-x) );
+    /* Absolute distance from center, only positive */
+    --distance-y: calc( (var(--offset-y) * var(--offset-y)) / var(--center-y) ); } }
+
+/* Recommended styles for Splitting */
+.splitting .word,
+.splitting .char {
+  display: inline-block; }
+
+/* Psuedo-element chars */
+.splitting .char {
+  position: relative; }
+
+/**
+ * Populate the psuedo elements with the character to allow for expanded effects
+ * Set to `display: none` by default; just add `display: block` when you want
+ * to use the psuedo elements
+ */
+.splitting .char::before,
+.splitting .char::after {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  -webkit-transition: inherit;
+  transition: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+/* Expanded CSS Variables */
+.splitting {
+  /* The center word index */
+  --word-center: calc((var(--word-total) - 1) / 2);
+  /* The center character index */
+  --char-center: calc((var(--char-total) - 1) / 2);
+  /* The center character index */
+  --line-center: calc((var(--line-total) - 1) / 2); }
+
+.splitting .word {
+  /* Pecent (0-1) of the word's position */
+  --word-percent: calc(var(--word-index) / var(--word-total));
+  /* Pecent (0-1) of the line's position */
+  --line-percent: calc(var(--line-index) / var(--line-total)); }
+
+.splitting .char {
+  /* Percent (0-1) of the char's position */
+  --char-percent: calc(var(--char-index) / var(--char-total));
+  /* Offset from center, positive & negative */
+  --char-offset: calc(var(--char-index) - var(--char-center));
+  /* Absolute distance from center, only positive */
+  --distance: calc(
+     (var(--char-offset) * var(--char-offset)) / var(--char-center)
+  );
+  /* Distance from center where -1 is the far left, 0 is center, 1 is far right */
+  --distance-sine: calc(var(--char-offset) / var(--char-center));
+  /* Distance from center where 1 is far left/far right, 0 is center */
+  --distance-percent: calc((var(--distance) / var(--char-center))); }
+
 *,
 *::after,
 *::before {
@@ -1267,6 +1369,7 @@ figure figcaption {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.initial-loader-locked,
 .no-scroll {
   overflow-y: scroll;
   position: fixed;
@@ -1274,6 +1377,7 @@ figure figcaption {
   height: 100%;
   left: 0;
   top: 0; }
+  .initial-loader-locked body,
   .no-scroll body {
     height: auto;
     overflow: hidden; }
@@ -1937,7 +2041,6 @@ select:-webkit-autofill:focus {
   height: 7rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-left: .5rem;
   vertical-align: middle;
   -o-object-fit: contain;
      object-fit: contain;
@@ -2026,6 +2129,26 @@ select:-webkit-autofill:focus {
     .intro__nav-link {
       font-size: 2rem;
       line-height: 1.2; } }
+
+.intro__main-heading .word {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.intro__main-heading-word-wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: .028em 0; }
 
 .portfolio-intro__content {
   min-height: 100vh;
@@ -8849,3 +8972,39 @@ select:-webkit-autofill:focus {
     .no-touch .about__follow-content a:hover {
       text-decoration: none;
       color: var(--primary-color); }
+
+.initial-loader {
+  position: fixed;
+  background-color: #fff;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.initial-loader__arrows {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  width: 16rem; }
+  @media only screen and (max-width: 640px) {
+    .initial-loader__arrows {
+      width: 6rem;
+      grid-gap: .8rem; } }
+
+.initial-loader__arrow svg {
+  display: block;
+  width: 100%; }

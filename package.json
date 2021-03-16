@@ -33,6 +33,7 @@
     "parsleyjs": "^2.9.2",
     "picturefill": "^3.0.3",
     "plyr": "^3.6.3",
+    "splitting": "^1.0.6",
     "sticky-sidebar": "^3.3.1",
     "swiper": "^6.3.2"
   },

@@ -30,6 +30,7 @@ import blogLayout from './blogLayout';
 import serviceNav from './serviceNav';
 import mobileContactLink from './mobileContactLink';
 import articleSlider from './articleSlider';
+import initialLoader from './initialLoader';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     customCursor();
     polyfills();
     detectTouch();
+    initialLoader();
     loader();
     commonAnimations();
     newHomepageAnimations();

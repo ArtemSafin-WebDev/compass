@@ -4,9 +4,14 @@ export function loader() {
     const loader = document.querySelector('.loader');
     const loaderMessage = document.querySelector('.loader__message');
 
+    
+
     window.addEventListener('load', () => {
         setTimeout(() => {
-            loader.classList.add('hidden');
+            if (loader) {
+                loader.classList.add('hidden');
+            }
+           
         }, 300);
     });
 
@@ -31,7 +36,7 @@ export function loader() {
             } else {
                 event.preventDefault();
 
-                if (loader.hasAttribute('data-get-loader-text')) {
+                if (loader && loader.hasAttribute('data-get-loader-text')) {
                     axios
                         .get(link.href)
                         .then(response => {
@@ -57,11 +62,19 @@ export function loader() {
                         });
                 } else {
                     // console.log('Loader does not have attribute');
-                    loader.classList.remove('hidden');
 
-                    setTimeout(() => {
+                    if (loader) {
+                        loader.classList.remove('hidden');
+
+                        setTimeout(() => {
+                            window.location = link.href;
+                        }, 1000);
+                    } else {
                         window.location = link.href;
-                    }, 1000);
+                    }
+                  
+
+                   
                 }
             }
         }

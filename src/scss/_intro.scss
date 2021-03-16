@@ -86,7 +86,7 @@
     width: 7rem;
     height: 7rem;
     flex-shrink: 0;
-    margin-left: .5rem;
+    // margin-left: .5rem;
     vertical-align: middle;
     @include objectFitContain();
 
@@ -181,4 +181,30 @@
         font-size: 2rem;
         line-height: 1.2;
     }
+}
+
+.intro__main-heading {
+
+    &.splitting {
+       
+    }
+    .word {
+        display: inline-flex;
+        flex-direction: column;
+       
+    }
+}
+
+.intro__main-heading-word-wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: .028em 0;
+   
+}
+
+.intro__main-heading-word-wrapper-inner {
+   
+  
+    
 }

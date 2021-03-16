@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class=" initial-loader-locked ">
 
 <head>
     <meta charset="UTF-8" />
@@ -59,7 +59,7 @@
         <div class="menu">
             <div class="menu__inner">
                 <div class="menu__inner-left-col">
-                    <a href="#" class="menu__logo-link">
+                    <a href="index.html" class="menu__logo-link">
                         <img src="img/menu-logo.svg" alt="" class="menu__logo-image" width="100">
                     </a>
         
@@ -242,7 +242,7 @@
                 Брендинг и коммуникации
             </p>
             <div class="intro__nav">
-                <a href="#" class="intro__nav-link">
+                <a href="portfolio.html" class="intro__nav-link">
                     Портфолио
                 </a>
                 <a href="#" class="intro__nav-link">
@@ -753,145 +753,98 @@
                 </div>
             </div>
         </footer>
-        <div class="loader" data-get-loader-text="">
-            <div class="loader__message">
-                
-        
-                Вы на правильном пути
-            </div>
-        </div>
-        
-        
+
+
         <style>
-            .loader {
-                position: fixed;
-                z-index: 1600;
-                background-color: var(--dark);
-                color: white;
-                display: flex;
-                flex-direction: column;
-                padding: 0 var(--content-padding);
-                padding-bottom: var(--bottom-offset);
-                padding-top: var(--top-offset);
-                width: 100%;
-                height: 100%;
-                left: 0;
-                top: 0;
-                transition: transform .4s;
-                transform-origin: left bottom;
-                font-family: 'Helvetica Neue', 'Arial', sans-serif;
-                font-weight: 500;
-                text-align: center;
+            .arrow-cls-1,
+            .arrow-cls-4 {
+                fill: none;
             }
         
-            .loader.hidden {
-                transform-origin: left top;
-                transform: scaleY(0);
-                opacity: 0;
-                visibility: hidden;
-                transition: transform .4s ease .4s, opacity 0s linear .8s, visibility 0s linear .8s;
+            .arrow-cls-2 {
+                clip-path: url(#arrow-clip-path);
             }
         
-            .loader__message {
-                display: flex;
-                align-items: center;
-        
-                margin: auto;
-                transition: opacity .2s ease .8s;
-        
-        
-        
-                font-weight: 500;
-                font-size: 5.2rem;
-                line-height: 6.3rem;
-        
-        
-        
-                animation-name: flickering;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                animation-duration: .8s;
-                animation-direction: alternate;
+            .arrow-cls-3 {
+                fill: #ff0000;
+                transform-origin: left center;
+                transform: scaleX(0);
             }
         
-        
-            .loader.hidden .loader__message {
-                opacity: 0;
-                transition: opacity .2s;
+            .arrow-cls-4 {
+                stroke: #ff0000;
+                stroke-miterlimit: 10;
             }
+        </style>
         
-            .loader__circle {
-                width: 6.8rem;
-                height: 6.8rem;
-                flex-shrink: 0;
-                border-radius: 50%;
-                background-color: #fff;
-                position: relative;
-                margin-right: 3rem;
-                animation-name: rotating;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
+        <div class="initial-loader">
+            <div class="initial-loader__arrows">
+                <div class="initial-loader__arrow initial-loader__arrow--first-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
+                        <defs>
         
-                animation-duration: .4s;
+                            <clipPath id="arrow-clip-path">
+                                <path class="arrow-cls-1"
+                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
+                            </clipPath>
+                        </defs>
+                        <g class="arrow-cls-2">
+                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
+                        </g>
+                        <path class="arrow-cls-4"
+                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
+                    </svg>
+                </div>
+                <div class="initial-loader__arrow initial-loader__arrow--second-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
+                        <defs>
         
-            }
+                            <clipPath id="arrow-clip-path">
+                                <path class="arrow-cls-1"
+                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
+                            </clipPath>
+                        </defs>
+                        <g class="arrow-cls-2">
+                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
+                        </g>
+                        <path class="arrow-cls-4"
+                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
+                    </svg>
+                </div>
+                <div class="initial-loader__arrow initial-loader__arrow--first-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
+                        <defs>
         
-            .loader__circle::after {
-                content: '';
-                position: absolute;
-                width: 1.2rem;
-                height: 1.2rem;
-                border-radius: 50%;
-                right: .8rem;
-                top: 50%;
-                transform: translateY(-50%);
-                background-color: var(--dark);
-            }
+                            <clipPath id="arrow-clip-path">
+                                <path class="arrow-cls-1"
+                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
+                            </clipPath>
+                        </defs>
+                        <g class="arrow-cls-2">
+                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
+                        </g>
+                        <path class="arrow-cls-4"
+                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
+                    </svg>
+                </div>
+                <div class="initial-loader__arrow initial-loader__arrow--second-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
+                        <defs>
         
-        
-        
-            @keyframes rotating {
-                from {
-                    transform: rotate(0deg);
-                }
-        
-                to {
-                    transform: rotate(360deg);
-                }
-            }
-        
-        
-            @keyframes flickering {
-                from {
-                    color: #fff;
-                }
-        
-                to {
-                    color: rgb(156, 156, 156);
-                }
-            }
-        
-        
-            @media screen and (max-width: 640px) {
-                .loader__message {
-                    font-size: 2.8rem;
-                    line-height: 1.2;
-                }
-        
-                .loader__circle {
-                    width: 5.4rem;
-                    height: 5.4rem;
-                    margin-right: 1.8rem;
-                }
-        
-                .loader__circle::after {
-                    width: 1rem;
-                    height: 1rem;
-                    right: .5rem;
-                }
-        
-            }
-        </style>        <style>
+                            <clipPath id="arrow-clip-path">
+                                <path class="arrow-cls-1"
+                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
+                            </clipPath>
+                        </defs>
+                        <g class="arrow-cls-2">
+                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
+                        </g>
+                        <path class="arrow-cls-4"
+                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>        <style>
             .ie-placeholder {
                 z-index: 4000;
                 position: fixed;
