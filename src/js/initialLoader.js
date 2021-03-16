@@ -5,7 +5,7 @@ import Splitting from 'splitting';
 export default function initialLoader() {
     const initialLoader = document.querySelector('.initial-loader');
 
-    if (!initialLoader) return;
+    if (initialLoader.classList.contains('initially-hidden')) return;
     const firstGroupOfArrows = Array.from(initialLoader.querySelectorAll('.initial-loader__arrow--first-group'));
     const secondGroupOfArrows = Array.from(initialLoader.querySelectorAll('.initial-loader__arrow--second-group'));
     const allArrows = Array.from(initialLoader.querySelectorAll('.initial-loader__arrow'));

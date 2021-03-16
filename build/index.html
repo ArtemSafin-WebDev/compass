@@ -176,7 +176,7 @@
         
         <div class="sidebar">
             <div class="sidebar__inner">
-                <a href="#" class="page-header__logo-link">
+                <a href="index.html" class="page-header__logo-link">
         
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 38" width="210" height="38">
                         <defs>
@@ -755,6 +755,8 @@
         </footer>
 
 
+
+
         <style>
             .arrow-cls-1,
             .arrow-cls-4 {
@@ -777,7 +779,7 @@
             }
         </style>
         
-        <div class="initial-loader">
+        <div class="initial-loader ">
             <div class="initial-loader__arrows">
                 <div class="initial-loader__arrow initial-loader__arrow--first-group">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
@@ -844,7 +846,151 @@
                     </svg>
                 </div>
             </div>
-        </div>        <style>
+        </div>        <div class="loader  initially-hidden " data-get-loader-text="">
+            <div class="loader__message">
+        
+        
+                Вы на правильном пути
+            </div>
+        </div>
+        
+        
+        <style>
+            .loader {
+                position: fixed;
+                z-index: 1600;
+                background-color: var(--dark);
+                color: white;
+                display: flex;
+                flex-direction: column;
+                padding: 0 var(--content-padding);
+                padding-bottom: var(--bottom-offset);
+                padding-top: var(--top-offset);
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                transition: transform .4s;
+                transform-origin: left bottom;
+                font-family: 'Helvetica Neue', 'Arial', sans-serif;
+                font-weight: 500;
+                text-align: center;
+            }
+        
+        
+            .loader.initially-hidden {
+                opacity: 0;
+                visibility: hidden;
+            }
+        
+            .loader.hidden {
+                transform-origin: left top;
+                transform: scaleY(0);
+                opacity: 0;
+                visibility: hidden;
+                transition: transform .4s ease .4s, opacity 0s linear .8s, visibility 0s linear .8s;
+            }
+        
+            .loader__message {
+                display: flex;
+                align-items: center;
+        
+                margin: auto;
+                transition: opacity .2s ease .8s;
+        
+        
+        
+                font-weight: 500;
+                font-size: 5.2rem;
+                line-height: 6.3rem;
+        
+        
+        
+                animation-name: flickering;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-duration: .8s;
+                animation-direction: alternate;
+            }
+        
+        
+            .loader.hidden .loader__message {
+                
+                transition: opacity .2s;
+            }
+        
+            .loader__circle {
+                width: 6.8rem;
+                height: 6.8rem;
+                flex-shrink: 0;
+                border-radius: 50%;
+                background-color: #fff;
+                position: relative;
+                margin-right: 3rem;
+                animation-name: rotating;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+        
+                animation-duration: .4s;
+        
+            }
+        
+            .loader__circle::after {
+                content: '';
+                position: absolute;
+                width: 1.2rem;
+                height: 1.2rem;
+                border-radius: 50%;
+                right: .8rem;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: var(--dark);
+            }
+        
+        
+        
+            @keyframes rotating {
+                from {
+                    transform: rotate(0deg);
+                }
+        
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        
+        
+            @keyframes flickering {
+                from {
+                    color: #fff;
+                }
+        
+                to {
+                    color: rgb(156, 156, 156);
+                }
+            }
+        
+        
+            @media screen and (max-width: 640px) {
+                .loader__message {
+                    font-size: 2.8rem;
+                    line-height: 1.2;
+                }
+        
+                .loader__circle {
+                    width: 5.4rem;
+                    height: 5.4rem;
+                    margin-right: 1.8rem;
+                }
+        
+                .loader__circle::after {
+                    width: 1rem;
+                    height: 1rem;
+                    right: .5rem;
+                }
+        
+            }
+        </style>        <style>
             .ie-placeholder {
                 z-index: 4000;
                 position: fixed;

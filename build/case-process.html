@@ -176,7 +176,7 @@
         
         <div class="sidebar">
             <div class="sidebar__inner">
-                <a href="#" class="page-header__logo-link">
+                <a href="index.html" class="page-header__logo-link">
         
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 38" width="210" height="38">
                         <defs>
@@ -803,9 +803,100 @@
         </footer>
 
 
-        <div class="loader" data-get-loader-text="">
+
+
+        <style>
+            .arrow-cls-1,
+            .arrow-cls-4 {
+                fill: none;
+            }
+        
+            .arrow-cls-2 {
+                clip-path: url(#arrow-clip-path);
+            }
+        
+            .arrow-cls-3 {
+                fill: #ff0000;
+                transform-origin: left center;
+                transform: scaleX(0);
+            }
+        
+            .arrow-cls-4 {
+                stroke: #ff0000;
+                stroke-miterlimit: 10;
+            }
+        </style>
+        
+        <div class="initial-loader  initially-hidden ">
+            <div class="initial-loader__arrows">
+                <div class="initial-loader__arrow initial-loader__arrow--first-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
+                        <defs>
+        
+                            <clipPath id="arrow-clip-path">
+                                <path class="arrow-cls-1"
+                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
+                            </clipPath>
+                        </defs>
+                        <g class="arrow-cls-2">
+                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
+                        </g>
+                        <path class="arrow-cls-4"
+                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
+                    </svg>
+                </div>
+                <div class="initial-loader__arrow initial-loader__arrow--second-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
+                        <defs>
+        
+                            <clipPath id="arrow-clip-path">
+                                <path class="arrow-cls-1"
+                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
+                            </clipPath>
+                        </defs>
+                        <g class="arrow-cls-2">
+                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
+                        </g>
+                        <path class="arrow-cls-4"
+                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
+                    </svg>
+                </div>
+                <div class="initial-loader__arrow initial-loader__arrow--first-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
+                        <defs>
+        
+                            <clipPath id="arrow-clip-path">
+                                <path class="arrow-cls-1"
+                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
+                            </clipPath>
+                        </defs>
+                        <g class="arrow-cls-2">
+                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
+                        </g>
+                        <path class="arrow-cls-4"
+                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
+                    </svg>
+                </div>
+                <div class="initial-loader__arrow initial-loader__arrow--second-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
+                        <defs>
+        
+                            <clipPath id="arrow-clip-path">
+                                <path class="arrow-cls-1"
+                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
+                            </clipPath>
+                        </defs>
+                        <g class="arrow-cls-2">
+                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
+                        </g>
+                        <path class="arrow-cls-4"
+                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>        <div class="loader " data-get-loader-text="">
             <div class="loader__message">
-                
+        
         
                 Вы на правильном пути
             </div>
@@ -832,6 +923,12 @@
                 font-family: 'Helvetica Neue', 'Arial', sans-serif;
                 font-weight: 500;
                 text-align: center;
+            }
+        
+        
+            .loader.initially-hidden {
+                opacity: 0;
+                visibility: hidden;
             }
         
             .loader.hidden {
@@ -866,7 +963,7 @@
         
         
             .loader.hidden .loader__message {
-                opacity: 0;
+                
                 transition: opacity .2s;
             }
         

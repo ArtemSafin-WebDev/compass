@@ -8994,6 +8994,9 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .initial-loader.initially-hidden {
+    opacity: 0;
+    visibility: hidden; }
 
 .initial-loader__arrows {
   display: grid;

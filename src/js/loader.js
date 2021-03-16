@@ -1,4 +1,5 @@
 import axios from 'axios';
+import gsap from 'gsap';
 
 export function loader() {
     const loader = document.querySelector('.loader');
@@ -44,18 +45,36 @@ export function loader() {
                             const nextPageHtml = parser.parseFromString(response.data, 'text/html');
 
                             const nextPageLoaderMessage = nextPageHtml.querySelector('.loader__message');
+                            const initialLoader = nextPageHtml.querySelector('.initial-loader');
 
-                            if (nextPageLoaderMessage) {
-                                loaderMessage.textContent = nextPageLoaderMessage.textContent;
+                            if (initialLoader && !initialLoader.classList.contains('initially-hidden')) {
+                                const currentInitialLoader = document.querySelector('.initial-loader');
 
-                                loader.classList.remove('hidden');
-
-                                setTimeout(() => {
-                                    window.location = link.href;
-                                }, 1000);
+                                gsap.to(currentInitialLoader, {
+                                    autoAlpha: 1,
+                                    duration: 0.3,
+                                    onComplete: () => {
+                                        setTimeout(() => {
+                                            window.location = link.href;
+                                        }, 200);
+                                    }
+                                })
                             } else {
-                                console.error('No next page loader message');
+                                if (nextPageLoaderMessage) {
+                                    loaderMessage.textContent = nextPageLoaderMessage.textContent;
+                                    loader.classList.remove('initially-hidden');
+                                    loader.classList.remove('hidden');
+                                    
+    
+                                    setTimeout(() => {
+                                        window.location = link.href;
+                                    }, 500);
+                                } else {
+                                    console.error('No next page loader message');
+                                }
                             }
+
+                            
                         })
                         .catch(err => {
                             console.error(err);
@@ -64,11 +83,12 @@ export function loader() {
                     // console.log('Loader does not have attribute');
 
                     if (loader) {
+                        loader.classList.remove('initially-hidden');
                         loader.classList.remove('hidden');
 
                         setTimeout(() => {
                             window.location = link.href;
-                        }, 1000);
+                        }, 500);
                     } else {
                         window.location = link.href;
                     }
