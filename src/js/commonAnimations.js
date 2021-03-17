@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function commonAnimations() {
    
-
+    console.log('Common animations triggered')
     gsap.to("html", {
         "--scroll-progress": 1,
         duration: 1,

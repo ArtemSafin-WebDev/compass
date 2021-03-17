@@ -3476,6 +3476,8 @@ select:-webkit-autofill:focus {
     color: #acacac; }
   .page-footer__madeby:hover {
     color: white; }
+  .page-footer__madeby--dark:hover {
+    color: #202020; }
   @media only screen and (max-width: 1024px) {
     .page-footer__madeby {
       justify-self: flex-end; } }
@@ -7493,11 +7495,16 @@ select:-webkit-autofill:focus {
   color: #ababab; }
 
 .blog-page__footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-row-gap: 1rem;
+  grid-column-gap: 2rem; }
   @media only screen and (max-width: 640px) {
     .blog-page__footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      grid-gap: initial;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -7506,19 +7513,11 @@ select:-webkit-autofill:focus {
           -ms-flex-align: end;
               align-items: flex-end;
       text-align: right; } }
-  .blog-page__footer::before {
-    content: '';
-    width: 20%;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
-    @media only screen and (max-width: 640px) {
-      .blog-page__footer::before {
-        display: none; } }
 
 .blog-page__footer-copyright {
   font-size: 2rem;
-  line-height: 2.4rem; }
+  line-height: 2.4rem;
+  grid-column: 2 / 3; }
   @media only screen and (max-width: 640px) {
     .blog-page__footer-copyright {
       font-size: 1.2rem;
@@ -7526,23 +7525,19 @@ select:-webkit-autofill:focus {
       margin-bottom: 1.6rem; } }
 
 .blog-page__footer-made-by {
-  width: 20%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  grid-column: 3 / 4; }
   @media only screen and (max-width: 640px) {
     .blog-page__footer-made-by {
       width: auto;
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0;
-      display: block; } }
+      display: block; }
+      .blog-page__footer-made-by .page-footer__madeby {
+        position: static; } }
 
 .blog-page__footer-made-by-link {
   display: -webkit-inline-box;

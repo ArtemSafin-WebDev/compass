@@ -1,6 +1,11 @@
 import imagesLoaded from 'imagesloaded';
-import gsap from 'gsap';
+
 import Splitting from 'splitting';
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function initialLoader() {
     const initialLoader = document.querySelector('.initial-loader');
@@ -106,7 +111,8 @@ export default function initialLoader() {
             onComplete: () => {
                 const tl = gsap.timeline({
                     onComplete: () => {
-                        document.documentElement.classList.remove('initial-loader-locked')
+                        document.documentElement.classList.remove('initial-loader-locked');
+                        ScrollTrigger.refresh();
                     }
                 });
 

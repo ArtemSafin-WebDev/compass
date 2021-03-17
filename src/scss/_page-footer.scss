@@ -213,6 +213,12 @@
         color: white;
     }
 
+    &--dark {
+        &:hover {
+            color: #202020;
+        }
+    }
+
     @include breakpoint(tablet) {
         justify-self: flex-end;
     }
