@@ -177,7 +177,7 @@
 
     
 
-    &:last-child {
+    &:last-of-type {
         margin-bottom: 0;
     }
     &:link,
@@ -388,6 +388,7 @@
     transition: color 0.2s, border-color 0.2s, background-color 0.2s;
     text-align: center;
     align-self: flex-start;
+    margin-bottom: 1.5rem;
     &:hover {
         background-color: transparent;
     }

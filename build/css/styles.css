@@ -1642,12 +1642,14 @@ select:-webkit-autofill:focus {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-top: -.6rem; }
   @media only screen and (max-width: 640px) {
     .page-header__right-col {
       -ms-flex-negative: 1;
           flex-shrink: 1;
-      width: auto; } }
+      width: auto;
+      margin-top: 0; } }
 
 .page-header__agency-text {
   font-weight: 500;
@@ -2079,7 +2081,7 @@ select:-webkit-autofill:focus {
   font-size: 1.8rem;
   line-height: 1.2;
   margin-right: 2rem;
-  margin-top: 0.5rem; }
+  margin-top: -0.3rem; }
   @media only screen and (max-width: 1024px) {
     .intro__agency-text {
       margin-top: 7rem;
@@ -3813,7 +3815,7 @@ select:-webkit-autofill:focus {
   position: relative;
   -webkit-transition: color 0.2s, opacity 0.2s;
   transition: color 0.2s, opacity 0.2s; }
-  .menu__nav-link:last-child {
+  .menu__nav-link:last-of-type {
     margin-bottom: 0; }
   .menu__nav-link:link, .menu__nav-link:visited {
     color: rgba(255, 255, 255, 0.3); }
@@ -4002,7 +4004,8 @@ select:-webkit-autofill:focus {
   transition: color 0.2s, border-color 0.2s, background-color 0.2s;
   text-align: center;
   -ms-flex-item-align: start;
-      align-self: flex-start; }
+      align-self: flex-start;
+  margin-bottom: 1.5rem; }
   .menu__contact-us:hover {
     background-color: transparent; }
   @media only screen and (max-width: 1024px) {
@@ -4587,7 +4590,7 @@ select:-webkit-autofill:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 0.5rem; }
+  margin-top: -0.5rem; }
   .case__back-link svg {
     width: 1.4rem;
     height: 1.4rem;
@@ -5623,7 +5626,7 @@ select:-webkit-autofill:focus {
   line-height: 1.2;
   margin-right: 2rem;
   margin-bottom: 12rem;
-  margin-top: 0.5rem; }
+  margin-top: -0.5rem; }
   @media only screen and (max-width: 1024px) {
     .contact-us__top-text {
       margin-top: 7rem;
@@ -6445,7 +6448,7 @@ select:-webkit-autofill:focus {
   line-height: 1.2;
   margin-right: 2rem;
   margin-bottom: 12rem;
-  margin-top: 0.5rem; }
+  margin-top: -0.5rem; }
   @media only screen and (max-width: 1024px) {
     .express-intro__top-text {
       margin-top: 7rem;
@@ -7060,7 +7063,7 @@ select:-webkit-autofill:focus {
   line-height: 1.2;
   margin-right: 2rem;
   margin-bottom: 12rem;
-  margin-top: 0.5rem; }
+  margin-top: -0.5rem; }
   @media only screen and (max-width: 1024px) {
     .error-page__intro-text {
       margin-top: 7rem;
@@ -7132,7 +7135,7 @@ select:-webkit-autofill:focus {
   font-size: 1.8rem;
   line-height: 1.2;
   margin-right: 2rem;
-  margin-top: 0.5rem; }
+  margin-top: -0.5rem; }
   @media only screen and (max-width: 1024px) {
     .services__page-text {
       margin-top: 7rem;
@@ -7338,7 +7341,7 @@ select:-webkit-autofill:focus {
   font-size: 1.8rem;
   line-height: 1.2;
   margin-right: 2rem;
-  margin-top: 0.5rem; }
+  margin-top: -0.5rem; }
   @media only screen and (max-width: 1024px) {
     .blog-page__text {
       margin-top: 7rem;
@@ -8458,7 +8461,7 @@ select:-webkit-autofill:focus {
   font-size: 1.8rem;
   line-height: 1.2;
   margin-right: 2rem;
-  margin-top: 0.5rem;
+  margin-top: -0.5rem;
   margin-bottom: 13rem; }
   @media only screen and (max-width: 1024px) {
     .about__top-text {
@@ -8996,8 +8999,8 @@ select:-webkit-autofill:focus {
 .initial-loader__arrows {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-gap: 2rem;
-  width: 16rem; }
+  grid-gap: 1rem;
+  width: 15rem; }
   @media only screen and (max-width: 640px) {
     .initial-loader__arrows {
       width: 6rem;
