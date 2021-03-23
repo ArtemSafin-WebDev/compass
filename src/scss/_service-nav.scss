@@ -1,6 +1,11 @@
 .service-nav {
     margin-bottom: auto;
 
+    .midnightHeader.dark & {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     @include breakpoint(tablet) {
         display: none;
     }

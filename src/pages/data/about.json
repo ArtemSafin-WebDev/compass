@@ -1,5 +1,6 @@
 {
     "title": "Блог - О нас",
     "noFooter": true,
-    "noBottomLinks": true
+    "noBottomLinks": false,
+    "hideBottomLinks": true
 }
