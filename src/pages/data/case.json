@@ -1,5 +1,6 @@
 {
     "title": "Страница кейса - Compass",
     "casePage": true,
-    "sharing": true
+    "sharing": true,
+    "hideBottomLinks": true
 }

@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     serviceNav();
     mobileContactLink();
     articleSlider();
-    hideSocial();
+   
    
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
@@ -79,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         $('.sidebar').midnight();
         $('.page-header').midnight();
+
+        hideSocial();
 
         
     });

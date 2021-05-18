@@ -109,10 +109,23 @@
         }
     }
 
+    a {
+        text-decoration: underline;
+
+        .no-touch &:hover,
+        .touch &:active {
+            text-decoration: none;
+        }
+    }
+
     p {
         margin-top: 3.2rem;
         max-width: 88rem;
         padding-left: 10rem;
+
+        img {
+            margin: 0;
+        }
 
         @include breakpoint(mobile) {
             margin-top: 1.6rem;
@@ -126,6 +139,21 @@
         height: auto;
         margin: 6.4rem 0;
         max-width: 88rem;
+
+
+        &[align="left"] {
+            margin-right: 3rem;
+
+            @include breakpoint(mobile) {
+                margin-right: 2rem;
+            }
+        }
+        &[align="right"] {
+            margin-left: 3rem;
+            @include breakpoint(mobile) {
+                margin-left: 2rem;
+            }
+        }
 
         @include breakpoint(mobile) {
             margin: 3.2rem 0;

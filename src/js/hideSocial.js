@@ -4,26 +4,30 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function hideSocial() {
-    const hideSocial = document.querySelector('.js-hide-social');
-    const aboutFollow = document.querySelector('.about__follow')
+    const hideSocials = Array.from(document.querySelectorAll('.js-hide-social'));
+    const aboutFollow = document.querySelector('.about__follow') || document.querySelector('.page-footer');
 
-    if (!hideSocial || !aboutFollow) return;
+    if (!hideSocials.length || !aboutFollow) return;
 
-    ScrollTrigger.matchMedia({
-        '(min-width: 641px)': () => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: aboutFollow,
-                    start: 'top bottom',
-                    toggleActions: 'play none none reverse'
-                }
-            });
+    console.log('Hide socials', hideSocials)
 
-            tl.to(hideSocial, {
-                autoAlpha: 0,
-                duration: 0.3
-            })
-           
-        }
-    })
+    hideSocials.forEach(hideSocial => {
+        ScrollTrigger.matchMedia({
+            '(min-width: 641px)': () => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: aboutFollow,
+                        start: 'top bottom',
+                        toggleActions: 'play none none reverse'
+                    }
+                });
+
+                tl.to(hideSocial, {
+                    autoAlpha: 0,
+                    duration: 0.2,
+                    ease: 'none'
+                });
+            }
+        });
+    });
 }
