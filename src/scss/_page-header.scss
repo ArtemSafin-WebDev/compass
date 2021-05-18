@@ -407,6 +407,11 @@
         }
     }
 
+    .case-nav {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     .case-nav__link {
         color: rgba(white, .55);
 
@@ -433,6 +438,8 @@
 
     .case-share-link {
         color: white;
+        opacity: 0;
+        visibility: hidden;
         &:link,
         &:visited {
             color: white;

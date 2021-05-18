@@ -1932,6 +1932,10 @@ select:-webkit-autofill:focus {
   .midnightHeader.dark .portfolio-catalog__nav-link.active, .midnightHeader.dark .portfolio-catalog__nav-link:hover {
     color: white; }
 
+.midnightHeader.dark .case-nav {
+  opacity: 0;
+  visibility: hidden; }
+
 .midnightHeader.dark .case-nav__link {
   color: rgba(255, 255, 255, 0.55); }
   .midnightHeader.dark .case-nav__link:link, .midnightHeader.dark .case-nav__link:visited {
@@ -1947,7 +1951,9 @@ select:-webkit-autofill:focus {
     color: var(--primary-color); }
 
 .midnightHeader.dark .case-share-link {
-  color: white; }
+  color: white;
+  opacity: 0;
+  visibility: hidden; }
   .midnightHeader.dark .case-share-link:link, .midnightHeader.dark .case-share-link:visited {
     color: white; }
 
