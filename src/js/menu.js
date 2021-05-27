@@ -18,7 +18,7 @@ export default function menu() {
     if (menu) {
         let menuIsOpen = false;
         const menuNavLinks = Array.from(document.querySelectorAll('.menu__nav-link'));
-        const initialActiveLink = menuNavLinks.findIndex(link => link.classList.contains('active'));
+        let initialActiveLink = menuNavLinks.findIndex(link => link.classList.contains('active'));
         const menuNav = document.querySelector('.menu__nav');
 
         const openMenu = () => {
@@ -87,7 +87,7 @@ export default function menu() {
             let activeIndex = null;
 
             const setActiveLink = index => {
-                if (index == null && index !== 0) {
+                if ((index == null && index !== 0) || index === -1) {
                     menuNavLinks.forEach(link => link.classList.remove('active'));
 
                     activeIndex = null;
@@ -98,6 +98,11 @@ export default function menu() {
                     });
                 } else {
                     const targetLink = menuNavLinks[index];
+
+                    console.log({
+                        targetLink,
+                        index
+                    })
 
                     const distance = targetLink.offsetTop;
 
@@ -117,9 +122,10 @@ export default function menu() {
                 }
             };
 
-            if (initialActiveLink !== -1) {
-                setActiveLink(initialActiveLink);
-            }
+            
+
+            setActiveLink(initialActiveLink);
+           
 
             menuNavLinks.forEach((link, linkIndex) => {
                 link.addEventListener('mouseenter', () => {

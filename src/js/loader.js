@@ -31,6 +31,7 @@ export function loader() {
                 link.hash ||
                 link.matches("[href^='#']") ||
                 link.matches('.case__content-quote-detail-link')
+                || link.matches('[download]') || link.matches('[target="_blank"]')
             ) {
                 // console.log('Link not internal', link);
                 return;
