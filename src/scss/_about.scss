@@ -401,9 +401,9 @@
     color: #202020;
     transition: color 0.2s;
 
-    .touch & {
-        pointer-events: none;
-    }
+    // .touch & {
+    //     pointer-events: none;
+    // }
 
     @include breakpointMF(small-tablet) {
         .about__clients-and-friends-card:hover &[href] {
@@ -431,12 +431,23 @@
     transition: opacity 0.3s, visibility 0.3s;
     z-index: 40;
 
-    .about__clients-and-friends-list-item:nth-child(3n) & {
-        right: 100%;
-        left: auto;
-        padding-left: 0;
-        padding-right: 0.5rem;
+    @include breakpointMF(small-tablet) {
+        .about__clients-and-friends-list-item:nth-child(3n) & {
+            right: 100%;
+            left: auto;
+            padding-left: 0;
+            padding-right: 0.5rem;
+        }
+
+        .about__clients-and-friends-card.active &,
+        .about__clients-and-friends-card:hover & {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
     }
+
+   
 
     @include breakpoint(mobile) {
         top: 100%;
@@ -445,12 +456,33 @@
         right: auto;
         height: auto;
         padding: 0;
+
+        .about__clients-and-friends-card.active & {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
     }
 
-    .about__clients-and-friends-card:hover & {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.3s, visibility 0.3s;
+  
+}
+
+.about__clients-and-friends-card-dropdown-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+
+    display: none;
+
+    @include breakpoint(mobile) {
+        display: block;
+    }
+    svg {
+        width: 2rem;
+        height: 2rem;
+        fill: white;
+        display: block;
     }
 }
 .about__clients-and-friends-card-dropdown-inner {

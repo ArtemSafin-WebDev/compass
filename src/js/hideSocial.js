@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function hideSocial() {
+    
     const hideSocials = Array.from(document.querySelectorAll('.js-hide-social'));
     const aboutFollow = document.querySelector('.about__follow') || document.querySelector('.page-footer');
 

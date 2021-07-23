@@ -8868,8 +8868,6 @@ select:-webkit-autofill:focus {
   color: #202020;
   -webkit-transition: color 0.2s;
   transition: color 0.2s; }
-  .touch .about__clients-and-friends-card-link {
-    pointer-events: none; }
   @media only screen and (min-width: 641px) {
     .about__clients-and-friends-card:hover .about__clients-and-friends-card-link[href] {
       color: #ababab; } }
@@ -8889,11 +8887,18 @@ select:-webkit-autofill:focus {
   -webkit-transition: opacity 0.3s, visibility 0.3s;
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 40; }
-  .about__clients-and-friends-list-item:nth-child(3n) .about__clients-and-friends-card-dropdown {
-    right: 100%;
-    left: auto;
-    padding-left: 0;
-    padding-right: 0.5rem; }
+  @media only screen and (min-width: 641px) {
+    .about__clients-and-friends-list-item:nth-child(3n) .about__clients-and-friends-card-dropdown {
+      right: 100%;
+      left: auto;
+      padding-left: 0;
+      padding-right: 0.5rem; }
+    .about__clients-and-friends-card.active .about__clients-and-friends-card-dropdown,
+    .about__clients-and-friends-card:hover .about__clients-and-friends-card-dropdown {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: opacity 0.3s, visibility 0.3s;
+      transition: opacity 0.3s, visibility 0.3s; } }
   @media only screen and (max-width: 640px) {
     .about__clients-and-friends-card-dropdown {
       top: 100%;
@@ -8901,12 +8906,27 @@ select:-webkit-autofill:focus {
       width: 100%;
       right: auto;
       height: auto;
-      padding: 0; } }
-  .about__clients-and-friends-card:hover .about__clients-and-friends-card-dropdown {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: opacity 0.3s, visibility 0.3s;
-    transition: opacity 0.3s, visibility 0.3s; }
+      padding: 0; }
+      .about__clients-and-friends-card.active .about__clients-and-friends-card-dropdown {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity 0.3s, visibility 0.3s;
+        transition: opacity 0.3s, visibility 0.3s; } }
+
+.about__clients-and-friends-card-dropdown-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  display: none; }
+  @media only screen and (max-width: 640px) {
+    .about__clients-and-friends-card-dropdown-close {
+      display: block; } }
+  .about__clients-and-friends-card-dropdown-close svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+    display: block; }
 
 .about__clients-and-friends-card-dropdown-inner {
   background: #202020;

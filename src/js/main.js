@@ -31,7 +31,8 @@ import serviceNav from './serviceNav';
 import mobileContactLink from './mobileContactLink';
 import articleSlider from './articleSlider';
 import initialLoader from './initialLoader';
-import hideSocial from './hideSocial';
+import clientsAndFriends from './clientsAndFriends';
+// import hideSocial from './hideSocial';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     serviceNav();
     mobileContactLink();
     articleSlider();
+    clientsAndFriends();
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
 
@@ -77,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.sidebar').midnight();
         $('.page-header').midnight();
 
-        hideSocial();
+        // hideSocial();
     });
 
     document.addEventListener('lazyloaded', function(e) {
