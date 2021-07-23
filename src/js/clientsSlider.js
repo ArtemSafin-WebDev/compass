@@ -16,6 +16,7 @@ export default function clientsSlider() {
             effect: 'fade',
             watchOverflow: true,
             touchStartPreventDefault: false,
+            loop: true,
             fadeEffect: {
                 crossFade: true
             },
@@ -39,8 +40,8 @@ export default function clientsSlider() {
 
        
 
-        const setAutoplay = index => {
-            const nextIndex = index + 1 >= slider.slides.length ? 0 : index + 1;
+        const setAutoplay = () => {
+            // const nextIndex = index + 1 >= slider.slides.length ? 0 : index + 1;
             // console.log("next index", nextIndex)
             gsap.to(progress, {
                 '--slider-progress': 1,
@@ -48,8 +49,8 @@ export default function clientsSlider() {
                 ease: 'linear',
                 clearProps: 'all',
                 onComplete: () => {
-                    slider.slideTo(nextIndex);
-                    setAutoplay(nextIndex);
+                    slider.slideNext();
+                    // setAutoplay();
                 }
             });
         };
@@ -73,7 +74,7 @@ export default function clientsSlider() {
             gsap.set(progress, {
                 '--slider-progress': 0
             });
-            setAutoplay(swiper.realIndex);
+            setAutoplay();
 
             if (window.matchMedia(`(max-width: ${MOBILE}px)`).matches) {
                 ScrollTrigger.refresh(true);
@@ -85,7 +86,7 @@ export default function clientsSlider() {
             name.addEventListener('click', event => {
                 event.preventDefault();
 
-                slider.slideTo(nameIndex)
+                slider.slideToLoop(nameIndex)
             })
         })
 

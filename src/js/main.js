@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     clientsSlider();
     blogFiltering();
     anchorLinks();
-  
+
     blogAnimations();
     menu();
     caseSlider();
@@ -61,8 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     serviceNav();
     mobileContactLink();
     articleSlider();
-   
-   
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
 
@@ -72,20 +70,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const mobileMidnight = Array.from(document.querySelectorAll('[data-mobile-midnight]'));
 
             mobileMidnight.forEach(item => {
-                item.setAttribute('data-midnight', item.getAttribute('data-mobile-midnight'))
-            })
+                item.setAttribute('data-midnight', item.getAttribute('data-mobile-midnight'));
+            });
         }
-        
 
         $('.sidebar').midnight();
         $('.page-header').midnight();
 
         hideSocial();
-
-        
     });
 
-    document.addEventListener('lazyloaded', function(e){
+    document.addEventListener('lazyloaded', function(e) {
         // console.log('Lazyloaded image', e.target)
 
         ScrollTrigger.refresh();
@@ -101,24 +96,23 @@ document.addEventListener('DOMContentLoaded', function() {
                         autoKill: false
                     },
                     onComplete: () => {
-                      
                         window.currentAnchor = null;
                     },
                     onInterrupt: () => {
                         window.currentAnchor = null;
-
                     }
                 });
             }
         }
     });
 
-
-
     document.addEventListener('heightchange', () => {
         ScrollTrigger.refresh();
-    })
+    });
 
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'auto';
+    }
 });
 
 window.addEventListener('load', function() {
