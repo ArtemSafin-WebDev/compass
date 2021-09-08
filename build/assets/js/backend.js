@@ -29,4 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.dispatchEvent(heightChangeEvent);
         })
     }
+
+    // hyst modal
+    // По клику на красную кнопку "Связаться" закрываем меню
+    const btn = document.querySelector('.menu__contact-us');
+    if (btn) {
+        btn.addEventListener('click', () => {
+            window.closeMenu();
+        })
+    }
 })

@@ -33,6 +33,7 @@ import articleSlider from './articleSlider';
 import initialLoader from './initialLoader';
 import clientsAndFriends from './clientsAndFriends';
 // import hideSocial from './hideSocial';
+import './modals';
 
 gsap.registerPlugin(ScrollToPlugin);
 

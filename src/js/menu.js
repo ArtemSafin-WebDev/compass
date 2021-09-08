@@ -79,6 +79,8 @@ export default function menu() {
             menuIsOpen = false;
         };
 
+        window.closeMenu = closeMenu;
+
         if (menuNavLinks.length && menuNav && !window.matchMedia(`(max-width: ${SMALL_TABLET}px)`).matches) {
             const pointer = document.createElement('div');
             pointer.className = 'menu__nav-link-pointer';
