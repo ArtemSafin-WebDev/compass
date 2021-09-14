@@ -198,9 +198,23 @@
 }
 
 .modal-form__inner {
+  position: relative;
+}
+
+.modal-form__standart-layer {
+  visibility: hidden;
+  opacity: 0;
+
   display: grid;
   grid-template-columns: 30rem 50rem;
   column-gap: 2rem;
+
+  transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+.modal-form__standart-layer.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal-form__photo {
@@ -275,6 +289,34 @@
   display: none;
 }
 
+.modal-form__success-layer {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  padding-left: var(--form-padding-left);
+  padding-right: var(--form-padding-right);
+  padding-top: 4rem;
+  padding-bottom: var(--form-padding-bottom);
+
+  background-color: var(--dark);
+  color: white;
+
+  transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+.modal-form__success-layer.active {
+  visibility: visible;
+  opacity: 1;
+
+  z-index: 3;
+}
+
 @media screen and (max-width: 640px) {
   .modal-form {
     --form-padding-top: 2rem;
@@ -290,7 +332,7 @@
     max-height: 80vh;
   }
 
-  .modal-form__inner {
+  .modal-form__standart-layer {
     display: flex;
     flex-direction: column;
   }
@@ -346,5 +388,11 @@
 
   .modal-form__close {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .modal-form__success-layer-heading {
+    font-size: 2rem;
   }
 }
