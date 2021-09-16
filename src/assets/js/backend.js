@@ -69,4 +69,30 @@ document.addEventListener('DOMContentLoaded', function() {
             window.closeMenu();
         })
     }
+
+    // Открытие модалки через 20 секунд нахождения на одной странице
+    // Либо после перехода на новую страницу
+    const isActive = sessionStorage.getItem('modal');
+
+    // 1. Если sessionStorage пуст, то сработает таймер, sessionStorage станет равен "active"
+    // 2. Если сработает таймер (откроется модалка), то sessionStorage перезапишется на "disabled" и
+    // после вся эта тема перестанет работать у пользователя
+    // 3. Если sessionStorage равен "active" при загрузке страницы, то попап откроется сразу,
+    // после вся эта тема перестанет работать у пользователя
+    
+    // Все обновляется после закрытия вкладки в браузере
+
+    if (isActive === null) {
+        setTimeout(() => {
+            window.formModal.open("#formModal");
+            sessionStorage.setItem('modal', 'disabled');
+        }, 20000);
+
+        sessionStorage.setItem('modal', 'active');
+    }
+    if (isActive === 'active') {
+        window.formModal.open("#formModal");
+
+        sessionStorage.setItem('modal', 'disabled');
+    }
 })

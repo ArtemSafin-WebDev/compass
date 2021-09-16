@@ -317,6 +317,10 @@
   z-index: 3;
 }
 
+.hystmodal__shadow {
+  z-index: 1400;
+}
+
 @media screen and (max-width: 640px) {
   .modal-form {
     --form-padding-top: 2rem;
