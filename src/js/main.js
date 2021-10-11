@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     customCursor();
     polyfills();
     detectTouch();
-    initialLoader();
+    // initialLoader();
     loader();
     commonAnimations();
     newHomepageAnimations();
