@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/plyr.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="stylesheet" href="assets/css/new-footer.css">
     <title>
         {{ title }}
     </title>
@@ -38,7 +39,7 @@
         </main>
 
         {{#unless noFooter}}
-        {{> footer }}
+        {{> new-footer }}
         {{/unless}}
 
 
@@ -49,7 +50,7 @@
 
         {{/if}}
 
-        {{> initial-loader }}
+        {{!-- {{> initial-loader }} --}}
         {{> loader }}
         {{> placeholder }}
 
@@ -60,6 +61,8 @@
         <script src="js/app.js"></script>
         <script src="assets/js/backend.js"></script>
     </div>
+
+    {{> modal-form }}
 </body>
 
 </html>

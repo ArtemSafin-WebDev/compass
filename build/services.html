@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/plyr.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="stylesheet" href="assets/css/new-footer.css">
     <title>
         Услуги - Compass
     </title>
@@ -44,9 +45,8 @@
                         <a href="#" class="page-header__language-link">
                             En
                         </a>
-                        <a href="contact-us.html" class="page-header__contact-link">
+                        <a href="#" data-hystmodal="#formModal" class="page-header__contact-link" >
                             Связаться
-        
                         </a>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                                 </div>
                             </a>
         
-                            <a href="#" class="menu__contact-us">
+                            <a href="#" data-hystmodal="#formModal" class="menu__contact-us">
                                 Связаться
                             </a>
                         </div>
@@ -570,69 +570,164 @@
 
         </main>
 
-        <footer class="page-footer" id="footer" data-midnight="dark">
-        
+        <footer class="page-footer new-footer" id="footer" data-midnight="dark">
             <div class="container">
-                <div class="page-footer__content">
+                <div class="page-footer__content new-footer__content">
                     <a href="#" class="page-footer__scroll-top js-scroll-top">
                         <svg width="14" height="14" aria-hidden="true" class="icon-arrow-up">
                             <use xlink:href="#arrow-up"></use>
                         </svg>
                         Наверх
                     </a>
-                    <nav class="page-footer__nav">
-                        <a href="#" class="page-footer__nav-link">
-                            Портфолио
-                        </a>
-                        <a href="#" class="page-footer__nav-link">
-                            Услуги
-                        </a>
-                        <a href="#" class="page-footer__nav-link">
-                            Об агентстве
-                        </a>
-                       
-                    </nav>
-                    <nav class="page-footer__nav page-footer__nav-social">
-                        <a href="#" class="page-footer__nav-link">
-                            Instagram
-                        </a>
-                        <a href="#" class="page-footer__nav-link">
-                            Facebook
-                        </a>
-                        <a href="#" class="page-footer__nav-link">
-                            Behance
-                        </a>
+                    
+                    <form action="/" method="POST" class="contact-us__form new-footer__form" data-need-validation="" data-mobile-midnight="dark" id="contact-us-form">
+                        <h3 class="blog__section-heading">Создайте бренд вместе с COMPASS</h3>
+                        <div class="contact-us__form-layers">
+                            <div class="contact-us__form-standard-layer active">
+                                <div class="contact-us__form-info new-footer__form-info">
+                                    <div>
+                                      <div class="contact-us__form-row">
+                                          <div class="contact-us__form-row-left-col">
+                                              <label for="yourname" class="contact-us__form-label">
+                                                  Имя
+                                              </label>
+                                          </div>
+                                          <div class="contact-us__form-row-right-col">
+                                              <div class="contact-us__form-input-wrapper">
+                                                  <input type="text" name="yourname" id="yourname"
+                                                      class="contact-us__form-input" autocomplete="new-password" required>
+                                              </div>
+        
+                                          </div>
+                                      </div>
+                                      <div class="contact-us__form-row">
+                                          <div class="contact-us__form-row-left-col">
+                                              <label for="yourphone" class="contact-us__form-label">
+                                                  Телефон
+                                              </label>
+                                          </div>
+                                          <div class="contact-us__form-row-right-col">
+                                              <div class="contact-us__form-input-wrapper">
+                                                  <input type="tel" name="yourphone" id="yourphone"
+                                                      class="contact-us__form-input js-phone-input"
+                                                      autocomplete="new-password" required data-parsley-phone>
+                                              </div>
+        
+                                          </div>
+                                      </div>
+                                      <div class="contact-us__form-row">
+                                          <div class="contact-us__form-row-left-col">
+                                              <label for="yourmail" class="contact-us__form-label">
+                                                  E-mail
+                                              </label>
+                                          </div>
+                                          <div class="contact-us__form-row-right-col">
+                                              <div class="contact-us__form-input-wrapper">
+                                                  <input type="email" name="yourmail" id="yourmail"
+                                                      class="contact-us__form-input"
+                                                      autocomplete="new-password" required>
+                                              </div>
+        
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="contact-us__form-comment">
+                                        <div class="contact-us__form-textarea-row">
+                                            <div class="contact-us__form-row-left-col">
+                                                <label for="comment" class="contact-us__form-label">
+                                                    Сообщение
+                                                </label>
+                                            </div>
+                                            <div class="contact-us__form-row-right-col">
+        
+                                            </div>
+                                        </div>
+                                        <div class="contact-us__form-textarea-row">
+                                            <div class="contact-us__form-row-left-col">
+        
+                                            </div>
+                                            <div class="contact-us__form-row-right-col">
+                                                <div class="contact-us__form-textarea-wrapper">
+                                                    <textarea name="comment" class="contact-us__form-textarea"
+                                                        id="comment" autocomplete="new-password"></textarea>
+                                                </div>
+                                                <div class="contact-us__form-file-upload js-file-upload">
+                                                    <input type="file" name="yourfile" id="yourfile"
+                                                        class="contact-us__form-file-upload-input">
         
         
-                    </nav>
+                                                    <label for="yourfile" class="contact-us__form-file-upload-label">
+                                                        <svg width="14" height="14" aria-hidden="true"
+                                                            class="icon-file">
+                                                            <use xlink:href="#file"></use>
+                                                        </svg>
+                                                        <span class="contact-us__form-file-upload-label-text">
+                                                            Прикрепить файл
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
         
-                    <div class="page-footer__copyright">
+                                </div>
+        
+                                <div class="contact-us__form-submit-row new-footer__form-submit-row">
+                                    <div class="contact-us__form-policy">
+                                        Нажимая кнопку «Отправить сообщение», вы даёте согласие на обработку <a
+                                            href="#">
+                                            персональных данных
+                                        </a>
+                                    </div>
+                                    <button class="new-footer__form-submit-btn">
+                                        Отправить
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-long-arrow-right">
+                                            <use xlink:href="#long-arrow-right"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+        
+                            <div class="contact-us__form-success-layer">
+                                <h3 class="contact-us__form-success-heading">
+                                    Спасибо, что доверяете нам!
+        
+                                    <img src="img/contact-us-arrow.svg" alt=""
+                                        class="contact-us__form-success-heading-image">
+                                </h3>
+                                <div class="contact-us__form-success-text">
+                                    <p>
+                                        Мы свяжемся с вами в ближайшее время
+                                    </p>
+                                </div>
+                                <a href="#" class="contact-us__form-success-link">
+                                    Написать еще
+                                </a>
+                            </div>
+                        </div>
+        
+                    </form>
+        
+                    <div class="contact-us__info new-footer__info">
+                        <a href="tel:+78432456140" class="contact-us__phone-link new-footer__phone-link">+7 843 245-61-40</a>
+                        <a href="mailto:info@compassbrand.ru" class="contact-us__email-link new-footer__email-link">info@compassbrand.ru</a>
+        
+                        <div class="contact-us__address new-footer__address">
+                            <p>
+                                Ул. Салимжанова, д. 2В, оф. 201,<br> Казань, 420107
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="page-footer__copyright new-footer__copyright">
+                        <span class="new-footer__label">Агентство входит в Ассоциация Брендинговых Компаний России (АБКР)</span>
                         © 2019 Compass Brand
                     </div>
-                    <a href="#" class="page-footer__madeby">
+        
+                    <a href="#" class="page-footer__madeby new-footer__madeby">
                         Website by
                         <img src="img/markweber.svg" alt="" class="page-footer__madeby-image" width="80">
                     </a>
-        
-        
-        
-                    <div class="page-footer__write-us">
-                        <div class="page-footer__write-us-interested">
-                            Заинтересовало?
-                        </div>
-                        <a href="#" class="page-footer__write-us-btn">
-                            <span class="page-footer__write-us-btn-text">
-                                Напишите нам</span><span class="page-footer__write-us-btn-arrow">
-                                <svg width="14" height="14" aria-hidden="true" class="icon-fillable-right-arrow">
-                                    <use xlink:href="#fillable-right-arrow"></use>
-                                </svg>
-                            </span>
-        
-        
-                        </a>
-                    </div>
-        
-        
         
                 </div>
             </div>
@@ -641,96 +736,7 @@
 
 
 
-        <style>
-            .arrow-cls-1,
-            .arrow-cls-4 {
-                fill: none;
-            }
-        
-            .arrow-cls-2 {
-                clip-path: url(#arrow-clip-path);
-            }
-        
-            .arrow-cls-3 {
-                fill: #ff0000;
-                transform-origin: left center;
-                transform: scaleX(0);
-            }
-        
-            .arrow-cls-4 {
-                stroke: #ff0000;
-                stroke-miterlimit: 10;
-            }
-        </style>
-        
-        <div class="initial-loader  initially-hidden ">
-            <div class="initial-loader__arrows">
-                <div class="initial-loader__arrow initial-loader__arrow--first-group">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
-                        <defs>
-        
-                            <clipPath id="arrow-clip-path">
-                                <path class="arrow-cls-1"
-                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
-                            </clipPath>
-                        </defs>
-                        <g class="arrow-cls-2">
-                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
-                        </g>
-                        <path class="arrow-cls-4"
-                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
-                    </svg>
-                </div>
-                <div class="initial-loader__arrow initial-loader__arrow--second-group">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
-                        <defs>
-        
-                            <clipPath id="arrow-clip-path">
-                                <path class="arrow-cls-1"
-                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
-                            </clipPath>
-                        </defs>
-                        <g class="arrow-cls-2">
-                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
-                        </g>
-                        <path class="arrow-cls-4"
-                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
-                    </svg>
-                </div>
-                <div class="initial-loader__arrow initial-loader__arrow--first-group">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
-                        <defs>
-        
-                            <clipPath id="arrow-clip-path">
-                                <path class="arrow-cls-1"
-                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
-                            </clipPath>
-                        </defs>
-                        <g class="arrow-cls-2">
-                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
-                        </g>
-                        <path class="arrow-cls-4"
-                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
-                    </svg>
-                </div>
-                <div class="initial-loader__arrow initial-loader__arrow--second-group">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.21 70.2">
-                        <defs>
-        
-                            <clipPath id="arrow-clip-path">
-                                <path class="arrow-cls-1"
-                                    d="M.71,60.5,45.19,16.7a2,2,0,0,0,.38-2.29,2.3,2.3,0,0,0-1.93-1.33H5.16V.5H65.3a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.71,1.71,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.8,69.5Z" />
-                            </clipPath>
-                        </defs>
-                        <g class="arrow-cls-2">
-                            <rect class="arrow-cls-3" width="71.21" height="70.2" />
-                        </g>
-                        <path class="arrow-cls-4"
-                            d="M.61,60.5,45.09,16.7a2,2,0,0,0,.38-2.29,2.33,2.33,0,0,0-1.93-1.33H5.06V.5H65.2a5.34,5.34,0,0,1,5.41,5.15V64.93h-13V27.19a1.72,1.72,0,0,0-1.35-1.91,2.13,2.13,0,0,0-2.32.38L9.7,69.5Z" />
-                    </svg>
-                </div>
-            </div>
-        </div>        <div class="loader " data-get-loader-text="">
+        <div class="loader " data-get-loader-text="">
             <div class="loader__message">
         
         
@@ -916,6 +922,108 @@
         <script src="js/app.js"></script>
         <script src="assets/js/backend.js"></script>
     </div>
-</body>
+
+    <div class="hystmodal modal-form" id="formModal" aria-hidden="true">
+        <div class="hystmodal__wrap modal-form__wrapper">
+            <div class="hystmodal__window modal-form__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close modal-form__close">
+                    <svg width="8" height="8" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                    <span>Закрыть</span>
+                </button>
+                <div class="modal-form__inner">
+                    <div class="modal-form__standart-layer active">
+                        <div class="modal-form__photo">
+                            <div>
+                                <img class="modal-form__image" src="img/form-modal-image.jpg" alt="Булат Салаватов">
+                                <span class="modal-form__image-label">Булат Салаватов / СЕО</span>
+                            </div>
+                            <div class="contact-us__form-policy modal-form__form-policy modal-form__form-policy--desktop">
+                                Нажимая кнопку «Разобрать», вы даёте согласие на обработку <a
+                                    href="#">
+                                    персональных данных
+                                </a>
+                            </div>
+                        </div>
+    
+                        <form action="/" method="POST" class="contact-us__form modal-form__form" data-need-validation="" data-mobile-midnight="dark" id="contact-us-form">
+                            <h3 class="modal-form__form-title">Давайте знакомиться. Мы COMPASS - создаем бренды со смыслом</h3>
+                            <p class="modal-form__form-subtitle">Расскажите о себе и своих задачах на часовой онлайн-встрече и получите рекомендации от наших экспертов.</p>
+                            <div class="contact-us__form-layers">
+                                <div class="contact-us__form-standard-layer active">
+                                    <div class="contact-us__form-info modal-form__form-info">
+                                        <div class="contact-us__form-row">
+                                            <div class="contact-us__form-row-left-col">
+                                                <label for="yourname" class="contact-us__form-label">
+                                                    Имя
+                                                </label>
+                                            </div>
+                                            <div class="contact-us__form-row-right-col">
+                                                <div class="contact-us__form-input-wrapper">
+                                                    <input type="text" name="yourname" id="yourname"
+                                                        class="contact-us__form-input" autocomplete="new-password" required>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                        <div class="contact-us__form-row">
+                                            <div class="contact-us__form-row-left-col">
+                                                <label for="yourphone" class="contact-us__form-label">
+                                                    Телефон
+                                                </label>
+                                            </div>
+                                            <div class="contact-us__form-row-right-col">
+                                                <div class="contact-us__form-input-wrapper">
+                                                    <input type="tel" name="yourphone" id="yourphone"
+                                                        class="contact-us__form-input js-phone-input"
+                                                        autocomplete="new-password" required data-parsley-phone>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="contact-us__form-submit-row modal-form__form-submit-row">
+                                        <div class="contact-us__form-policy modal-form__form-policy modal-form__form-policy--mobile">
+                                            Нажимая кнопку «Разобрать», вы даёте согласие на обработку <a
+                                                href="#">
+                                                персональных данных
+                                            </a>
+                                        </div>
+    
+                                        <button class="new-footer__form-submit-btn">
+                                            Разобрать
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-long-arrow-right">
+                                                <use xlink:href="#long-arrow-right"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </form>
+                    </div>
+    
+                    <div class="modal-form__success-layer">
+                        <h3 class="contact-us__form-success-heading modal-form__success-layer-heading">
+                            Спасибо, что доверяете нам!
+    
+                            <img src="img/contact-us-arrow.svg" alt="" class="contact-us__form-success-heading-image">
+                        </h3>
+                        <div class="contact-us__form-success-text">
+                            <p>
+                                Мы свяжемся с вами в ближайшее время
+                            </p>
+                        </div>
+                        <a href="#" class="contact-us__form-success-link">
+                            Написать еще
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div></body>
 
 </html>
